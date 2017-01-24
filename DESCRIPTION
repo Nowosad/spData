@@ -1,10 +1,16 @@
-Package: spDatasets
-Version: 0.1-1
-Date: 2014-08-02
+Package: spData
+Version: 0.1-11
 Title: Datasets for spatial analysis packages
 Authors@R: c(person("Roger", "Bivand", role = c("aut", "cre"), 
 	email="Roger.Bivand@nhh.no"))
-Depends: R (>= 3.1.0)
-Suggests: foreign, maptools, sp, spdep
-Description: Datasets for some spatial analysis packages, moved to resolve license issues and reduce package size
+Depends:
+    R (>= 3.3.0)
+Suggests:
+    foreign,
+    maptools,
+    sp,
+    spdep
+Description: Datasets for some spatial analysis packages, moved to resolve
+    license issues and reduce package size
 License: CC BY-SA 4.0
+RoxygenNote: 5.0.1
