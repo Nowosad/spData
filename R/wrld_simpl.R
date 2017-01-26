@@ -6,17 +6,17 @@
 #' 
 #' @format Formal class 'SpatialPolygonsDataFrame' [package "sp"] with 5 slots; the data clot contains a data.frame with 246 obs. of  11 variables:
 #' \itemize{
-#'     \item{FIPS}{factor of FIPS country codes}
-#'     \item{ISO2}{factor of ISO 2 character country codes}
-#'     \item{ISO3}{factor of ISO 3 character country codes}
-#'     \item{UN}{integer vector of UN country codes}
-#'     \item{NAME}{Factor of country names}
-#'     \item{AREA}{integer vector of area values}
-#'     \item{POP2005}{integer vector of population in 2005}
-#'     \item{REGION}{integer vector of region values}
-#'     \item{SUBREGION}{integer vector of subregion values}
-#'     \item{LON}{numeric vector of longitude label points}
-#'     \item{LAT}{numeric vector of latitude label points}
+#'     \item{FIPS} {factor of FIPS country codes}
+#'     \item{ISO2} {factor of ISO 2 character country codes}
+#'     \item{ISO3} {factor of ISO 3 character country codes}
+#'     \item{UN} {integer vector of UN country codes}
+#'     \item{NAME} {Factor of country names}
+#'     \item{AREA} {integer vector of area values}
+#'     \item{POP2005} {integer vector of population in 2005}
+#'     \item{REGION} {integer vector of region values}
+#'     \item{SUBREGION} {integer vector of subregion values}
+#'     \item{LON} {numeric vector of longitude label points}
+#'     \item{LAT} {numeric vector of latitude label points}
 #' }
 #' The object is in geographical coordinates using the WGS84 datum.
 #' 

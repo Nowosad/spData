@@ -6,11 +6,11 @@
 #' 
 #' @format This data frame contains the following columns:
 #' \itemize{
-#'         \item{x}{an easting in decimal degrees (taken as centroid of shapefile polygon)}
-#'         \item{y}{an northing in decimal degrees (taken as centroid of shapefile polygon)}
-#'         \item{totcon}{index of total conflict 1966-78}
-#'         \item{name}{country name}
-#'         \item{id}{country id number as in paper}
+#'         \item{x} {an easting in decimal degrees (taken as centroid of shapefile polygon)}
+#'         \item{y} {an northing in decimal degrees (taken as centroid of shapefile polygon)}
+#'         \item{totcon} {index of total conflict 1966-78}
+#'         \item{name} {country name}
+#'         \item{id} {country id number as in paper}
 #' }
 #' 
 #' @source 

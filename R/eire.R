@@ -7,16 +7,16 @@
 #' 
 #' @format This data frame contains the following columns:
 #' \itemize{
-#'         \item{A}{Percentage of sample with blood group A}
-#'         \item{towns}{Towns/unit area}
-#'         \item{pale}{Beyond the Pale 0, within the Pale 1}
-#'         \item{size}{number of blood type samples}
-#'         \item{ROADACC}{arterial road network accessibility in 1961}
-#'         \item{OWNCONS}{percentage in value terms of gross agricultural output of each county consumed by itself}
-#'         \item{POPCHG}{1961 population as percentage of 1926}
-#'         \item{RETSALE}{value of retail sales British Pound000}
-#'         \item{INCOME}{total personal income British Pound000}
-#'         \item{names}{County names}
+#'         \item{A} {Percentage of sample with blood group A}
+#'         \item{towns} {Towns/unit area}
+#'         \item{pale} {Beyond the Pale 0, within the Pale 1}
+#'         \item{size} {number of blood type samples}
+#'         \item{ROADACC} {arterial road network accessibility in 1961}
+#'         \item{OWNCONS} {percentage in value terms of gross agricultural output of each county consumed by itself}
+#'         \item{POPCHG} {1961 population as percentage of 1926}
+#'         \item{RETSALE} {value of retail sales British Pound000}
+#'         \item{INCOME} {total personal income British Pound000}
+#'         \item{names} {County names}
 #' }
 #' 
 #' @source Upton and Fingleton 1985, - Bailey and Gatrell 1995, ch. 1 for blood group data, Cliff and Ord (1973), p. 107 for remaining variables (also after O'Sullivan, 1968). Polygon borders and Irish data sourced from Michael Tiefelsdorf's SPSS Saddlepoint bundle, originally hosted at: \url{http://geog-www.sbs.ohio-state.edu/faculty/tiefelsdorf/GeoStat.htm}.
@@ -26,7 +26,7 @@
 #' @examples 
 #' library(maptools)
 #' library(spdep)
-#' eire <- readShapePoly(system.file("etc/shapes/eire.shp", package="spdep")[1], 
+#' eire <- readShapePoly(system.file("shapes/eire.shp", package="spData")[1], 
 #'     ID="names", proj4string=CRS("+proj=utm +zone=30 +units=km"))
 #' eire.nb <- poly2nb(eire)
 #' #data(eire)

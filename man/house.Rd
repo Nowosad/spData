@@ -8,30 +8,30 @@
 \title{Lucas county OH housing}
 \format{Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots. The data slot is a data frame with 25357 observations on the following 24 variables.
 \itemize{
-        \item{price}{a numeric vector}
-        \item{yrbuilt}{a numeric vector}
-        \item{stories}{a factor with levels \code{one} \code{bilevel} \code{multilvl} \code{one+half} \code{two}     \code{two+half} \code{three}}
-        \item{TLA}{a numeric vector}
-        \item{wall}{a factor with levels \code{stucdrvt} \code{ccbtile} \code{metlvnyl} \code{brick} \code{stone} \code{wood} \code{partbrk}}
-        \item{beds}{a numeric vector}
-        \item{baths}{a numeric vector}
-        \item{halfbaths}{a numeric vector}
-        \item{frontage}{a numeric vector}
-        \item{depth}{a numeric vector}
-        \item{garage}{a factor with levels \code{no garage} \code{basement} \code{attached} \code{detached} \code{carport}}
-        \item{garagesqft}{a numeric vector}
-        \item{rooms}{a numeric vector}
-        \item{lotsize}{a numeric vector}
-        \item{sdate}{a numeric vector}
-        \item{avalue}{a numeric vector}
-        \item{s1993}{a numeric vector}
-        \item{s1994}{a numeric vector}
-        \item{s1995}{a numeric vector}
-        \item{s1996}{a numeric vector}
-        \item{s1997}{a numeric vector}
-        \item{s1998}{a numeric vector}
-        \item{syear}{a factor with levels \code{1993} \code{1994} \code{1995} \code{1996} \code{1997} \code{1998}}
-        \item{age}{a numeric vector}
+        \item{price} {a numeric vector}
+        \item{yrbuilt} {a numeric vector}
+        \item{stories} {a factor with levels \code{one} \code{bilevel} \code{multilvl} \code{one+half} \code{two}     \code{two+half} \code{three}}
+        \item{TLA} {a numeric vector}
+        \item{wall} {a factor with levels \code{stucdrvt} \code{ccbtile} \code{metlvnyl} \code{brick} \code{stone} \code{wood} \code{partbrk}}
+        \item{beds} {a numeric vector}
+        \item{baths} {a numeric vector}
+        \item{halfbaths} {a numeric vector}
+        \item{frontage} {a numeric vector}
+        \item{depth} {a numeric vector}
+        \item{garage} {a factor with levels \code{no garage} \code{basement} \code{attached} \code{detached} \code{carport}}
+        \item{garagesqft} {a numeric vector}
+        \item{rooms} {a numeric vector}
+        \item{lotsize} {a numeric vector}
+        \item{sdate} {a numeric vector}
+        \item{avalue} {a numeric vector}
+        \item{s1993} {a numeric vector}
+        \item{s1994} {a numeric vector}
+        \item{s1995} {a numeric vector}
+        \item{s1996} {a numeric vector}
+        \item{s1997} {a numeric vector}
+        \item{s1998} {a numeric vector}
+        \item{syear} {a factor with levels \code{1993} \code{1994} \code{1995} \code{1996} \code{1997} \code{1998}}
+        \item{age} {a numeric vector}
 }
 Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.}
 \source{
@@ -65,11 +65,12 @@ house <- spTransform(house, CRS("+init=epsg:2834"))
 library(spdep)
 LO_nb <- graph2nb(soi.graph(tri2nb(coordinates(house)), coordinates(house)))
 W <- as(as_dgRMatrix_listw(nb2listw(LO_nb)), "CsparseMatrix")
-trMat <- trW(W, type="mult")
-}
-data(house)
-## maybe str(house) ; plot(house) ...
+trMat <- trW(W, type="mult")}
 
+library(sp)
+data(house)
+str(house)
+plot(house)
 }
 \keyword{datasets}
 

@@ -8,26 +8,26 @@
 #' @format 
 #' This data frame contains the following columns:
 #' \itemize{
-#'         \item{SP\_ID}{SpatialPolygons ID}
-#'         \item{CNTY\_ID}{county ID}
-#'         \item{east}{eastings, county seat, miles, local projection}
-#'         \item{north}{northings, county seat, miles, local projection}
-#'         \item{L\_id}{Cressie and Read (1985) L index}
-#'         \item{M\_id}{Cressie and Read (1985) M index}
-#'         \item{names}{County names}
-#'         \item{AREA}{County polygon areas in degree units}
-#'         \item{PERIMETER}{County polygon perimeters in degree units}
-#'         \item{CNTY\_}{Internal county ID}
-#'         \item{NAME}{County names}
-#'         \item{FIPS}{County ID}
-#'         \item{FIPSNO}{County ID}
-#'         \item{CRESS\_ID}{Cressie papers ID}
-#'         \item{BIR74}{births, 1974-78}
-#'         \item{SID74}{SID deaths, 1974-78}
-#'         \item{NWBIR74}{non-white births, 1974-78}
-#'         \item{BIR79}{births, 1979-84}
-#'         \item{SID79}{SID deaths, 1979-84}
-#'         \item{NWBIR79}{non-white births, 1979-84}
+#'         \item{SP_ID} {SpatialPolygons ID}
+#'         \item{CNTY_ID} {county ID}
+#'         \item{east} {eastings, county seat, miles, local projection}
+#'         \item{north} {northings, county seat, miles, local projection}
+#'         \item{L_id} {Cressie and Read (1985) L index}
+#'         \item{M_id} {Cressie and Read (1985) M index}
+#'         \item{names} {County names}
+#'         \item{AREA} {County polygon areas in degree units}
+#'         \item{PERIMETER} {County polygon perimeters in degree units}
+#'         \item{CNTY_} {Internal county ID}
+#'         \item{NAME} {County names}
+#'         \item{FIPS} {County ID}
+#'         \item{FIPSNO} {County ID}
+#'         \item{CRESS_ID} {Cressie papers ID}
+#'         \item{BIR74} {births, 1974-78}
+#'         \item{SID74} {SID deaths, 1974-78}
+#'         \item{NWBIR74} {non-white births, 1974-78}
+#'         \item{BIR79} {births, 1979-84}
+#'         \item{SID79} {SID deaths, 1979-84}
+#'         \item{NWBIR79} {non-white births, 1979-84}
 #' }
 #' 
 #' @source Cressie, N (1991), \emph{Statistics for spatial data}. New York: Wiley, pp. 386--389; Cressie, N, Chan NH (1989) Spatial modelling of regional variables. \emph{Journal of the American Statistical Association}, 84, 393--401; Cressie, N, Read, TRC (1985) Do sudden infant deaths come in clusters? \emph{Statistics and Decisions} Supplement Issue 2, 333--349; \url{http://sal.agecon.uiuc.edu/datasets/sids.zip}.
@@ -37,12 +37,12 @@
 #' @examples 
 #' library(maptools)
 #' library(spdep)
-#' nc.sids <- readShapePoly(system.file("etc/shapes/sids.shp", package="spdep")[1],
+#' nc.sids <- readShapePoly(system.file("shapes/sids.shp", package="spData")[1],
 #'                          ID="FIPSNO", proj4string=CRS("+proj=longlat +ellps=clrk66"))
 #' rn <- sapply(slot(nc.sids, "polygons"), function(x) slot(x, "ID"))
-#' ncCC89_nb <- read.gal(system.file("etc/weights/ncCC89.gal", package="spdep")[1],
+#' ncCC89_nb <- read.gal(system.file("weights/ncCC89.gal", package="spData")[1],
 #'                       region.id=rn)
-#' ncCR85_nb <- read.gal(system.file("etc/weights/ncCR85.gal", package="spdep")[1],
+#' ncCR85_nb <- read.gal(system.file("weights/ncCR85.gal", package="spData")[1],
 #'                       region.id=rn)
 #' \dontrun{
 #'         plot(nc.sids, border="grey")

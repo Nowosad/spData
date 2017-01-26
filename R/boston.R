@@ -6,38 +6,38 @@
 #' 
 #' @format   This data frame contains the following columns:
 #' \itemize{
-#'         \item{TOWN}{a factor with levels given by town names}
-#'         \item{TOWNNO}{a numeric vector corresponding to TOWN}
-#'         \item{TRACT}{a numeric vector of tract ID numbers}
-#'         \item{LON}{a numeric vector of tract point longitudes in decimal degrees}
-#'         \item{LAT}{a numeric vector of tract point latitudes in decimal degrees}
-#'         \item{MEDV}{a numeric vector of median values of owner-occupied housing
+#'         \item{TOWN} {a factor with levels given by town names}
+#'         \item{TOWNNO} {a numeric vector corresponding to TOWN}
+#'         \item{TRACT} {a numeric vector of tract ID numbers}
+#'         \item{LON} {a numeric vector of tract point longitudes in decimal degrees}
+#'         \item{LAT} {a numeric vector of tract point latitudes in decimal degrees}
+#'         \item{MEDV} {a numeric vector of median values of owner-occupied housing
 #'                 in USD 1000}
-#'         \item{CMEDV}{a numeric vector of corrected median values of
+#'         \item{CMEDV} {a numeric vector of corrected median values of
 #'                 owner-occupied housing in USD 1000}
-#'         \item{CRIM}{a numeric vector of per capita crime}
-#'         \item{ZN}{a numeric vector of proportions of residential land zoned
+#'         \item{CRIM} {a numeric vector of per capita crime}
+#'         \item{ZN} {a numeric vector of proportions of residential land zoned
 #'                 for lots over 25000 sq. ft per town (constant for all Boston tracts)}
-#'         \item{INDUS}{a numeric vector of proportions of non-retail business
+#'         \item{INDUS} {a numeric vector of proportions of non-retail business
 #'                 acres per town (constant for all Boston tracts)}
-#'         \item{CHAS}{a factor with levels 1 if tract borders Charles River;
+#'         \item{CHAS} {a factor with levels 1 if tract borders Charles River;
 #'                 0 otherwise}
-#'         \item{NOX}{a numeric vector of nitric oxides concentration (parts per
+#'         \item{NOX} {a numeric vector of nitric oxides concentration (parts per
 #'                                                                     10 million) per town}
-#'         \item{RM}{a numeric vector of average numbers of rooms per dwelling}
-#'         \item{AGE}{a numeric vector of proportions of owner-occupied units
+#'         \item{RM} {a numeric vector of average numbers of rooms per dwelling}
+#'         \item{AGE} {a numeric vector of proportions of owner-occupied units
 #'                 built prior to 1940}
-#'         \item{DIS}{a numeric vector of weighted distances to five Boston
+#'         \item{DIS} {a numeric vector of weighted distances to five Boston
 #'                 employment centres}
-#'         \item{RAD}{a numeric vector of an index of accessibility to radial
+#'         \item{RAD} {a numeric vector of an index of accessibility to radial
 #'                 highways per town (constant for all Boston tracts)}
-#'         \item{TAX}{a numeric vector full-value property-tax rate per USD
+#'         \item{TAX} {a numeric vector full-value property-tax rate per USD
 #'                 10,000 per town (constant for all Boston tracts)}
-#'         \item{PTRATIO}{a numeric vector of pupil-teacher ratios per town
+#'         \item{PTRATIO} {a numeric vector of pupil-teacher ratios per town
 #'                 (constant for all Boston tracts)}
-#'         \item{B}{a numeric vector of \code{1000*(Bk - 0.63)^2} where Bk is the
+#'         \item{B} {a numeric vector of \code{1000*(Bk - 0.63)^2} where Bk is the
 #'                 proportion of blacks}
-#'         \item{LSTAT}{a numeric vector of percentage values of lower status
+#'         \item{LSTAT} {a numeric vector of percentage values of lower status
 #'                 population}
 #' }
 #' @note Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: \url{http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip}, counties in the BOSTON SMSA \url{http://www.census.gov/population/metro/files/lists/historical/63mfips.txt}; tract conversion table 1980/1970: \url{https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&permit[0]=AVAILABLE}, \url{http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&study=7913&bundle=all&ds=1&dups=yes}
@@ -66,8 +66,8 @@
 #' lm.morantest(hr0, nb2listw(boston.soi))
 #' \dontrun{
 #' library(maptools)
-#' boston.tr <- readShapePoly(system.file("etc/shapes/boston_tracts.shp",
-#' #'                         package="spdep")[1], ID="poltract",
+#' boston.tr <- readShapePoly(system.file("shapes/boston_tracts.shp",
+#' #'                         package="spData")[1], ID="poltract",
 #'                            proj4string=CRS(paste("+proj=longlat +datum=NAD27 
 #'                            +no_defs +ellps=clrk66",
 #'                            "+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat")))

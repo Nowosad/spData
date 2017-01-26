@@ -6,10 +6,10 @@
 #' 
 #' @format This data frame contains the following columns:
 #' \itemize{
-#'         \item{Easting}{a numeric vector of x coordinates in an unknown spatial reference system}
-#'         \item{Northing}{a numeric vector of y coordinates in an unknown spatial reference system}
-#'         \item{M77\_85}{a numeric vector of counts of infant (under 5 years of age) deaths in Auckland, 1977-1985}
-#'         \item{Und5\_81}{a numeric vector of population under 5 years of age at the 1981 Census}
+#'         \item{Easting} {a numeric vector of x coordinates in an unknown spatial reference system}
+#'         \item{Northing} {a numeric vector of y coordinates in an unknown spatial reference system}
+#'         \item{M77_85} {a numeric vector of counts of infant (under 5 years of age) deaths in Auckland, 1977-1985}
+#'         \item{Und5_81} {a numeric vector of population under 5 years of age at the 1981 Census}
 #' }
 #' 
 #' @details The contiguous neighbours object does not completely replicate results in the sources, and was reconstructed from \code{auckpolys}; examination of figures in the sources suggests that there are differences in detail, although probably not in substance.
@@ -19,8 +19,8 @@
 #' 
 #' @examples 
 #' library(maptools)
-#' auckland <- readShapePoly(system.file("etc/shapes/auckland.shp",
-#'                                       package="spdep")[1])
+#' auckland <- readShapePoly(system.file("shapes/auckland.shp",
+#'                                       package="spData")[1])
 #' library(spdep)
 #' auckland.nb <- poly2nb(auckland)
 
