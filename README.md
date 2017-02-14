@@ -7,6 +7,7 @@ Datasets for some spatial analysis packages:
 -   `afcon` - Spatial patterns of conflict in Africa 1966-78
 -   `auckland` - Marshall's infant mortality in Auckland dataset
 -   `baltimore` - House sales prices, Baltimore, MD 1978
+-   `boston` - Boston Housing Data
 -   `columbus` - Columbus OH spatial analysis data set
 -   `eire` - Eire data sets
 -   `elect80` - 1980 Presidential election results
