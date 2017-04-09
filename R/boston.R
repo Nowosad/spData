@@ -50,7 +50,7 @@
 #' 
 #' Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to Improve Estimation,  \emph{Journal of the Real Estate Finance and Economics}, 14 (1997), 333-340.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets spdep
 #' 
 #' @examples 
 #' library(spdep)
@@ -67,7 +67,7 @@
 #' \dontrun{
 #' library(maptools)
 #' boston.tr <- readShapePoly(system.file("shapes/boston_tracts.shp",
-#' #'                         package="spData")[1], ID="poltract",
+#'                            package="spData")[1], ID="poltract",
 #'                            proj4string=CRS(paste("+proj=longlat +datum=NAD27 
 #'                            +no_defs +ellps=clrk66",
 #'                            "+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat")))
@@ -83,71 +83,8 @@
 #' gp2 <- lagsarlm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2)
 #'                 +  AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT),
 #'                 data=boston.c, nb2listw(boston.soi), method="Matrix")
-#' summary(gp2)}
-#' \dontrun{
-#' ## Conversion table 1980/1970
-#' # ICPSR_07913.zip
-#' # 07913-0001-Data.txt
-#' # http://dx.doi.org/10.3886/ICPSR07913.v1
-#' # Provider: ICPSR
-#' # Content: text/plain; charset="us-ascii"
-#' # 
-#' # TY  - DATA
-#' # T1  - Census of Population and Housing 1980 [United States]:
-#' # 1970-Pre 1980 Tract Relationships
-#' # AU  - United States Department of Commerce. Bureau of the Census
-#' # DO  - 10.3886/ICPSR07913.v1
-#' # PY  - 1984-06-28
-#' # UR  - http://dx.doi.org/10.3886/ICPSR07913.v1
-#' # PB  - Inter-university Consortium for Political and Social Research
-#' # (ICPSR) [distributor]
-#' # ER  -
-#' widths <- c(ID=5L, FIPS70State=2L, FIPS70cty=3L, Tract70=6L, FIPS80State=2L,
-#'     FIPS80cty=3L, f1=7L, CTC=6L, f2=2L, intersect1=3L, intersect2=3L, name=30L)
-#' dta0 <- read.fwf("07913-0001-Data.txt", unname(widths),
-#'     col.names=names(widths), colClasses=rep("character", 12), as.is=TRUE)
-#' sub <- grep("25", dta0$FIPS80State)
-#' MA <- dta0[sub,]
-#' ## match against boston data set
-#' library(spdep)
-#' data(boston)
-#' bTR <- boston.c$TRACT
-#' x1 <- match(as.integer(MA$Tract70), bTR)
-#' BOSTON <- MA[!is.na(x1),]
-#' ## MA 1990 tracts
-#' library(rgdal)
-#' MAtr90 <- readOGR(".", "tr25_d90")
-#' ## counties in the BOSTON SMSA
-#' BOSTON_SMSA <- MAtr90[MAtr90$CO %in% c("009", "017", "021", "023", "025"),]
-#' proj4string(BOSTON_SMSA) <- CRS(paste("+proj=longlat +datum=NAD27 +no_defs",
-#'       "+ellps=clrk66 +nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat"))
-#' CTC4 <- substring(BOSTON$CTC, 1, 4)
-#' CTC4u <- unique(CTC4)
-#' TB_CTC4u <- match(BOSTON_SMSA$TRACTBASE, CTC4u)
-#' ## match 1980 tracts with 1990
-#' BOSTON_SMSA1 <- BOSTON_SMSA[!is.na(TB_CTC4u),]
-#' ## union Polygons objects with same 1970 tract code
-#' #library(rgeos)
-#' BOSTON_SMSA2 <- unionSpatialPolygons(BOSTON_SMSA1,
-#'      id=as.character(BOSTON_SMSA1$TRACTBASE))
-#' #BOSTON_SMSA2 <- gUnaryUnion(BOSTON_SMSA1,
-#' # id=as.character(BOSTON_SMSA1$TRACTBASE))
-#' ## reorder data set
-#' mm <- match(as.integer(as.character(row.names(BOSTON_SMSA2))), boston.c$TRACT)
-#' df <- boston.c[mm,]
-#' row.names(df) <- df$TRACT
-#' row.names(BOSTON_SMSA2) <- as.character(as.integer(row.names(BOSTON_SMSA2)))
-#' ## create SpatialPolygonsDataFrame
-#' BOSTON_SMSA3 <- SpatialPolygonsDataFrame(BOSTON_SMSA2,
-#'     data=data.frame(poltract=row.names(BOSTON_SMSA2),
-#'     row.names=row.names(BOSTON_SMSA2)))
-#' BOSTON_SMSA4 <- spCbind(BOSTON_SMSA3, df)
-#' mm1 <- match(boston.c$TRACT, row.names(BOSTON_SMSA4))
-#' BOSTON_SMSA5 <- BOSTON_SMSA4[mm1,]
-#' #writeOGR(BOSTON_SMSA5, ".", "boston_tracts", driver="ESRI Shapefile",
-#' # overwrite_layer=TRUE)
-#' moran.test(boston.c$CMEDV, nb2listw(boston.soi))
-#' moran.test(BOSTON_SMSA5$CMEDV, nb2listw(boston.soi))
+#' summary(gp2)
 #' }
+
 
 NULL

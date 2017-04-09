@@ -19,7 +19,7 @@
 #' Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis, 27, Table 1, p. 103.
 #' @note All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets spdep
 #' 
 #' @examples 
 #' data(afcon)

@@ -32,23 +32,21 @@
 #' 
 #' @source Cressie, N (1991), \emph{Statistics for spatial data}. New York: Wiley, pp. 386--389; Cressie, N, Chan NH (1989) Spatial modelling of regional variables. \emph{Journal of the American Statistical Association}, 84, 393--401; Cressie, N, Read, TRC (1985) Do sudden infant deaths come in clusters? \emph{Statistics and Decisions} Supplement Issue 2, 333--349; \url{http://sal.agecon.uiuc.edu/datasets/sids.zip}.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets spdep
 #' 
 #' @examples 
-#' library(maptools)
+#' library(rgdal)
 #' library(spdep)
-#' nc.sids <- readShapePoly(system.file("shapes/sids.shp", package="spData")[1],
-#'                          ID="FIPSNO", proj4string=CRS("+proj=longlat +ellps=clrk66"))
-#' rn <- sapply(slot(nc.sids, "polygons"), function(x) slot(x, "ID"))
+#' nc.sids <- readOGR(system.file("shapes/sids.shp", package="spData")[1])
+#' rn <- levels(nc.sids@data$FIPSNO)
 #' ncCC89_nb <- read.gal(system.file("weights/ncCC89.gal", package="spData")[1],
 #'                       region.id=rn)
 #' ncCR85_nb <- read.gal(system.file("weights/ncCR85.gal", package="spData")[1],
 #'                       region.id=rn)
-#' \dontrun{
-#'         plot(nc.sids, border="grey")
-#'         plot(ncCR85_nb, coordinates(nc.sids), add=TRUE, col="blue")
-#'         plot(nc.sids, border="grey")
-#'         plot(ncCC89_nb, coordinates(nc.sids), add=TRUE, col="blue")
-#' }
+#'                       
+#' plot(nc.sids, border="grey")
+#' plot(ncCR85_nb, coordinates(nc.sids), add=TRUE, col="blue")
+#' plot(nc.sids, border="grey")
+#' plot(ncCC89_nb, coordinates(nc.sids), add=TRUE, col="blue")
 
 NULL

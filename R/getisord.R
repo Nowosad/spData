@@ -14,7 +14,7 @@
 #' 
 #' @source Getis, A. and Ord, J. K. 1996 Local spatial statistics: an overview. In P. Longley and M. Batty (eds) \emph{Spatial analysis: modelling in a GIS environment} (Cambridge: Geoinformation International), 266.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets misc
 #' 
 #' @examples 
 #' data(getisord)

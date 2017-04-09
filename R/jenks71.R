@@ -12,7 +12,7 @@
 #' 
 #' @source Jenks, G. F., Caspall, F. C., 1971. "Error on choroplethic maps: definition, measurement, reduction". Annals, Association of American Geographers, 61 (2), 217--244
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets misc
 #' 
 #' @examples 
 #' data(jenks71)

@@ -15,12 +15,13 @@
 #' @details The contiguous neighbours object does not completely replicate results in the sources, and was reconstructed from \code{auckpolys}; examination of figures in the sources suggests that there are differences in detail, although probably not in substance.
 #' @source Marshall R M (1991) Mapping disease and mortality rates using Empirical Bayes Estimators, Applied Statistics, 40, 283--294; Bailey T, Gatrell A (1995) Interactive Spatial Data Analysis, Harlow: Longman --- INFOMAP data set used with permission.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets sp
 #' 
 #' @examples 
-#' library(maptools)
-#' auckland <- readShapePoly(system.file("shapes/auckland.shp",
-#'                                       package="spData")[1])
+#' library(rgdal)
+#' auckland <- readOGR(system.file("shapes/auckland.shp", package="spData")[1])
+#' plot(auckland)
+#' 
 #' library(spdep)
 #' auckland.nb <- poly2nb(auckland)
 

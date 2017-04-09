@@ -28,10 +28,14 @@
 #' @source Prepared by Luc Anselin. Original data made available by Robin Dubin, Weatherhead School of Management, Case Western Research University, Cleveland, OH. \url{http://sal.agecon.uiuc.edu/datasets/baltimore.zip}
 #' @references Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Regional Science and Urban Economics 22(3), 433-452.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets sf
 #' 
 #' @examples 
 #' data(baltimore)
 #' str(baltimore)
+#' 
+#' library(sf)
+#' baltimore_sf <- baltimore %>% st_as_sf(., coords = c("X","Y"))
+#' plot(baltimore_sf)
 
 NULL
