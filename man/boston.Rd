@@ -158,4 +158,3 @@ Gilley, O.W., and R. Kelley Pace, On the Harrison and Rubinfeld Data, \emph{Jour
 Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to Improve Estimation,  \emph{Journal of the Real Estate Finance and Economics}, 14 (1997), 333-340.
 }
 \keyword{datasets}
-

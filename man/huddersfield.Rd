@@ -20,4 +20,3 @@ data(huddersfield)
 str(huddersfield)
 }
 \keyword{datasets}
-

@@ -21,4 +21,3 @@ box()
 Hopkins, B., 1965 Observations on savanna burning in the Olokemeji Forest Reserve, Nigeria. Journal of Applied Ecology, 2, 367--381.
 }
 \keyword{datasets}
-

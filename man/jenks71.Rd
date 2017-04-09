@@ -20,4 +20,3 @@ data(jenks71)
 jenks71
 }
 \keyword{datasets}
-

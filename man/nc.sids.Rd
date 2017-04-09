@@ -3,10 +3,10 @@
 \docType{data}
 \name{nc.sids}
 \alias{nc.sids}
-\alias{ncCC89.nb}
 \alias{ncCR85.nb}
-\alias{sidscents}
+\alias{ncCC89.nb}
 \alias{sidspolys}
+\alias{sidscents}
 \title{North Carolina SIDS data}
 \format{This data frame contains the following columns:
 \itemize{
@@ -56,4 +56,3 @@ ncCR85_nb <- read.gal(system.file("weights/ncCR85.gal", package="spData")[1],
 }
 }
 \keyword{datasets}
-

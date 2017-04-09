@@ -3,10 +3,10 @@
 \docType{data}
 \name{eire}
 \alias{eire}
-\alias{eire.coords.utm}
 \alias{eire.df}
-\alias{eire.nb}
 \alias{eire.polys.utm}
+\alias{eire.coords.utm}
+\alias{eire.nb}
 \title{Eire data sets}
 \format{This data frame contains the following columns:
 \itemize{
@@ -83,4 +83,3 @@ print(localmoran.sad(e.lm, eire.nb, select=1:length(slot(eire, "polygons"))))
 
 }
 \keyword{datasets}
-

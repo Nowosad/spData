@@ -30,4 +30,3 @@ library(spdep)
 auckland.nb <- poly2nb(auckland)
 }
 \keyword{datasets}
-

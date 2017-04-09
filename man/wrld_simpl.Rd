@@ -32,4 +32,3 @@ plot(wrld_simpl)
 
 }
 \keyword{datasets}
-

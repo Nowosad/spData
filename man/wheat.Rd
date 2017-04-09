@@ -47,4 +47,3 @@ wheat <- readShapeSpatial(system.file("shapes/wheat.shp",
 Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.
 }
 \keyword{datasets}
-

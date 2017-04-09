@@ -38,4 +38,3 @@ str(baltimore)
 Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Regional Science and Urban Economics 22(3), 433-452.
 }
 \keyword{datasets}
-

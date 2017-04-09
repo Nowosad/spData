@@ -2,8 +2,8 @@
 % Please edit documentation in R/used.cars.R
 \docType{data}
 \name{used.cars}
-\alias{usa48.nb}
 \alias{used.cars}
+\alias{usa48.nb}
 \title{US 1960 used car prices}
 \format{This data frame contains the following columns:
 \itemize{
@@ -48,4 +48,3 @@ summary(uc.err1)
 Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with spatial series, in Masser, I (ed) Theory and practice in regional science, London: Pion, pp. 90-104.
 }
 \keyword{datasets}
-

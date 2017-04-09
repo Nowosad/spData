@@ -28,4 +28,3 @@ plot(SplashDams, axes=TRUE)
 \url{http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
 }
 \keyword{datasets}
-
