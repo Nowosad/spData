@@ -46,8 +46,10 @@ The row names of \code{columbus} and the \code{region.id} attribute of \code{pol
 All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, \url{http://sal.agecon.uiuc.edu/datasets/columbus.zip}.
 }
 \examples{
-library(maptools)
-columbus <- readShapePoly(system.file("shapes/columbus.shp", package="spData")[1])
+library(rgdal)
+columbus <- readOGR(system.file("shapes/columbus.shp", package="spData")[1])
+plot(columbus)
+
 library(spdep)
 col.gal.nb <- read.gal(system.file("weights/columbus.gal", package="spData")[1])
 }

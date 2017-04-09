@@ -34,3 +34,4 @@ plot(state.vbm, col=cm.colors(10)[tmp2])
 Greg Snow \email{greg.snow@imail.org} (of this compilation)
 }
 \keyword{datasets}
+\keyword{sp}

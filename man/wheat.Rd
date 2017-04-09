@@ -38,12 +38,13 @@ row.names(df) <- sapply(slot(wheat_spl, "polygons"),
                         function(x) slot(x, "ID"))
 wheat <- SpatialPolygonsDataFrame(wheat_spl, data=df)
 }
-library(maptools)
-wheat <- readShapeSpatial(system.file("shapes/wheat.shp",
-                                      package="spData")[1])
 
+library(sf)
+wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
+plot(wheat)
 }
 \references{
 Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.
 }
 \keyword{datasets}
+\keyword{sf}

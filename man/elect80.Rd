@@ -26,6 +26,8 @@ A data set for 1980 Presidential election results covering 3,107 US counties usi
 }
 \examples{
 data(elect80)
-
+summary(elect80)
+plot(elect80)
 }
 \keyword{datasets}
+\keyword{sp}

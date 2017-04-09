@@ -28,3 +28,4 @@ title(main="Getis-Ord 1996 remote sensing data")
 
 }
 \keyword{datasets}
+\keyword{misc}

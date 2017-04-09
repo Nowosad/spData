@@ -29,12 +29,12 @@ The Eire data set has been converted to shapefile format and placed in the etc/s
 The \code{eire.df} data frame has 26 rows and 9 columns. In addition, polygons of the 26 counties are provided as a multipart polylist in eire.polys.utm (coordinates in km, projection UTM zone 30). Their centroids are in eire.coords.utm. The original Cliff and Ord binary contiguities are in eire.nb.
 }
 \examples{
-library(maptools)
+library(rgdal)
 library(spdep)
-eire <- readShapePoly(system.file("shapes/eire.shp", package="spData")[1], 
-    ID="names", proj4string=CRS("+proj=utm +zone=30 +units=km"))
+eire <- readOGR(system.file("shapes/eire.shp", package="spData")[1])
 eire.nb <- poly2nb(eire)
-#data(eire)
+
+# data(eire)
 # Eire physical anthropology blood group data
 summary(eire$A)
 brks <- round(fivenum(eire$A), digits=2)
@@ -42,8 +42,10 @@ cols <- rev(heat.colors(4))
 plot(eire, col=cols[findInterval(eire$A, brks, all.inside=TRUE)])
 title(main="Percentage with blood group A in Eire")
 legend(x=c(-50, 70), y=c(6120, 6050), leglabs(brks), fill=cols, bty="n")
+
 plot(eire)
 plot(eire.nb, coordinates(eire), add=TRUE)
+
 lA <- lag.listw(nb2listw(eire.nb), eire$A)
 summary(lA)
 moran.test(eire$A, nb2listw(eire.nb))
@@ -55,18 +57,22 @@ summary(A.lm)
 res <- residuals(A.lm)
 brks <- c(min(res),-2,-1,0,1,2,max(res))
 cols <- rev(cm.colors(6))
+
 plot(eire, col=cols[findInterval(res, brks, all.inside=TRUE)])
 title(main="Regression residuals")
 legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cols, bty="n")
+
 lm.morantest(A.lm, nb2listw(eire.nb))
 lm.morantest.sad(A.lm, nb2listw(eire.nb))
 lm.LMtests(A.lm, nb2listw(eire.nb), test="LMerr")
+
 # Eire agricultural data
 brks <- round(fivenum(eire$OWNCONS), digits=2)
 cols <- grey(4:1/5)
 plot(eire, col=cols[findInterval(eire$OWNCONS, brks, all.inside=TRUE)])
 title(main="Percentage own consumption of agricultural produce")
 legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cols, bty="n")
+
 moran.plot(eire$OWNCONS, nb2listw(eire.nb))
 moran.test(eire$OWNCONS, nb2listw(eire.nb))
 e.lm <- lm(OWNCONS ~ ROADACC, data=eire)
@@ -76,6 +82,7 @@ cols <- rev(cm.colors(6))
 plot(eire, col=cols[findInterval(res, brks, all.inside=TRUE)])
 title(main="Regression residuals")
 legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cm.colors(6), bty="n")
+
 lm.morantest(e.lm, nb2listw(eire.nb))
 lm.morantest.sad(e.lm, nb2listw(eire.nb))
 lm.LMtests(e.lm, nb2listw(eire.nb), test="LMerr")
@@ -83,3 +90,5 @@ print(localmoran.sad(e.lm, eire.nb, select=1:length(slot(eire, "polygons"))))
 
 }
 \keyword{datasets}
+\keyword{sp}
+\keyword{spdep}

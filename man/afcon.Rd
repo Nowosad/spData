@@ -37,3 +37,4 @@ moran.test(afcon$totcon, nb2listw(paper.nb))
 geary.test(afcon$totcon, nb2listw(paper.nb))
 }
 \keyword{datasets}
+\keyword{spdep}

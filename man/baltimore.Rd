@@ -33,8 +33,13 @@ House sales price and characteristics for a spatial hedonic regression, Baltimor
 \examples{
 data(baltimore)
 str(baltimore)
+
+library(sf)
+baltimore_sf <- baltimore \%>\% st_as_sf(., coords = c("X","Y"))
+plot(baltimore_sf)
 }
 \references{
 Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Regional Science and Urban Economics 22(3), 433-452.
 }
 \keyword{datasets}
+\keyword{sf}
