@@ -54,3 +54,5 @@ library(spdep)
 col.gal.nb <- read.gal(system.file("weights/columbus.gal", package="spData")[1])
 }
 \keyword{datasets}
+\keyword{sp}
+\keyword{spdep}

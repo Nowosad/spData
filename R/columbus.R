@@ -33,7 +33,7 @@
 #' @source Anselin, Luc.  1988.  Spatial econometrics: methods and models.  Dordrecht: Kluwer Academic, Table 12.1 p. 189.
 #' @note All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, \url{http://sal.agecon.uiuc.edu/datasets/columbus.zip}.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets sp spdep
 #' 
 #' @examples 
 #' library(rgdal)
