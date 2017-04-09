@@ -23,7 +23,7 @@
 #' @source \url{http://www.naturalearthdata.com/}
 #' @source \url{http://data.worldbank.org/}
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets sf
 #' 
 #' @examples 
 #' library(sf)

@@ -1,16 +1,16 @@
 Package: spData
 Title: Datasets for spatial analysis packages
-Version: 0.1-14
+Version: 0.1-16
 Authors@R: c(person("Roger", "Bivand", role = c("aut", "cre"), email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = "ctb"),
         person("Robin", "Lovelace", role = "ctb")
 	)
 Description: Datasets for some spatial analysis packages. 
-    Moved to resolve license issues and reduce package size.
 Depends:
     R (>= 3.3.0)
 Suggests:
     foreign,
+    maptools,
     rgdal,
     sp,
     sf, 

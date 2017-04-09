@@ -24,6 +24,7 @@
 #' @keywords datasets sp spdep
 #' 
 #' @examples 
+#' library(maptools)
 #' library(rgdal)
 #' library(spdep)
 #' eire <- readOGR(system.file("shapes/eire.shp", package="spData")[1])

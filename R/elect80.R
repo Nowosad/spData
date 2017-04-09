@@ -21,6 +21,7 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
+#' library(sp)
 #' data(elect80)
 #' summary(elect80)
 #' plot(elect80)

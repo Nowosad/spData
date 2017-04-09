@@ -37,3 +37,4 @@ plot(wrld)
 
 }
 \keyword{datasets}
+\keyword{sf}
