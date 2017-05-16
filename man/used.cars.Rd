@@ -2,8 +2,8 @@
 % Please edit documentation in R/used.cars.R
 \docType{data}
 \name{used.cars}
-\alias{usa48.nb}
 \alias{used.cars}
+\alias{usa48.nb}
 \title{US 1960 used car prices}
 \format{This data frame contains the following columns:
 \itemize{
@@ -24,6 +24,7 @@ moran.plot(used.cars$price.1960, nb2listw(usa48.nb),
            labels=rownames(used.cars))
 uc.lm <- lm(price.1960 ~ tax.charges, data=used.cars)
 summary(uc.lm)
+
 lm.morantest(uc.lm, nb2listw(usa48.nb))
 lm.morantest.sad(uc.lm, nb2listw(usa48.nb))
 lm.LMtests(uc.lm, nb2listw(usa48.nb))
@@ -48,4 +49,4 @@ summary(uc.err1)
 Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with spatial series, in Masser, I (ed) Theory and practice in regional science, London: Pion, pp. 90-104.
 }
 \keyword{datasets}
-
+\keyword{spdep}

@@ -12,7 +12,7 @@
 #' 
 #' @source Martuzzi M, Elliott P (1996) Empirical Bayes estimation of small area prevalence of non-rare conditions, Statistics in Medicine 15, 1867--1873, pp. 1870--1871.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets misc
 #' 
 #' @examples 
 #' data(huddersfield)

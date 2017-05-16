@@ -13,7 +13,7 @@
 #' @source Hanna, F. A. 1966 Effects of regional differences in taxes and transport charges on automobile consumption, in Ostry, S., Rhymes, J. K. (eds) Papers on regional statistical studies, Toronto: Toronto University Press, pp. 199-223.
 #' @references Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with spatial series, in Masser, I (ed) Theory and practice in regional science, London: Pion, pp. 90-104.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets spdep
 #' 
 #' @examples 
 #' library(spdep)
@@ -23,6 +23,7 @@
 #'            labels=rownames(used.cars))
 #' uc.lm <- lm(price.1960 ~ tax.charges, data=used.cars)
 #' summary(uc.lm)
+#' 
 #' lm.morantest(uc.lm, nb2listw(usa48.nb))
 #' lm.morantest.sad(uc.lm, nb2listw(usa48.nb))
 #' lm.LMtests(uc.lm, nb2listw(usa48.nb))

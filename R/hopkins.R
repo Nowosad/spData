@@ -9,12 +9,12 @@
 #' @source Upton, G., Fingleton, B. 1985 Spatial data analysis by example: point pattern and quatitative data, Wiley, pp. 38--39.
 #' @references Hopkins, B., 1965 Observations on savanna burning in the Olokemeji Forest Reserve, Nigeria. Journal of Applied Ecology, 2, 367--381.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets misc
 #' 
 #' @examples 
 #' data(hopkins)
 #' image(1:32, 1:32, hopkins[5:36,36:5], breaks=c(-0.5, 3.5, 20),
 #'       col=c("white", "black"))
-#' box()
+
 
 NULL

@@ -18,7 +18,7 @@
 #' @source Cressie, N. A. C. (1993) Statistics for Spatial Data. Wiley, New York, p. 455.
 #' @references Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets sf
 #' 
 #' @examples 
 #' \dontrun{
@@ -36,9 +36,9 @@
 #'                         function(x) slot(x, "ID"))
 #' wheat <- SpatialPolygonsDataFrame(wheat_spl, data=df)
 #' }
-#' library(maptools)
-#' wheat <- readShapeSpatial(system.file("shapes/wheat.shp",
-#'                                       package="spData")[1])
 #' 
+#' library(sf)
+#' wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
+#' plot(wheat)
 
 NULL

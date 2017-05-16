@@ -3,8 +3,8 @@
 \docType{data}
 \name{NY_data}
 \alias{NY_data}
-\alias{listw_NY}
 \alias{nydata}
+\alias{listw_NY}
 \title{New York leukemia data}
 \format{A data frame with 281 observations on the following 12 variables, and the binary coded spatial weights used in the source.
 \itemize{
@@ -36,11 +36,14 @@ library(foreign)
 nydata <- read.dbf(system.file("misc/nydata.dbf", package="spData")[1])
 library(sp)
 coordinates(nydata) <- c("X", "Y")
+plot(nydata)
+
 nyadjmat <- as.matrix(read.dbf(system.file("misc/nyadjwts.dbf",
                                            package="spData")[1])[-1])
 ID <- as.character(names(read.dbf(system.file("misc/nyadjwts.dbf",
                                               package="spData")[1]))[-1])
 identical(substring(ID, 2, 10), substring(as.character(nydata$AREAKEY), 2, 10))
+
 library(spdep)
 nyadjlw <- mat2listw(nyadjmat, as.character(nydata$AREAKEY))
 listw_NY <- nb2listw(nyadjlw$neighbours, style="B")
@@ -49,4 +52,5 @@ listw_NY <- nb2listw(nyadjlw$neighbours, style="B")
 Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Health Data}. New York: John Wiley and Sons.
 }
 \keyword{datasets}
-
+\keyword{foreign}
+\keyword{spdep}

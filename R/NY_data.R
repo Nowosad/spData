@@ -25,7 +25,7 @@
 #' @source \url{http://www.sph.emory.edu/~lwaller/ch9index.htm}
 #' @references Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Health Data}. New York: John Wiley and Sons.
 #' @docType data
-#' @keywords datasets
+#' @keywords datasets foreign spdep
 #' 
 #' @examples 
 #' ## NY leukemia
@@ -33,11 +33,14 @@
 #' nydata <- read.dbf(system.file("misc/nydata.dbf", package="spData")[1])
 #' library(sp)
 #' coordinates(nydata) <- c("X", "Y")
+#' plot(nydata)
+#' 
 #' nyadjmat <- as.matrix(read.dbf(system.file("misc/nyadjwts.dbf",
 #'                                            package="spData")[1])[-1])
 #' ID <- as.character(names(read.dbf(system.file("misc/nyadjwts.dbf",
 #'                                               package="spData")[1]))[-1])
 #' identical(substring(ID, 2, 10), substring(as.character(nydata$AREAKEY), 2, 10))
+#' 
 #' library(spdep)
 #' nyadjlw <- mat2listw(nyadjmat, as.character(nydata$AREAKEY))
 #' listw_NY <- nb2listw(nyadjlw$neighbours, style="B")

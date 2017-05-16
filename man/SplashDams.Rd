@@ -20,12 +20,12 @@ R. R. Miller (2010) Is the Past Present? Historical Splash-dam Mapping and Strea
 Data for Splash Dams in western Oregon
 }
 \examples{
-data(SplashDams)
 library(sp)
+data(SplashDams)
 plot(SplashDams, axes=TRUE)
 }
 \references{
 \url{http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
 }
 \keyword{datasets}
-
+\keyword{sp}

@@ -15,10 +15,9 @@ A 20m square is divided into 40 by 40 0.5m quadrats. Observations are in tens of
 data(hopkins)
 image(1:32, 1:32, hopkins[5:36,36:5], breaks=c(-0.5, 3.5, 20),
       col=c("white", "black"))
-box()
 }
 \references{
 Hopkins, B., 1965 Observations on savanna burning in the Olokemeji Forest Reserve, Nigeria. Journal of Applied Ecology, 2, 367--381.
 }
 \keyword{datasets}
-
+\keyword{misc}
