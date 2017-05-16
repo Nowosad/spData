@@ -8,8 +8,6 @@ Datasets for spatial analysis
 
 ### `sf`
 
-> > > > > > > efd049bdb32865d5b2f8b517f4bb31f8e1949724
-
 -   `baltimore` - House sales prices, Baltimore, MD 1978
 -   `cycle_hire` -
 -   `cycle_hire_osm` -
