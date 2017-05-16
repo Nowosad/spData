@@ -1,8 +1,22 @@
 language: r
-sudo: required
+
 warnings_are_errors: true
-env:
-  global:
-    - NOT_CRAN=false
+
+r:
+  - release
+  - devel
+
+cache: packages
+
+sudo: required
+
+dist: trusty
+
 before_install:
-  - echo "options(repos = c(CRAN='http://cran.rstudio.com'))" > ~/.Rprofile
+  - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
+  - sudo apt-get --yes --force-yes update -qq
+  - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev
+  
+r_packages:
+  - rgdal
+  - sf
