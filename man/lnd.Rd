@@ -3,30 +3,29 @@
 \docType{data}
 \name{lnd}
 \alias{lnd}
-\title{TITLE}
-\format{FORMAT:
-\itemize{
-    \item{NAME} {}
-    \item{GSS_CODE} {}
-    \item{HECTARES} {}
-    \item{NONLD_AREA} {}
-    \item{ONS_INNER} {}
-    \item{SUB_2009} {}
-    \item{SUB_2006} {}
+\title{The boroughs of London}
+\format{\itemize{
+    \item{NAME} {Borough name}
+    \item{GSS_CODE} {Official code}
+    \item{HECTARES} {How many hectares}
+    \item{NONLD_AREA} {Area outside London}
+    \item{ONS_INNER} {Office for national statistics code}
+    \item{SUB_2009} {Empty column}
+    \item{SUB_2006} {Empty column}
     \item{geometry} {sfc_MULTIPOLYGON}
 }}
 \source{
-\url{http://SOURCE.com}
+\url{https://github.com/Robinlovelace/Creating-maps-in-R}
 }
 \description{
-DESCRIPTION
+Polygons representing large administrative zones in London
 }
 \examples{
 library(sf)
 data(lnd)
 # or
 lnd <- st_read(system.file("shapes/lnd.geojson", package="spData"))
-
+summary(lnd)
 plot(lnd)
 
 }
