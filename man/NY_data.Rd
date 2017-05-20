@@ -3,8 +3,8 @@
 \docType{data}
 \name{NY_data}
 \alias{NY_data}
-\alias{listw_NY}
 \alias{nydata}
+\alias{listw_NY}
 \title{New York leukemia data}
 \format{A data frame with 281 observations on the following 12 variables, and the binary coded spatial weights used in the source.
 \itemize{
@@ -54,4 +54,3 @@ Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Heal
 \keyword{datasets}
 \keyword{foreign}
 \keyword{spdep}
-

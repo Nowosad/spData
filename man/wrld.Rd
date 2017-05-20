@@ -41,4 +41,3 @@ See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth
 }
 \keyword{datasets}
 \keyword{sf}
-

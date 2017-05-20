@@ -31,4 +31,3 @@ plot(lnd)
 }
 \keyword{datasets}
 \keyword{sf}
-

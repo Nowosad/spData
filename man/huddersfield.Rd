@@ -21,4 +21,3 @@ str(huddersfield)
 }
 \keyword{datasets}
 \keyword{misc}
-

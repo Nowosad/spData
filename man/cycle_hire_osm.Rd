@@ -41,4 +41,3 @@ nrow(lnd_cycle_p_mini)
 }
 \keyword{datasets}
 \keyword{sf}
-
