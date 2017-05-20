@@ -4,8 +4,8 @@
 \name{getisord}
 \alias{getisord}
 \alias{x}
-\alias{y}
 \alias{xyz}
+\alias{y}
 \title{Getis-Ord remote sensing example data}
 \format{This data frame contains the following columns:
 \itemize{
@@ -29,3 +29,4 @@ title(main="Getis-Ord 1996 remote sensing data")
 }
 \keyword{datasets}
 \keyword{misc}
+

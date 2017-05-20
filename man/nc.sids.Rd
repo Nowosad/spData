@@ -3,10 +3,10 @@
 \docType{data}
 \name{nc.sids}
 \alias{nc.sids}
-\alias{ncCR85.nb}
 \alias{ncCC89.nb}
-\alias{sidspolys}
+\alias{ncCR85.nb}
 \alias{sidscents}
+\alias{sidspolys}
 \title{North Carolina SIDS data}
 \format{This data frame contains the following columns:
 \itemize{
@@ -55,3 +55,4 @@ plot(ncCC89_nb, coordinates(nc.sids), add=TRUE, col="blue")
 }
 \keyword{datasets}
 \keyword{spdep}
+

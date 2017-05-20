@@ -2,8 +2,8 @@
 % Please edit documentation in R/house.R
 \docType{data}
 \name{house}
-\alias{house}
 \alias{LO_nb}
+\alias{house}
 \alias{trMat}
 \title{Lucas county OH housing}
 \format{Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots. The data slot is a data frame with 25357 observations on the following 24 variables.
@@ -49,3 +49,4 @@ plot(house)
 }
 \keyword{datasets}
 \keyword{sp}
+

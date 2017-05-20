@@ -43,3 +43,4 @@ Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Region
 }
 \keyword{datasets}
 \keyword{sf}
+

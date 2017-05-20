@@ -5,7 +5,7 @@ Authors@R: c(person("Roger", "Bivand", role = c("aut", "cre"), email="Roger.Biva
         person("Jakub", "Nowosad", role = "ctb"),
         person("Robin", "Lovelace", role = "ctb")
 	)
-Description: Datasets for some spatial analysis packages. 
+Description: Datasets for some spatial analysis packages.
 Depends:
     R (>= 3.3.0)
 Suggests:
@@ -13,7 +13,7 @@ Suggests:
     maptools,
     rgdal,
     sp,
-    sf, 
+    sf,
     spdep
 License: CC BY-SA 4.0
-RoxygenNote: 6.0.1
+RoxygenNote: 5.0.1

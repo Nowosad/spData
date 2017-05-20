@@ -3,21 +3,21 @@
 \docType{data}
 \name{cycle_hire_osm}
 \alias{cycle_hire_osm}
-\title{TITLE}
-\format{FORMAT:
-\itemize{
-    \item{osm_id} {}
-    \item{name} {}
-    \item{capacity} {}
-    \item{cyclestreets_id} {}
-    \item{description} {}
+\title{Cycle hire points in London from OSM}
+\format{\itemize{
+    \item{osm_id} {The OSM ID}
+    \item{name} {The name of the cycle point}
+    \item{capacity} {How many bikes it can take}
+    \item{cyclestreets_id} {The ID linked to cyclestreets' photomap}
+    \item{description} {Additional description of points}
     \item{geometry} {sfc_POINT}
 }}
 \source{
-\url{http://SOURCE.com}
+\url{http://www.openstreetmap.org}
 }
 \description{
-DESCRIPTION
+Dataset downloaded using the osmdata package
+representing cycle hire points accross London.
 }
 \examples{
 library(sf)
@@ -27,6 +27,18 @@ cycle_hire_osm <- st_read(system.file("shapes/cycle_hire_osm.geojson", package="
 
 plot(cycle_hire_osm)
 
+# Code used to download the data:
+\dontrun{
+library(osmdata)
+library(sf)
+q = add_feature(opq = opq("London"), key = "network", value = "tfl_cycle_hire")
+lnd_cycle_hire = osmdata_sf(q)
+lnd_cycle_p = lnd_cycle_hire$osm_points
+plot(lnd_cycle_p)
+lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestreets_id, description)
+nrow(lnd_cycle_p_mini)
+}
 }
 \keyword{datasets}
 \keyword{sf}
+

@@ -2,8 +2,8 @@
 % Please edit documentation in R/used.cars.R
 \docType{data}
 \name{used.cars}
-\alias{used.cars}
 \alias{usa48.nb}
+\alias{used.cars}
 \title{US 1960 used car prices}
 \format{This data frame contains the following columns:
 \itemize{
@@ -50,3 +50,4 @@ Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with sp
 }
 \keyword{datasets}
 \keyword{spdep}
+
