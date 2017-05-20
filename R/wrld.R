@@ -20,11 +20,13 @@
 #' }
 #' The object is in geographical coordinates using the WGS84 datum.
 #' 
+#' @seealso 
+#' See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth
+#' 
 #' @source \url{http://www.naturalearthdata.com/}
 #' @source \url{http://data.worldbank.org/}
 #' @docType data
 #' @keywords datasets sf
-#' 
 #' @examples 
 #' library(sf)
 #' data(wrld)
@@ -32,6 +34,6 @@
 #' wrld <- st_read(system.file("shapes/wrld.gpkg", package="spData"))
 #' 
 #' plot(wrld)
-#'
+#' 
 
 NULL

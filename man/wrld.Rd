@@ -36,6 +36,9 @@ wrld <- st_read(system.file("shapes/wrld.gpkg", package="spData"))
 plot(wrld)
 
 }
+\seealso{
+See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth
+}
 \keyword{datasets}
 \keyword{sf}
 
