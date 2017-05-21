@@ -17,3 +17,4 @@ Suggests:
     spdep
 License: CC BY-SA 4.0
 RoxygenNote: 6.0.1
+LazyData: true
