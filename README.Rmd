@@ -27,7 +27,7 @@ Datasets for spatial analysis
 - `cycle_hire` - 
 - `cycle_hire_osm` - 
 - `lnd` - 
-- `wrld` - world country polygons
+- `world` - world country polygons
 - `wheat` - Mercer and Hall wheat yield data
 
 ### `sp`
