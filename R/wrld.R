@@ -1,5 +1,5 @@
 #' @name wrld
-#' @aliases wrld
+#' @aliases wrld world
 #' @title World country polygons
 #'
 #' @description The object loaded is a \code{sf} object containing a world map data from Natural Earth with a few variables from World Bank
