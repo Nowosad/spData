@@ -38,4 +38,3 @@ cycle_hire = st_sf(cycle_hire, st_multipoint(c_names[c("lon", "lat")]))
 }
 \keyword{datasets}
 \keyword{sf}
-

@@ -21,4 +21,3 @@ jenks71
 }
 \keyword{datasets}
 \keyword{misc}
-

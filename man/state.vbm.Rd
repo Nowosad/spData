@@ -26,13 +26,12 @@ tmp2 <- cut(tmp, seq(min(tmp), max(tmp), length.out=11),
 plot(state.vbm, col=cm.colors(10)[tmp2])
 
 }
-\author{
-Greg Snow \email{greg.snow@imail.org} (of this compilation)
-}
 \references{
 \url{http://www.markmonmonier.com/index.htm},
 \url{http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html}
 }
+\author{
+Greg Snow \email{greg.snow@imail.org} (of this compilation)
+}
 \keyword{datasets}
 \keyword{sp}
-
