@@ -24,10 +24,10 @@ Datasets for spatial analysis
 ### `sf`
 
 - `baltimore` - House sales prices, Baltimore, MD 1978
-- `cycle_hire` - Cycle hire points in London
-- `cycle_hire_osm` - Cycle hire points in London from OSM
-- `lnd` - The boroughs of London
-- `wrld` - World country polygons
+- `cycle_hire` - 
+- `cycle_hire_osm` - 
+- `lnd` - 
+- `world` - world country polygons
 - `wheat` - Mercer and Hall wheat yield data
 
 ### `sp`

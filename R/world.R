@@ -1,5 +1,5 @@
-#' @name wrld
-#' @aliases wrld world
+#' @name world
+#' @aliases wrld
 #' @title World country polygons
 #'
 #' @description The object loaded is a \code{sf} object containing a world map data from Natural Earth with a few variables from World Bank
@@ -29,11 +29,11 @@
 #' @keywords datasets sf
 #' @examples 
 #' library(sf)
-#' data(wrld)
+#' data(world)
 #' # or
-#' wrld <- st_read(system.file("shapes/wrld.gpkg", package="spData"))
+#' world <- st_read(system.file("shapes/world.gpkg", package="spData"))
 #' 
-#' plot(wrld)
+#' plot(world)
 #' 
 
 NULL
