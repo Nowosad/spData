@@ -95,4 +95,3 @@ Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to
 }
 \keyword{datasets}
 \keyword{spdep}
-

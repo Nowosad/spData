@@ -2,11 +2,11 @@
 % Please edit documentation in R/columbus.R
 \docType{data}
 \name{columbus}
-\alias{bbs}
-\alias{col.gal.nb}
 \alias{columbus}
+\alias{col.gal.nb}
 \alias{coords}
 \alias{polys}
+\alias{bbs}
 \title{Columbus OH spatial analysis data set}
 \format{This data frame contains the following columns:
        \itemize{
@@ -56,4 +56,3 @@ col.gal.nb <- read.gal(system.file("weights/columbus.gal", package="spData")[1])
 \keyword{datasets}
 \keyword{sp}
 \keyword{spdep}
-

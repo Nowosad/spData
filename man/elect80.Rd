@@ -2,11 +2,11 @@
 % Please edit documentation in R/elect80.R
 \docType{data}
 \name{elect80}
-\alias{dll}
-\alias{e80_queen}
 \alias{elect80}
 \alias{elect80_lw}
 \alias{k4}
+\alias{dll}
+\alias{e80_queen}
 \title{1980 Presidential election results}
 \format{A SpatialPointsDataFrame with 3107 observations on the following 7 variables.
 \itemize{
@@ -32,4 +32,3 @@ plot(elect80)
 }
 \keyword{datasets}
 \keyword{sp}
-
