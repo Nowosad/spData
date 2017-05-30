@@ -1,45 +1,87 @@
-This files lists the copyright holders and licenses (if known) of the
-various data sets in the spData package:
-
+This files lists the copyright holders and licenses (if known) of the various data sets in the spData package:
 
 afcon
 -----
 
+All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign.
+
 auckland
 --------
+
+Marshall R M (1991) Mapping disease and mortality rates using Empirical Bayes Estimators, Applied Statistics, 40, 283--294; Bailey T, Gatrell A (1995) Interactive Spatial Data Analysis, Harlow: Longman --- INFOMAP data set used with permission.
 
 baltimore
 ---------
 
+Prepared by Luc Anselin. Original data made available by Robin Dubin, Weatherhead School of Management, Case Western Research University, Cleveland, OH. \url{http://sal.agecon.uiuc.edu/datasets/baltimore.zip}
+
+Please cite the following reference if you use this dataset:
+
+Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Regional Science and Urban Economics 22(3), 433-452.
+
 boston
 ------
+
+Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: \url{http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip}, counties in the BOSTON SMSA \url{http://www.census.gov/population/metro/files/lists/historical/63mfips.txt}; tract conversion table 1980/1970: \url{https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&permit[0]=AVAILABLE}, \url{http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&study=7913&bundle=all&ds=1&dups=yes}
 
 columbus
 --------
 
+All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, \url{http://sal.agecon.uiuc.edu/datasets/columbus.zip}.
+
+Please cite the following reference if you use this dataset:
+
+Anselin, Luc.  1988.  Spatial econometrics: methods and models.  Dordrecht: Kluwer Academic, Table 12.1 p. 189.
+
 cycle_hire
 ----------
+
+The data was downloaded from http://cyclehireapp.com/cyclehirelive/cyclehire.csv.
 
 eire
 ----
 
+Upton and Fingleton 1985, - Bailey and Gatrell 1995, ch. 1 for blood group data, Cliff and Ord (1973), p. 107 for remaining variables (also after O'Sullivan, 1968). Polygon borders and Irish data sourced from Michael Tiefelsdorf's SPSS Saddlepoint bundle, originally hosted at: \url{http://geog-www.sbs.ohio-state.edu/faculty/tiefelsdorf/GeoStat.htm}.
+
 elect80
 -------
+
+Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
 
 getisord
 --------
 
+Please cite the following reference if you use this dataset:
+
+Getis, A. and Ord, J. K. 1996 Local spatial statistics: an overview. In P. Longley and M. Batty (eds) \emph{Spatial analysis: modelling in a GIS environment} (Cambridge: Geoinformation International), 266.
+
 hopkins
 -------
+
+Upton, G., Fingleton, B. 1985 Spatial data analysis by example: point pattern and quatitative data, Wiley, pp. 38--39.  was the source of the data.
+
+Please cite the following reference if you use this dataset:
+
+Hopkins, B., 1965 Observations on savanna burning in the Olokemeji Forest Reserve, Nigeria. Journal of Applied Ecology, 2, 367--381.
 
 house
 -----
 
+Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
+
 huddersfield
 ------------
 
+Please cite the following reference if you use this dataset:
+
+Martuzzi M, Elliott P (1996) Empirical Bayes estimation of small area prevalence of non-rare conditions, Statistics in Medicine 15, 1867--1873, pp. 1870--1871.
+
 jenks71
 -------
+
+Please cite the following reference if you use this dataset:
+
+Jenks, G. F., Caspall, F. C., 1971. "Error on choroplethic maps: definition, measurement, reduction". Annals, Association of American Geographers, 61 (2), 217--244
 
 lnd
 ---
@@ -47,17 +89,31 @@ lnd
 nc.sids
 -------
 
+Cressie, N (1991), \emph{Statistics for spatial data}. New York: Wiley, pp. 386--389; Cressie, N, Chan NH (1989) Spatial modelling of regional variables. \emph{Journal of the American Statistical Association}, 84, 393--401; Cressie, N, Read, TRC (1985) Do sudden infant deaths come in clusters? \emph{Statistics and Decisions} Supplement Issue 2, 333--349; \url{http://sal.agecon.uiuc.edu/datasets/sids.zip}.
+
 NY_data
 -------
 
+Please cite the following reference if you use this dataset:
+
+Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Health Data}. New York: John Wiley and Sons.
+
 SplashDams
 ----------
+
+Please cite the following reference if you use this dataset:
+
+R. R. Miller (2010) Is the Past Present? Historical Splash-dam Mapping and Stream Disturbance Detection in the Oregon Coastal Province. MSc. thesis, Oregon State University
 
 state.vbm
 ---------
 
 used.cars
 ---------
+
+Please cite the following reference if you use this dataset:
+
+Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with spatial series, in Masser, I (ed) Theory and practice in regional science, London: Pion, pp. 90-104.
 
 wheat
 -----
