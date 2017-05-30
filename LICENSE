@@ -1,0 +1,16 @@
+This files lists the copyright holders and licenses (if known) of the
+various data sets in the spData package:
+
+wheat
+-----
+
+Cressie, N. A. C. (1993) Statistics for Spatial Data. Wiley, New York, p. 455. was the source of the data.
+
+Please cite the following reference if you use this dataset:
+
+Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.
+
+world
+-----
+
+The data is from the Natural Earth (http://www.naturalearthdata.com/), and it is in the Public Domain.

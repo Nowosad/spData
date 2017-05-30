@@ -1,8 +1,8 @@
 Package: spData
 Title: Datasets for spatial analysis packages
-Version: 0.1-20
-Authors@R: c(person("Roger", "Bivand", role = c("aut", "cre"), email="Roger.Bivand@nhh.no"),
-        person("Jakub", "Nowosad", role = "ctb"),
+Version: 0.1-21
+Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
+        person("Jakub", "Nowosad", role = c("ctb", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "ctb")
 	)
 Description: Datasets for some spatial analysis packages.
@@ -15,6 +15,8 @@ Suggests:
     sp,
     sf,
     spdep
-License: CC BY-SA 4.0
+License: CC BY-SA 4.0 + file LICENSE
 RoxygenNote: 6.0.1
 LazyData: true
+URL: https://github.com/Nowosad/spData
+BugReports: https://github.com/Nowosad/spData/issues
