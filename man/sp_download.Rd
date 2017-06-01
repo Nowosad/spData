@@ -4,13 +4,15 @@
 \alias{sp_download}
 \title{sp_download}
 \usage{
-sp_download(filenames, version_id, dest_folder = "data",
+sp_download(filenames, dest_folder = "data",
   baseurl = "https://github.com/Nowosad/spDataLarge/blob/master/inst/")
 }
 \arguments{
 \item{filenames}{names of files}
 
 \item{dest_folder}{destination folder (data/ by default)}
+
+\item{baseurl}{the url to download data from}
 }
 \description{
 Retrieves external files from the spDataLarge package, based on functions from the externalrdata package \url{https://github.com/jsta/externalrdata}

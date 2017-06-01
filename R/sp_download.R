@@ -4,11 +4,12 @@
 #' @description Retrieves external files from the spDataLarge package, based on functions from the externalrdata package \url{https://github.com/jsta/externalrdata}
 #' @param filenames names of files
 #' @param dest_folder destination folder (data/ by default)
+#' @param baseurl the url to download data from
 #' @examples \dontrun{
 #' sp_download(c("zion.gpkg", "landsat_b3.tif"))
 #' }
 #'
-sp_download <- function(filenames, version_id, dest_folder = "data",
+sp_download <- function(filenames, dest_folder = "data",
                         baseurl = "https://github.com/Nowosad/spDataLarge/blob/master/inst/"){
         
         urls <- lapply(filenames, get_single_url, baseurl)
