@@ -128,3 +128,8 @@ world
 -----
 
 The data is from the Natural Earth (http://www.naturalearthdata.com/), and it is in the Public Domain.
+
+worldbank_df
+------------
+
+The data is from the World Bank (http://data.worldbank.org).
