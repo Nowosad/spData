@@ -8,6 +8,9 @@ Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"
 Description: Datasets for some spatial analysis packages.
 Depends:
     R (>= 3.3.0)
+Imports: tools,
+    purrr,
+    utils
 Suggests:
     foreign,
     maptools,
