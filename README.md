@@ -39,6 +39,7 @@ Datasets for spatial analysis
 -   `hopkins` - Hopkins burnt savanna herb remains
 -   `huddersfield` - Prevalence of respiratory symptoms
 -   `jenks71` - Illinois 1959 county gross farm product value per acre
+-   `worldbank_df` - Selected World Bank data
 
 Installation
 ------------

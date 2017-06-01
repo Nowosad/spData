@@ -1,6 +1,6 @@
 #' @name worldbank_df
 #' @aliases worldbank_df
-#' @title World bank data
+#' @title World Bank data
 #'
 #' @description The object loaded is a \code{data.frame} object containing a data from World Bank
 #' 
@@ -24,7 +24,7 @@
 #' @examples 
 #' data(worldbank_df)
 #' # or
-#' worldbank_df <- st_read(system.file("misc/worldbank_df.gpkg", package="spData"))
+#' worldbank_df <- read.csv(system.file("misc/worldbank_df.csv", package="spData"))
 #' 
 #' summary(worldbank_df)
 #' 

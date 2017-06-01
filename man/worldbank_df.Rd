@@ -3,7 +3,7 @@
 \docType{data}
 \name{worldbank_df}
 \alias{worldbank_df}
-\title{World bank data}
+\title{World Bank data}
 \format{Formal class 'data.frame'; the data contains a data.frame with 217 obs. of 7 variables:
 \itemize{
     \item{name} {factor of country names}
@@ -23,7 +23,7 @@ The object loaded is a \code{data.frame} object containing a data from World Ban
 \examples{
 data(worldbank_df)
 # or
-worldbank_df <- st_read(system.file("misc/worldbank_df.gpkg", package="spData"))
+worldbank_df <- read.csv(system.file("misc/worldbank_df.csv", package="spData"))
 
 summary(worldbank_df)
 
