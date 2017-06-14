@@ -30,7 +30,8 @@ plot(cycle_hire)
 
 \dontrun{
 # Download the data
-cycle_hire = readr::read_csv("http://cyclehireapp.com/cyclehirelive/cyclehire.csv", col_names = FALSE, skip = TRUE)
+cycle_hire = readr::read_csv("http://cyclehireapp.com/cyclehirelive/cyclehire.csv", 
+  col_names = FALSE, skip = TRUE)
 cycle_hire = cycle_hire[c_names]
 c_names = c("id", "name", "area", "lat", "lon", "nbikes", "nempty")
 cycle_hire = st_sf(cycle_hire, st_multipoint(c_names[c("lon", "lat")]))
