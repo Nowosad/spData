@@ -5,7 +5,7 @@ Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "aut")
 	)
-Description: Datasets for some spatial analysis packages.
+Description: Datasets for some spatial analysis packages. It includes data of a sf, sp, and spdep class.
 Depends:
     R (>= 3.3.0)
 Imports: tools,
