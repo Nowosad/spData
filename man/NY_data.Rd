@@ -22,7 +22,7 @@
 \item{PEXPOSURE} {"exposure potential": inverse distance between each census tract centroid and the nearest TCE site, IDIST, transformed via log(100*IDIST)}
 }}
 \source{
-\url{http://www.sph.emory.edu/~lwaller/ch9index.htm}
+http://www.sph.emory.edu/~lwaller/ch9index.htm
 }
 \description{
 New York leukemia data taken from the data sets supporting Waller and Gotway 2004 (the data should be loaded by running \code{example(NY_data)} to demonstrate spatial data import techniques)

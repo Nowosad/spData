@@ -43,7 +43,7 @@ The \code{columbus} data frame has 49 rows and 22 columns. Unit of analysis: 49 
 The row names of \code{columbus} and the \code{region.id} attribute of \code{polys} are set to \code{columbus$NEIGNO}.
 }
 \note{
-All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, \url{http://sal.agecon.uiuc.edu/datasets/columbus.zip}.
+All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, http://sal.agecon.uiuc.edu/datasets/columbus.zip.
 }
 \examples{
 library(rgdal)

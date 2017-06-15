@@ -22,7 +22,7 @@
 #' 
 #' @details The examples section shows how the DBF files from the book website for Chapter 9 were converted into the \code{nydata} data frame and the \code{listw_NY} spatial weights list.
 #' 
-#' @source \url{http://www.sph.emory.edu/~lwaller/ch9index.htm}
+#' @source http://www.sph.emory.edu/~lwaller/ch9index.htm
 #' @references Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Health Data}. New York: John Wiley and Sons.
 #' @docType data
 #' @keywords datasets foreign spdep

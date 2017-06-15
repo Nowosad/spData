@@ -31,7 +31,7 @@
 #'        }
 #' @details The row names of \code{columbus} and the \code{region.id} attribute of \code{polys} are set to \code{columbus$NEIGNO}.
 #' @source Anselin, Luc.  1988.  Spatial econometrics: methods and models.  Dordrecht: Kluwer Academic, Table 12.1 p. 189.
-#' @note All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, \url{http://sal.agecon.uiuc.edu/datasets/columbus.zip}.
+#' @note All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, http://sal.agecon.uiuc.edu/datasets/columbus.zip.
 #' @docType data
 #' @keywords datasets sp spdep
 #' 

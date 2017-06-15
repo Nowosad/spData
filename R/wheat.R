@@ -13,7 +13,7 @@
 #'         \item{lon} {local coordinates eastings}
 #'         \item{lat1} {local coordinates northings ordered south to north}
 #' }
-#' @note The value of 4.03 was changed to 4.33 (wheat[71,]) 13 January 2014; thanks to Sandy Burden; cross-checked with \url{http://www.itc.nl/personal/rossiter/teach/R/mhw.csv}, which agrees.
+#' @note The value of 4.03 was changed to 4.33 (wheat[71,]) 13 January 2014; thanks to Sandy Burden; cross-checked with http://www.itc.nl/personal/rossiter/teach/R/mhw.csv, which agrees.
 #' 
 #' @source Cressie, N. A. C. (1993) Statistics for Spatial Data. Wiley, New York, p. 455.
 #' @references Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.

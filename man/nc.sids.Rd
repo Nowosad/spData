@@ -32,7 +32,7 @@
         \item{NWBIR79} {non-white births, 1979-84}
 }}
 \source{
-Cressie, N (1991), \emph{Statistics for spatial data}. New York: Wiley, pp. 386--389; Cressie, N, Chan NH (1989) Spatial modelling of regional variables. \emph{Journal of the American Statistical Association}, 84, 393--401; Cressie, N, Read, TRC (1985) Do sudden infant deaths come in clusters? \emph{Statistics and Decisions} Supplement Issue 2, 333--349; \url{http://sal.agecon.uiuc.edu/datasets/sids.zip}.
+Cressie, N (1991), \emph{Statistics for spatial data}. New York: Wiley, pp. 386--389; Cressie, N, Chan NH (1989) Spatial modelling of regional variables. \emph{Journal of the American Statistical Association}, 84, 393--401; Cressie, N, Read, TRC (1985) Do sudden infant deaths come in clusters? \emph{Statistics and Decisions} Supplement Issue 2, 333--349; http://sal.agecon.uiuc.edu/datasets/sids.zip.
 }
 \description{
 (Use \code{example(nc.sids)} to read the data set from shapefile, together with import of two different list of neighbours). 
