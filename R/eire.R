@@ -30,7 +30,7 @@
 #' eire <- readOGR(system.file("shapes/eire.shp", package="spData")[1])
 #' eire.nb <- poly2nb(eire)
 #' 
-#' # data(eire)
+#' data(eire)
 #' # Eire physical anthropology blood group data
 #' summary(eire$A)
 #' brks <- round(fivenum(eire$A), digits=2)
