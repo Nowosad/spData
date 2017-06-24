@@ -5,8 +5,7 @@ Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "aut")
 	)
-Description: Diverse spatial datasets for demonstrating, benchmarking and teaching spatial data analysis.
-It includes R data of class df (defined by the package sf), Spatial (sp), and nb (spdep) class.
+Description: Diverse spatial datasets for demonstrating, benchmarking and teaching spatial data analysis. It includes R data of class df (defined by the package sf), Spatial (sp), and nb (spdep) class.
 Unlike other spatial data packages such as rnaturalearth and maps, 
 it also contains data stored in a range of file formats including GeoJSON, ESRI Shapefile and GeoPackage. 
 Some of the datasets are designed to illustrate specific analysis techniques.
