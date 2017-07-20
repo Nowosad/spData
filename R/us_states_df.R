@@ -3,7 +3,7 @@
 #'
 #' @description The object loaded is a \code{data.frame} object containing the US states data from the American Community Survey (ACS)
 #' 
-#' @format Formal class 'data.frame'; the data contains a data.frame with 52 obs. of 5 variables:
+#' @format Formal class 'data.frame'; the data contains a data.frame with 51 obs. of 5 variables:
 #' \itemize{
 #'     \item{NAME} {character vector of state names}
 #'     \item{median_income_10} {numerical vector of median income in 2010}

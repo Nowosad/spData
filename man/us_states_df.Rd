@@ -4,7 +4,7 @@
 \name{us_states_df}
 \alias{us_states_df}
 \title{the American Community Survey (ACS) data}
-\format{Formal class 'data.frame'; the data contains a data.frame with 52 obs. of 5 variables:
+\format{Formal class 'data.frame'; the data contains a data.frame with 51 obs. of 5 variables:
 \itemize{
     \item{NAME} {character vector of state names}
     \item{median_income_10} {numerical vector of median income in 2010}
