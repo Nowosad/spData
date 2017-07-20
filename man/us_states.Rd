@@ -4,7 +4,7 @@
 \name{us_states}
 \alias{us_states}
 \title{US states polygons}
-\format{Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 6 variables:
+\format{Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 7 variables:
 \itemize{
     \item{GEOID} {character vector of geographic identifiers}
     \item{NAME} {character vector of state names}

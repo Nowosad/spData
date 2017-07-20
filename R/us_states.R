@@ -4,7 +4,7 @@
 #' @description The object loaded is a \code{sf} object containing the contiguous United States data from the US Census Bureau
 #' with a few variables from American Community Survey (ACS)
 #' 
-#' @format Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 6 variables:
+#' @format Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 7 variables:
 #' \itemize{
 #'     \item{GEOID} {character vector of geographic identifiers}
 #'     \item{NAME} {character vector of state names}
