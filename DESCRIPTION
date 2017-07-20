@@ -25,6 +25,5 @@ Suggests:
     spdep
 License: CC BY-SA 4.0 + file LICENSE
 RoxygenNote: 6.0.1
-LazyData: true
 URL: https://github.com/Nowosad/spData
 BugReports: https://github.com/Nowosad/spData/issues
