@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for spatial analysis
-Version: 0.2
+Version: 0.2.0.9000
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "aut")
