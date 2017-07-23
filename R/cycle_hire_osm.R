@@ -15,6 +15,9 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
+#' @seealso 
+#' See the osmdata package: https://cran.r-project.org/package=osmdata
+#' 
 #' @source \url{http://www.openstreetmap.org}
 #' @docType data
 #' @keywords datasets sf
