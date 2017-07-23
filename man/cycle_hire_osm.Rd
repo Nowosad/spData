@@ -39,5 +39,8 @@ lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestree
 nrow(lnd_cycle_p_mini)
 }
 }
+\seealso{
+See the osmdata package: https://cran.r-project.org/package=osmdata
+}
 \keyword{datasets}
 \keyword{sf}
