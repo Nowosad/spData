@@ -9,9 +9,24 @@ Datasets for spatial analysis
 
 ### `sf`
 
+-   `baltimore` - House sales prices, Baltimore, MD 1978
+-   `cycle_hire` - Cycle hire points in London
 -   `cycle_hire_osm` - Cycle hire points in London from OSM
 -   `us_states` - US states polygons
 -   `world` - World country polygons
+
+### `sp`
+
+-   `auckland` - Marshall's infant mortality in Auckland dataset
+
+### `spdep`
+
+-   `afcon` - Spatial patterns of conflict in Africa 1966-78
+-   `boston` - Boston Housing Data
+-   `columbus` - Columbus OH spatial analysis data set
+-   `eire` - Eire data sets
+-   `nc.sids` - North Carolina SIDS data
+-   `NY_data` - New York leukemia data
 
 ### misc
 
@@ -20,6 +35,12 @@ Datasets for spatial analysis
 
 Installation
 ------------
+
+Get the released version from CRAN:
+
+``` r
+install.packages("spData")
+```
 
 Get the development version from github:
 
