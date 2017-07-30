@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -106,7 +112,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>data</span>(<span class='no'>afcon</span>)
 <span class='fu'>library</span>(<span class='no'>spdep</span>)
-<span class='fu'>plot</span>(<span class='no'>africa.rook.nb</span>, <span class='no'>afxy</span>)</div><div class='input'><span class='fu'>plot</span>(<span class='fu'>diffnb</span>(<span class='no'>paper.nb</span>, <span class='no'>africa.rook.nb</span>), <span class='no'>afxy</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>, <span class='kw'>add</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'><span class='fu'>text</span>(<span class='no'>afxy</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>attr</span>(<span class='no'>africa.rook.nb</span>, <span class='st'>"region.id"</span>), <span class='kw'>pos</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>offset</span><span class='kw'>=</span><span class='fl'>0.4</span>)</div><img src='afcon-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>moran.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>africa.rook.nb</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>plot</span>(<span class='no'>africa.rook.nb</span>, <span class='no'>afxy</span>)</div><div class='input'><span class='fu'>plot</span>(<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/diffnb'>diffnb</a></span>(<span class='no'>paper.nb</span>, <span class='no'>africa.rook.nb</span>), <span class='no'>afxy</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>, <span class='kw'>add</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'><span class='fu'>text</span>(<span class='no'>afxy</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>attr</span>(<span class='no'>africa.rook.nb</span>, <span class='st'>"region.id"</span>), <span class='kw'>pos</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>offset</span><span class='kw'>=</span><span class='fl'>0.4</span>)</div><div class='img'><img src='afcon-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>africa.rook.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Moran I test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon  
@@ -117,7 +123,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
 #&gt; sample estimates:
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;        0.40981723       -0.02439024        0.01107950 
-#&gt; </div><div class='input'><span class='fu'>moran.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Moran I test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon  
@@ -128,7 +134,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
 #&gt; sample estimates:
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;        0.41679563       -0.02439024        0.01029358 
-#&gt; </div><div class='input'><span class='fu'>geary.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/geary.test'>geary.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Geary C test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon 

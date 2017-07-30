@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -100,8 +106,8 @@
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href = 'http://www.naturalearthdata.com/'>http://www.naturalearthdata.com/</a>
-    <a href = 'http://data.worldbank.org/'>http://data.worldbank.org/</a></p>
+    <p><a href='http://www.naturalearthdata.com/'>http://www.naturalearthdata.com/</a>
+    <a href='http://data.worldbank.org/'>http://data.worldbank.org/</a></p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -112,15 +118,14 @@
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
 <span class='fu'>data</span>(<span class='no'>world</span>)
 <span class='co'># or</span>
-<span class='no'>world</span> <span class='kw'>&lt;-</span> <span class='fu'>st_read</span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/world.gpkg"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `wrld.gpkg' from data source `/home/admin/Science/R/spData/inst/shapes/world.gpkg' using driver `GPKG'
-#&gt; converted into: MULTIPOLYGON
+<span class='no'>world</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/world.gpkg"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `wrld.gpkg' from data source `/home/jn/Documents/spData/inst/shapes/world.gpkg' using driver `GPKG'
 #&gt; Simple feature collection with 177 features and 10 fields
 #&gt; geometry type:  MULTIPOLYGON
 #&gt; dimension:      XY
 #&gt; bbox:           xmin: -180 ymin: -90 xmax: 180 ymax: 83.64513
 #&gt; epsg (SRID):    4326
 #&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='input'>
-<span class='fu'>plot</span>(<span class='no'>world</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot all</span></div><img src='world-5.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>world</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot all</span></div><div class='img'><img src='world-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

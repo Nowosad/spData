@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -101,7 +107,7 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>spdep</span>)
 <span class='fu'>data</span>(<span class='no'>used.cars</span>)
-<span class='fu'>moran.test</span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
+<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Moran I test under randomisation
 #&gt; 
 #&gt; data:  used.cars$price.1960  
@@ -112,8 +118,8 @@
 #&gt; sample estimates:
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;       0.783561543      -0.021276596       0.009692214 
-#&gt; </div><div class='input'><span class='fu'>moran.plot</span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>),
-           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))</div><img src='used.cars-4.png' alt='' width='540' height='400' /><div class='input'><span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.plot'>moran.plot</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>),
+           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))</div><div class='img'><img src='used.cars-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
 <span class='fu'>summary</span>(<span class='no'>uc.lm</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = price.1960 ~ tax.charges, data = used.cars)
@@ -133,7 +139,7 @@
 #&gt; Multiple R-squared:  0.2503,	Adjusted R-squared:  0.234 
 #&gt; F-statistic: 15.35 on 1 and 46 DF,  p-value: 0.0002939
 #&gt; </div><div class='input'>
-<span class='fu'>lm.morantest</span>(<span class='no'>uc.lm</span>, <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
+<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Global Moran I for regression residuals
 #&gt; 
 #&gt; data:  
@@ -145,7 +151,8 @@
 #&gt; sample estimates:
 #&gt; Observed Moran I      Expectation         Variance 
 #&gt;      0.574817771     -0.030300549      0.008976437 
-#&gt; </div><div class='input'><span class='fu'>lm.morantest.sad</span>(<span class='no'>uc.lm</span>, <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest.sad'>lm.morantest.sad</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: Recycling array of length 1 in vector-array arithmetic is deprecated.</span>
+#&gt; <span class='warning'>  Use c() or as.vector() instead.</span></div><div class='output co'>#&gt; 
 #&gt; 	Saddlepoint approximation for global Moran's I (Barndorff-Nielsen
 #&gt; 	formula)
 #&gt; 
@@ -158,7 +165,7 @@
 #&gt; sample estimates:
 #&gt; Observed Moran I 
 #&gt;        0.5748178 
-#&gt; </div><div class='input'><span class='fu'>lm.LMtests</span>(<span class='no'>uc.lm</span>, <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.LMtests'>lm.LMtests</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Lagrange multiplier diagnostics for spatial dependence
 #&gt; 
 #&gt; data:  
@@ -166,8 +173,8 @@
 #&gt; weights: nb2listw(usa48.nb)
 #&gt; 
 #&gt; LMErr = 31.793, df = 1, p-value = 1.715e-08
-#&gt; </div><div class='input'><span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'>errorsarlm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                     <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+#&gt; </div><div class='input'><span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                     <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                      <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
 <span class='fu'>summary</span>(<span class='no'>uc.err</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:errorsarlm(formula = price.1960 ~ tax.charges, data = used.cars, 
@@ -193,8 +200,8 @@
 #&gt; Number of observations: 48 
 #&gt; Number of parameters estimated: 4 
 #&gt; AIC: 489.43, (AIC for lm: 528.33)
-#&gt; </div><div class='input'><span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'>lagsarlm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                   <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+#&gt; </div><div class='input'><span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                   <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                    <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
 <span class='fu'>summary</span>(<span class='no'>uc.lag</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:lagsarlm(formula = price.1960 ~ tax.charges, data = used.cars, 
@@ -222,8 +229,8 @@
 #&gt; AIC: 487.65, (AIC for lm: 528.33)
 #&gt; LM test for residual autocorrelation
 #&gt; test value: 2.1139, p-value: 0.14596
-#&gt; </div><div class='input'><span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'>lagsarlm</span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                    <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+#&gt; </div><div class='input'><span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                    <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                     <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
 <span class='fu'>summary</span>(<span class='no'>uc.lag1</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
@@ -251,8 +258,8 @@
 #&gt; AIC: 487.95, (AIC for lm: 540.16)
 #&gt; LM test for residual autocorrelation
 #&gt; test value: 2.1495, p-value: 0.14262
-#&gt; </div><div class='input'><span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'>errorsarlm</span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                      <span class='fu'>nb2listw</span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+#&gt; </div><div class='input'><span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                      <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                       <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
 <span class='fu'>summary</span>(<span class='no'>uc.err1</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:

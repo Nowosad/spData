@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -96,33 +102,36 @@ representing cycle hire points accross London.</p>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href = 'http://www.openstreetmap.org'>http://www.openstreetmap.org</a></p>
+    <p><a href='http://www.openstreetmap.org'>http://www.openstreetmap.org</a></p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p>See the osmdata package: https://cran.r-project.org/package=osmdata</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
 <span class='fu'>data</span>(<span class='no'>cycle_hire_osm</span>)
 <span class='co'># or</span>
-<span class='no'>cycle_hire_osm</span> <span class='kw'>&lt;-</span> <span class='fu'>st_read</span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/cycle_hire_osm.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/admin/Science/R/spData/inst/shapes/cycle_hire_osm.geojson' using driver `GeoJSON'
-#&gt; converted into: POINT
+<span class='no'>cycle_hire_osm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/cycle_hire_osm.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/jn/Documents/spData/inst/shapes/cycle_hire_osm.geojson' using driver `GeoJSON'
 #&gt; Simple feature collection with 532 features and 5 fields
 #&gt; geometry type:  POINT
 #&gt; dimension:      XY
 #&gt; bbox:           xmin: -0.229123 ymin: 51.45927 xmax: -0.0079843 ymax: 51.54683
 #&gt; epsg (SRID):    4326
 #&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='input'>
-<span class='fu'>plot</span>(<span class='no'>cycle_hire_osm</span>)</div><img src='cycle_hire_osm-4.png' alt='' width='540' height='400' /><div class='input'>
-<span class='co'># Code used to download the data:</span>
-<span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>osmdata</span>)
-  <span class='fu'>library</span>(<span class='no'>sf</span>)
-  <span class='no'>q</span> <span class='kw'>=</span> <span class='fu'>add_feature</span>(<span class='kw'>opq</span> <span class='kw'>=</span> <span class='fu'>opq</span>(<span class='st'>"London"</span>), <span class='kw'>key</span> <span class='kw'>=</span> <span class='st'>"network"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='st'>"tfl_cycle_hire"</span>)
-  <span class='no'>lnd_cycle_hire</span> <span class='kw'>=</span> <span class='fu'>osmdata_sf</span>(<span class='no'>q</span>)
-  <span class='no'>lnd_cycle_p</span> <span class='kw'>=</span> <span class='no'>lnd_cycle_hire</span>$<span class='no'>osm_points</span>
-  <span class='fu'>plot</span>(<span class='no'>lnd_cycle_p</span>)
-  <span class='no'>lnd_cycle_p_mini</span> <span class='kw'>=</span> <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>select</span>(<span class='no'>lnd_cycle_p</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>, <span class='no'>cyclestreets_id</span>, <span class='no'>description</span>)
-  <span class='fu'>nrow</span>(<span class='no'>lnd_cycle_p_mini</span>)
-})</div></pre>
+<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire_osm</span>)</div><div class='img'><img src='cycle_hire_osm-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+# Code used to download the data:
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>osmdata</span>)
+<span class='fu'>library</span>(<span class='no'>sf</span>)
+<span class='no'>q</span> <span class='kw'>=</span> <span class='fu'>add_feature</span>(<span class='kw'>opq</span> <span class='kw'>=</span> <span class='fu'>opq</span>(<span class='st'>"London"</span>), <span class='kw'>key</span> <span class='kw'>=</span> <span class='st'>"network"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='st'>"tfl_cycle_hire"</span>)
+<span class='no'>lnd_cycle_hire</span> <span class='kw'>=</span> <span class='fu'>osmdata_sf</span>(<span class='no'>q</span>)
+<span class='no'>lnd_cycle_p</span> <span class='kw'>=</span> <span class='no'>lnd_cycle_hire</span>$<span class='no'>osm_points</span>
+<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>lnd_cycle_p</span>)
+<span class='no'>lnd_cycle_p_mini</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>lnd_cycle_p</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>, <span class='no'>cyclestreets_id</span>, <span class='no'>description</span>)
+<span class='fu'>nrow</span>(<span class='no'>lnd_cycle_p_mini</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -131,6 +140,8 @@ representing cycle hire points accross London.</p>
       <li><a href="#format">Format</a></li>
 
       <li><a href="#source">Source</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -122,11 +128,11 @@
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href = 'http://lib.stat.cmu.edu/datasets/boston_corrected.txt'>http://lib.stat.cmu.edu/datasets/boston_corrected.txt</a></p>
+    <p><a href='http://lib.stat.cmu.edu/datasets/boston_corrected.txt'>http://lib.stat.cmu.edu/datasets/boston_corrected.txt</a></p>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt; tract conversion table 1980/1970: <a href = 'https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE'>https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE</a>, <a href = 'http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes'>http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes</a></p>
+    <p>Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt; tract conversion table 1980/1970: <a href='https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE'>https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE</a>, <a href='http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes'>http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes</a></p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -206,7 +212,7 @@
 #&gt; Residual standard error: 0.1799 on 492 degrees of freedom
 #&gt; Multiple R-squared:  0.8108,	Adjusted R-squared:  0.8058 
 #&gt; F-statistic: 162.1 on 13 and 492 DF,  p-value: &lt; 2.2e-16
-#&gt; </div><div class='input'><span class='fu'>logLik</span>(<span class='no'>gp0</span>)</div><div class='output co'>#&gt; 'log Lik.' 156.9788 (df=15)</div><div class='input'><span class='fu'>lm.morantest</span>(<span class='no'>hr0</span>, <span class='fu'>nb2listw</span>(<span class='no'>boston.soi</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>logLik</span>(<span class='no'>gp0</span>)</div><div class='output co'>#&gt; 'log Lik.' 156.9788 (df=15)</div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>hr0</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Global Moran I for regression residuals
 #&gt; 
 #&gt; data:  
@@ -220,27 +226,26 @@
 #&gt; sample estimates:
 #&gt; Observed Moran I      Expectation         Variance 
 #&gt;     0.4364296993    -0.0168870829     0.0009762383 
-#&gt; </div><div class='input'><span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>maptools</span>)
-  <span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'>readShapePoly</span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
-                             <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>], <span class='kw'>ID</span><span class='kw'>=</span><span class='st'>"poltract"</span>,
-                             <span class='kw'>proj4string</span><span class='kw'>=</span><span class='fu'>CRS</span>(<span class='fu'>paste</span>(<span class='st'>"+proj=longlat +datum=NAD27 
-                             +no_defs +ellps=clrk66"</span>,
-                             <span class='st'>"+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat"</span>)))
-  <span class='no'>boston_nb</span> <span class='kw'>&lt;-</span> <span class='fu'>poly2nb</span>(<span class='no'>boston.tr</span>)
-})
-<span class='fu'>not_run</span>({
-  <span class='no'>gp1</span> <span class='kw'>&lt;-</span> <span class='fu'>errorsarlm</span>(<span class='fu'>log</span>(<span class='no'>CMEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>)
-                             + <span class='fu'>I</span>(<span class='no'>RM</span>^<span class='fl'>2</span>) +  <span class='no'>AGE</span> + <span class='fu'>log</span>(<span class='no'>DIS</span>) + <span class='fu'>log</span>(<span class='no'>RAD</span>) +
-                              <span class='no'>TAX</span> + <span class='no'>PTRATIO</span> + <span class='no'>B</span> + <span class='fu'>log</span>(<span class='no'>LSTAT</span>),
-                             <span class='kw'>data</span><span class='kw'>=</span><span class='no'>boston.c</span>, <span class='fu'>nb2listw</span>(<span class='no'>boston.soi</span>), <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"Matrix"</span>,
-                             <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span> <span class='kw'>=</span> <span class='no'>.Machine</span>$<span class='no'>double.eps</span>^(<span class='fl'>1</span>/<span class='fl'>4</span>)))
-  <span class='fu'>summary</span>(<span class='no'>gp1</span>)
-  <span class='no'>gp2</span> <span class='kw'>&lt;-</span> <span class='fu'>lagsarlm</span>(<span class='fu'>log</span>(<span class='no'>CMEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>) + <span class='fu'>I</span>(<span class='no'>RM</span>^<span class='fl'>2</span>)
-                  +  <span class='no'>AGE</span> + <span class='fu'>log</span>(<span class='no'>DIS</span>) + <span class='fu'>log</span>(<span class='no'>RAD</span>) + <span class='no'>TAX</span> + <span class='no'>PTRATIO</span> + <span class='no'>B</span> + <span class='fu'>log</span>(<span class='no'>LSTAT</span>),
-                  <span class='kw'>data</span><span class='kw'>=</span><span class='no'>boston.c</span>, <span class='fu'>nb2listw</span>(<span class='no'>boston.soi</span>), <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"Matrix"</span>)
-  <span class='fu'>summary</span>(<span class='no'>gp2</span>)
-})</div></pre>
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>maptools</span>)
+<span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/maptools/topics/readShapePoly'>readShapePoly</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
+                           <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>], <span class='kw'>ID</span><span class='kw'>=</span><span class='st'>"poltract"</span>,
+                           <span class='kw'>proj4string</span><span class='kw'>=</span><span class='fu'>CRS</span>(<span class='fu'>paste</span>(<span class='st'>"+proj=longlat +datum=NAD27 
+                           +no_defs +ellps=clrk66"</span>,
+                           <span class='st'>"+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat"</span>)))
+<span class='no'>boston_nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/poly2nb'>poly2nb</a></span>(<span class='no'>boston.tr</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
+<span class='no'>gp1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='fu'>log</span>(<span class='no'>CMEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>)
+                           + <span class='fu'>I</span>(<span class='no'>RM</span>^<span class='fl'>2</span>) +  <span class='no'>AGE</span> + <span class='fu'>log</span>(<span class='no'>DIS</span>) + <span class='fu'>log</span>(<span class='no'>RAD</span>) +
+                            <span class='no'>TAX</span> + <span class='no'>PTRATIO</span> + <span class='no'>B</span> + <span class='fu'>log</span>(<span class='no'>LSTAT</span>),
+                           <span class='kw'>data</span><span class='kw'>=</span><span class='no'>boston.c</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>), <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"Matrix"</span>,
+                           <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span> <span class='kw'>=</span> <span class='no'>.Machine</span>$<span class='no'>double.eps</span>^(<span class='fl'>1</span>/<span class='fl'>4</span>)))
+<span class='fu'>summary</span>(<span class='no'>gp1</span>)
+<span class='no'>gp2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='fu'>log</span>(<span class='no'>CMEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>) + <span class='fu'>I</span>(<span class='no'>RM</span>^<span class='fl'>2</span>)
+                +  <span class='no'>AGE</span> + <span class='fu'>log</span>(<span class='no'>DIS</span>) + <span class='fu'>log</span>(<span class='no'>RAD</span>) + <span class='no'>TAX</span> + <span class='no'>PTRATIO</span> + <span class='no'>B</span> + <span class='fu'>log</span>(<span class='no'>LSTAT</span>),
+                <span class='kw'>data</span><span class='kw'>=</span><span class='no'>boston.c</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>), <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"Matrix"</span>)
+<span class='fu'>summary</span>(<span class='no'>gp2</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
