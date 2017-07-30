@@ -119,7 +119,7 @@
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;       0.783561543      -0.021276596       0.009692214 
 #&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.plot'>moran.plot</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>),
-           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))</div><div class='img'><img src='used.cars-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
+           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))</div><div class='img'><img src='used.cars-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
 <span class='fu'>summary</span>(<span class='no'>uc.lm</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = price.1960 ~ tax.charges, data = used.cars)
