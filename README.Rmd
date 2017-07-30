@@ -38,7 +38,6 @@ Datasets for spatial analysis
 - `house` - Lucas county OH housing
 - `SplashDams` - Data for Splash Dams in western Oregon
 - `state.vbm` - US State Visibility Based Map
-- `used.cars` - US 1960 used car prices
 
 ### `spdep`
 
