@@ -16,6 +16,9 @@
 \source{
 \url{cyclehireapp.com/cyclehirelive/cyclehire.csv}
 }
+\usage{
+cycle_hire
+}
 \description{
 Points
 representing cycle hire points accross London.

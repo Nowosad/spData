@@ -85,6 +85,4 @@
 #'                 data=boston.c, nb2listw(boston.soi), method="Matrix")
 #' summary(gp2)
 #' }
-
-
 NULL

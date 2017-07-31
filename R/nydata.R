@@ -1,4 +1,3 @@
-#' @name NY_data
 #' @aliases NY_data nydata listw_NY
 #' @title New York leukemia data
 #'
@@ -44,5 +43,4 @@
 #' library(spdep)
 #' nyadjlw <- mat2listw(nyadjmat, as.character(nydata$AREAKEY))
 #' listw_NY <- nb2listw(nyadjlw$neighbours, style="B")
-
-NULL
+"nydata"

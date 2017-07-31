@@ -20,6 +20,9 @@ Anselin, L. and John O'Loughlin. 1992. Geography of international conflict and c
 also: 
 Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis, 27, Table 1, p. 103.
 }
+\usage{
+afcon
+}
 \description{
 The \code{afcon} data frame has 42 rows and 5 columns, for 42 African countries, exclusing then South West Africa and Spanish Equatorial Africa and Spanish Sahara. The dataset is used in Anselin (1995), and downloaded from  before adaptation. The neighbour list object \code{africa.rook.nb} is the SpaceStat \file{rook.GAL}, but is not the list used in Anselin (1995) - \code{paper.nb} reconstructs the list used in the paper, with inserted links between Mauritania and Morocco, South Africa and Angola and Zambia, Tanzania and Zaire, and Botswana and Zambia. \code{afxy} is the coordinate matrix for the centroids of the countries.
 }

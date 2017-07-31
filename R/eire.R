@@ -84,5 +84,4 @@
 #' lm.LMtests(e.lm, nb2listw(eire.nb), test="LMerr")
 #' print(localmoran.sad(e.lm, eire.nb, select=1:length(slot(eire, "polygons"))))
 #' 
-
 NULL

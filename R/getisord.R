@@ -23,5 +23,4 @@
 #' polygon(c(195,225,225,195), c(195,195,225,225), lwd=2)
 #' title(main="Getis-Ord 1996 remote sensing data")
 #'
-
 NULL

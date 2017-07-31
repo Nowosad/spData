@@ -13,6 +13,9 @@
 \source{
 Hanna, F. A. 1966 Effects of regional differences in taxes and transport charges on automobile consumption, in Ostry, S., Rhymes, J. K. (eds) Papers on regional statistical studies, Toronto: Toronto University Press, pp. 199-223.
 }
+\usage{
+used.cars
+}
 \description{
 The \code{used.cars} data frame has 48 rows and 2 columns. The data set includes a neighbours list for the 48 states excluding DC from poly2nb().
 }

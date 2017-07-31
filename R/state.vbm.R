@@ -29,5 +29,4 @@
 #'             include.lowest=TRUE)
 #' plot(state.vbm, col=cm.colors(10)[tmp2])
 #'
-
-NULL
+"state.vbm"

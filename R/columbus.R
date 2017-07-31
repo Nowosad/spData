@@ -42,5 +42,4 @@
 #' 
 #' library(spdep)
 #' col.gal.nb <- read.gal(system.file("weights/columbus.gal", package="spData")[1])
-
-NULL
+"columbus"
