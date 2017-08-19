@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 0.2.4.9001
+Version: 0.2.4.9003
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "aut")
@@ -23,7 +23,7 @@ Suggests:
     rgdal,
     sf,
     sp,
-    spDataLarge,
+    spDataLarge (>= 0.2.1.9000),
     spdep
 License: CC0
 RoxygenNote: 6.0.1
