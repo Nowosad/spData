@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -81,6 +87,7 @@
     <p>Polygons representing large administrative zones in London</p>
     
 
+    <pre class="usage"><span class='no'>lnd</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -97,15 +104,14 @@
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href = 'https://github.com/Robinlovelace/Creating-maps-in-R'>https://github.com/Robinlovelace/Creating-maps-in-R</a></p>
+    <p><a href='https://github.com/Robinlovelace/Creating-maps-in-R'>https://github.com/Robinlovelace/Creating-maps-in-R</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
 <span class='fu'>data</span>(<span class='no'>lnd</span>)
 <span class='co'># or</span>
-<span class='no'>lnd</span> <span class='kw'>&lt;-</span> <span class='fu'>st_read</span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/lnd.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/admin/Science/R/spData/inst/shapes/lnd.geojson' using driver `GeoJSON'
-#&gt; converted into: MULTIPOLYGON
+<span class='no'>lnd</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/lnd.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/jn/Documents/spData/inst/shapes/lnd.geojson' using driver `GeoJSON'
 #&gt; Simple feature collection with 33 features and 7 fields
 #&gt; geometry type:  MULTIPOLYGON
 #&gt; dimension:      XY
@@ -126,7 +132,7 @@
 #&gt;                                                  
 #&gt;                                                  
 #&gt;                                                  
-#&gt;                                                  </div><div class='input'><span class='fu'>plot</span>(<span class='no'>lnd</span>)</div><img src='lnd-6.png' alt='' width='540' height='400' /><div class='input'>
+#&gt;                                                  </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>lnd</span>)</div><div class='img'><img src='lnd-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

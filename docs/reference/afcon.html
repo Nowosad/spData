@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -81,6 +87,7 @@
     <p>The <code>afcon</code> data frame has 42 rows and 5 columns, for 42 African countries, exclusing then South West Africa and Spanish Equatorial Africa and Spanish Sahara. The dataset is used in Anselin (1995), and downloaded from  before adaptation. The neighbour list object <code>africa.rook.nb</code> is the SpaceStat <code class="file">rook.GAL</code>, but is not the list used in Anselin (1995) - <code>paper.nb</code> reconstructs the list used in the paper, with inserted links between Mauritania and Morocco, South Africa and Angola and Zambia, Tanzania and Zaire, and Botswana and Zambia. <code>afxy</code> is the coordinate matrix for the centroids of the countries.</p>
     
 
+    <pre class="usage"><span class='no'>afcon</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -105,8 +112,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>data</span>(<span class='no'>afcon</span>)
-<span class='fu'>library</span>(<span class='no'>spdep</span>)
-<span class='fu'>plot</span>(<span class='no'>africa.rook.nb</span>, <span class='no'>afxy</span>)</div><div class='input'><span class='fu'>plot</span>(<span class='fu'>diffnb</span>(<span class='no'>paper.nb</span>, <span class='no'>africa.rook.nb</span>), <span class='no'>afxy</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>, <span class='kw'>add</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'><span class='fu'>text</span>(<span class='no'>afxy</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>attr</span>(<span class='no'>africa.rook.nb</span>, <span class='st'>"region.id"</span>), <span class='kw'>pos</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>offset</span><span class='kw'>=</span><span class='fl'>0.4</span>)</div><img src='afcon-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>moran.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>africa.rook.nb</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>library</span>(<span class='no'>spdep</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: sp</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: Matrix</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>africa.rook.nb</span>, <span class='no'>afxy</span>)</div><div class='input'><span class='fu'>plot</span>(<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/diffnb'>diffnb</a></span>(<span class='no'>paper.nb</span>, <span class='no'>africa.rook.nb</span>), <span class='no'>afxy</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>, <span class='kw'>add</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'><span class='fu'>text</span>(<span class='no'>afxy</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>attr</span>(<span class='no'>africa.rook.nb</span>, <span class='st'>"region.id"</span>), <span class='kw'>pos</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>offset</span><span class='kw'>=</span><span class='fl'>0.4</span>)</div><div class='img'><img src='afcon-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>africa.rook.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Moran I test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon  
@@ -117,7 +123,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
 #&gt; sample estimates:
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;        0.40981723       -0.02439024        0.01107950 
-#&gt; </div><div class='input'><span class='fu'>moran.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Moran I test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon  
@@ -128,7 +134,7 @@ Anselin, L. 1995. Local indicators of spatial association, Geographical Analysis
 #&gt; sample estimates:
 #&gt; Moran I statistic       Expectation          Variance 
 #&gt;        0.41679563       -0.02439024        0.01029358 
-#&gt; </div><div class='input'><span class='fu'>geary.test</span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'>nb2listw</span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/geary.test'>geary.test</a></span>(<span class='no'>afcon</span>$<span class='no'>totcon</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>paper.nb</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Geary C test under randomisation
 #&gt; 
 #&gt; data:  afcon$totcon 

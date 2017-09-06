@@ -28,5 +28,4 @@
 #' summary(lnd)
 #' plot(lnd)
 #'
-
-NULL
+"lnd"

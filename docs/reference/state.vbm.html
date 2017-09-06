@@ -52,6 +52,12 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
@@ -81,7 +87,12 @@
     <p>A SpatialPolygonsDataFrame object (for use with the maptools package) to plot a Visibility Based Map.</p>
     
 
+    <pre class="usage"><span class='no'>state.vbm</span></pre>
         
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>SpatialPolygonsDataFrame</code> with 50 rows and 2 columns.</p>
+    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>The data was converted from the maps library for S-PLUS.  S-PLUS uses the map with permission from the author. This version of the data has not received permission from the author (no attempt made, not that it was refused), most of my uses I feel fall under fair use and do not violate copyright, but you will need to decide for yourself and your applications.</p>
@@ -94,24 +105,26 @@ The original map is copyrighted by Mark Monmonier.  Official publications based 
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p><a href = 'http://www.markmonmonier.com/index.htm'>http://www.markmonmonier.com/index.htm</a>,
-<a href = 'http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html'>http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html</a></p>
+    <p><a href='http://www.markmonmonier.com/index.htm'>http://www.markmonmonier.com/index.htm</a>,
+<a href='http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html'>http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sp</span>)
 <span class='fu'>data</span>(<span class='no'>state.vbm</span>)
-<span class='fu'>plot</span>(<span class='no'>state.vbm</span>)</div><img src='state.vbm-2.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>plot</span>(<span class='no'>state.vbm</span>)</div><div class='img'><img src='state.vbm-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 <span class='no'>tmp</span> <span class='kw'>&lt;-</span> <span class='no'>state.x77</span>[, <span class='st'>'HS Grad'</span>]
 <span class='no'>tmp2</span> <span class='kw'>&lt;-</span> <span class='fu'>cut</span>(<span class='no'>tmp</span>, <span class='fu'>seq</span>(<span class='fu'>min</span>(<span class='no'>tmp</span>), <span class='fu'>max</span>(<span class='no'>tmp</span>), <span class='kw'>length.out</span><span class='kw'>=</span><span class='fl'>11</span>),
             <span class='kw'>include.lowest</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='fu'>plot</span>(<span class='no'>state.vbm</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fu'>cm.colors</span>(<span class='fl'>10</span>)[<span class='no'>tmp2</span>])</div><img src='state.vbm-4.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>plot</span>(<span class='no'>state.vbm</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fu'>cm.colors</span>(<span class='fl'>10</span>)[<span class='no'>tmp2</span>])</div><div class='img'><img src='state.vbm-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
+      <li><a href="#format">Format</a></li>
+
       <li><a href="#source">Source</a></li>
 
       <li><a href="#details">Details</a></li>

@@ -43,5 +43,4 @@
 #' data(house)
 #' str(house)
 #' plot(house)
-
-NULL
+"house"

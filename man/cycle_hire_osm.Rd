@@ -15,6 +15,9 @@
 \source{
 \url{http://www.openstreetmap.org}
 }
+\usage{
+cycle_hire_osm
+}
 \description{
 Dataset downloaded using the osmdata package
 representing cycle hire points accross London.
@@ -38,6 +41,9 @@ plot(lnd_cycle_p)
 lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestreets_id, description)
 nrow(lnd_cycle_p_mini)
 }
+}
+\seealso{
+See the osmdata package: https://cran.r-project.org/package=osmdata
 }
 \keyword{datasets}
 \keyword{sf}

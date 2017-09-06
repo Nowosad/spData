@@ -30,5 +30,4 @@
 #' moran.test(afcon$totcon, nb2listw(africa.rook.nb))
 #' moran.test(afcon$totcon, nb2listw(paper.nb))
 #' geary.test(afcon$totcon, nb2listw(paper.nb))
-
-NULL
+"afcon"

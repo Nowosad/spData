@@ -15,6 +15,9 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
+#' @seealso 
+#' See the osmdata package: https://cran.r-project.org/package=osmdata
+#' 
 #' @source \url{http://www.openstreetmap.org}
 #' @docType data
 #' @keywords datasets sf
@@ -38,5 +41,4 @@
 #' lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestreets_id, description)
 #' nrow(lnd_cycle_p_mini)
 #' }
-
-NULL
+"cycle_hire_osm"

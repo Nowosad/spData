@@ -36,6 +36,9 @@
 \source{
 Anselin, Luc.  1988.  Spatial econometrics: methods and models.  Dordrecht: Kluwer Academic, Table 12.1 p. 189.
 }
+\usage{
+columbus
+}
 \description{
 The \code{columbus} data frame has 49 rows and 22 columns. Unit of analysis: 49 neighbourhoods in Columbus, OH, 1980 data. In addition the data set includes a \code{polylist} object \code{polys} with the boundaries of the neighbourhoods, a matrix of polygon centroids \code{coords}, and \code{col.gal.nb}, the neighbours list from an original GAL-format file. The matrix \code{bbs} is DEPRECATED, but retained for other packages using this data set.
 }

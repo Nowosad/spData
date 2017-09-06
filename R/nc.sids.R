@@ -48,5 +48,4 @@
 #' plot(ncCR85_nb, coordinates(nc.sids), add=TRUE, col="blue")
 #' plot(nc.sids, border="grey")
 #' plot(ncCC89_nb, coordinates(nc.sids), add=TRUE, col="blue")
-
-NULL
+"nc.sids"

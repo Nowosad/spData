@@ -3,7 +3,7 @@
 spData
 ======
 
-[![Build Status](https://travis-ci.org/Nowosad/spData.png?branch=master)](https://travis-ci.org/Nowosad/spData)
+[![Build Status](https://travis-ci.org/Nowosad/spData.png?branch=master)](https://travis-ci.org/Nowosad/spData) [![CRAN version](http://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData) [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
 
 Datasets for spatial analysis
 
@@ -46,6 +46,12 @@ Datasets for spatial analysis
 
 Installation
 ------------
+
+Get the released version from CRAN:
+
+``` r
+install.packages("spData")
+```
 
 Get the development version from github:
 

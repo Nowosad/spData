@@ -17,6 +17,9 @@
 \source{
 \url{http://data.worldbank.org/}
 }
+\usage{
+worldbank_df
+}
 \description{
 The object loaded is a \code{data.frame} object containing a data from World Bank
 }
