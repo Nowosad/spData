@@ -2,7 +2,7 @@
 #' @aliases urban_agglomerations
 #' @title Major urban areas worldwide
 #'
-#' @description Dataset in 'long' form from the United Nations
+#' @description Dataset in a 'long' form from the United Nations
 #' population division with projections up to 2050.
 #' Includes only the top 30 largest areas by population at 5 year intervals.
 #' 
