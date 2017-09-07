@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 0.2.5.0
+Version: 0.2.5.1
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com"),
         person("Robin", "Lovelace", role = "aut")
@@ -14,7 +14,7 @@ Description: Diverse spatial datasets for demonstrating, benchmarking and teachi
         This package interacts with data available through the 'spDataLarge' package, 
         which is available in a 'drat' repository. To access this data package, 
         run 'install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")'. 
-        The size of the 'spDataLarge' package is approximately 12 MB. 
+        The size of the 'spDataLarge' package is approximately 20 MB. 
 Depends:
     R (>= 3.3.0)
 Suggests:
