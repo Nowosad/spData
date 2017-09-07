@@ -27,7 +27,8 @@
 #' 
 #' # Code used to download the data:
 #' \dontrun{
-#' download.file(url = "https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls", "WUP2014-F11a-30_Largest_Cities.xls")
+#' download.file(destfile = "WUP2014-F11a-30_Largest_Cities.xls",
+#' url = "https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls")
 #' library(dplyr)
 #' library(sf)
 #' urban_agglomerations = readxl::read_excel("WUP2014-F11a-30_Largest_Cities.xls", skip = 16) %>%

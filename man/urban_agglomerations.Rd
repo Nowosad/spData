@@ -20,7 +20,7 @@
 urban_agglomerations
 }
 \description{
-Dataset in 'long' form from the United Nations
+Dataset in a 'long' form from the United Nations
 population division with projections up to 2050.
 Includes only the top 30 largest areas by population at 5 year intervals.
 }
@@ -30,7 +30,8 @@ data(urban_agglomerations)
 
 # Code used to download the data:
 \dontrun{
-download.file(url = "https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls", "WUP2014-F11a-30_Largest_Cities.xls")
+download.file(destfile = "WUP2014-F11a-30_Largest_Cities.xls",
+url = "https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls")
 library(dplyr)
 library(sf)
 urban_agglomerations = readxl::read_excel("WUP2014-F11a-30_Largest_Cities.xls", skip = 16) \%>\%
