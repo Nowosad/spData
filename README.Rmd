@@ -27,6 +27,7 @@ Datasets for spatial analysis
 - `cycle_hire` - Cycle hire points in London
 - `cycle_hire_osm` - Cycle hire points in London from OSM
 - `lnd` - The boroughs of London
+- `urban_agglomerations` - Major urban areas worldwide
 - `us_states` - US states polygons
 - `world` - World country polygons
 - `wheat` - Mercer and Hall wheat yield data
