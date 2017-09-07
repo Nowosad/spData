@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Marshall's infant mortality in Auckland dataset — auckland • spData</title>
+<title>Major urban areas worldwide — urban_agglomerations • spData</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,46 +80,46 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Marshall's infant mortality in Auckland dataset</h1>
+    <h1>Major urban areas worldwide</h1>
     </div>
 
     
-    <p>(Use <code>example(auckland)</code> to load the data from shapefile and generate neighbour list on the fly).  The <code>auckland</code> data frame has 167 rows (census area units --- CAU) and 4 columns. The dataset also includes the "nb" object <code>auckland.nb</code> of neighbour relations based on contiguity, and the "polylist" object <code>auckpolys</code> of polygon boundaries for the CAU. The <code>auckland</code> data frame includes the following columns:</p>
+    <p>Dataset in 'long' form from the United Nations
+population division with projections up to 2050.
+Includes only the top 30 largest areas by population at 5 year intervals.</p>
     
 
-    <pre class="usage"><span class='no'>auckland</span></pre>
+    <pre class="usage"><span class='no'>urban_agglomerations</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>This data frame contains the following columns:</p><ul>
-<li><p>Easting a numeric vector of x coordinates in an unknown spatial reference system</p></li>
-<li><p>Northing a numeric vector of y coordinates in an unknown spatial reference system</p></li>
-<li><p>M77_85 a numeric vector of counts of infant (under 5 years of age) deaths in Auckland, 1977-1985</p></li>
-<li><p>Und5_81 a numeric vector of population under 5 years of age at the 1981 Census</p></li>
+    <p>Selected variables:</p><ul>
+<li><p>Index Index of row</p></li>
+<li><p>Year Year of population estimate</p></li>
+<li><p>Country code Code of country</p></li>
+<li><p>Urban Agglomeration Name of the urban agglomeration</p></li>
+<li><p>Population (millions) Estimated human population</p></li>
+<li><p>geometry sfc_POINT</p></li>
 </ul>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>Marshall R M (1991) Mapping disease and mortality rates using Empirical Bayes Estimators, Applied Statistics, 40, 283--294; Bailey T, Gatrell A (1995) Interactive Spatial Data Analysis, Harlow: Longman --- INFOMAP data set used with permission.</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>The contiguous neighbours object does not completely replicate results in the sources, and was reconstructed from <code>auckpolys</code>; examination of figures in the sources suggests that there are differences in detail, although probably not in substance.</p>
+    <p><a href='https://esa.un.org/unpd/wup/CD-ROM/'>https://esa.un.org/unpd/wup/CD-ROM/</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>rgdal</span>)</div><div class='output co'>#&gt; <span class='message'>rgdal: version: 1.2-8, (SVN revision 663)</span>
-#&gt; <span class='message'> Geospatial Data Abstraction Library extensions to R successfully loaded</span>
-#&gt; <span class='message'> Loaded GDAL runtime: GDAL 2.1.3, released 2017/20/01</span>
-#&gt; <span class='message'> Path to GDAL shared files: /usr/share/gdal</span>
-#&gt; <span class='message'> Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span>
-#&gt; <span class='message'> Path to PROJ.4 shared files: (autodetected)</span>
-#&gt; <span class='message'> Linking to sp version: 1.2-5 </span></div><div class='input'><span class='no'>auckland</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/auckland.shp"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])</div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/home/jn/Documents/spData/inst/shapes/auckland.shp", layer: "auckland"
-#&gt; with 167 features
-#&gt; It has 4 fields</div><div class='input'><span class='fu'>plot</span>(<span class='no'>auckland</span>)</div><div class='img'><img src='auckland-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
-<span class='fu'>library</span>(<span class='no'>spdep</span>)
-<span class='no'>auckland.nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/poly2nb'>poly2nb</a></span>(<span class='no'>auckland</span>)</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
+<span class='fu'>data</span>(<span class='no'>urban_agglomerations</span>)
+
+<span class='co'># Code used to download the data:</span></div><span class='co'># NOT RUN {</span>
+<span class='fu'>download.file</span>(<span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls"</span>, <span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>)
+<span class='fu'>library</span>(<span class='no'>dplyr</span>)
+<span class='fu'>library</span>(<span class='no'>sf</span>)
+<span class='no'>urban_agglomerations</span> <span class='kw'>=</span> <span class='kw pkg'>readxl</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/readxl/topics/read_excel'>read_excel</a></span>(<span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>, <span class='kw'>skip</span> <span class='kw'>=</span> <span class='fl'>16</span>) <span class='kw'>%&gt;%</span>
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_as_sf'>st_as_sf</a></span>(<span class='kw'>coords</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"Longitude"</span>, <span class='st'>"Latitude"</span>), <span class='kw'>crs</span> <span class='kw'>=</span> <span class='fl'>4326</span>)
+<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>urban_agglomerations</span>)
+<span class='fu'>file.remove</span>(<span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -128,8 +128,6 @@
       <li><a href="#format">Format</a></li>
 
       <li><a href="#source">Source</a></li>
-
-      <li><a href="#details">Details</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
