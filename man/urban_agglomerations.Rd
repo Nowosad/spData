@@ -6,11 +6,10 @@
 \title{Major urban areas worldwide}
 \format{Selected variables:
 \itemize{
-    \item{Index} {Index of row}
-    \item{Year} {Year of population estimate}
-    \item{Country code} {Code of country}
-    \item{Urban Agglomeration} {Name of the urban agglomeration}
-    \item{Population (millions)} {Estimated human population}
+    \item{year} {Year of population estimate}
+    \item{country_code} {Code of country}
+    \item{urban_agglomeration} {Name of the urban agglomeration}
+    \item{population_millions} {Estimated human population}
     \item{geometry} {sfc_POINT}
 }}
 \source{
@@ -36,7 +35,9 @@ library(dplyr)
 library(sf)
 urban_agglomerations = readxl::read_excel("WUP2014-F11a-30_Largest_Cities.xls", skip = 16) \%>\%
     st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
-devtools::use_data(urban_agglomerations)
+names(urban_agglomerations) <- gsub(" ", "_", tolower(names(urban_agglomerations)) ) \%>\% 
+        gsub("\\\\(|\\\\)", "", .)
+devtools::use_data(urban_agglomerations, overwrite = TRUE)
 file.remove("WUP2014-F11a-30_Largest_Cities.xls")
 }
 }
