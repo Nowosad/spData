@@ -24,4 +24,4 @@
 #' 
 #' library(spdep)
 #' auckland.nb <- poly2nb(auckland)
-"auckland"
+NULL

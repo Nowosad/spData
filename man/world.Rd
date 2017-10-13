@@ -25,9 +25,6 @@ The object is in geographical coordinates using the WGS84 datum.}
 
 \url{http://data.worldbank.org/}
 }
-\usage{
-world
-}
 \description{
 The object loaded is a \code{sf} object containing a world map data from Natural Earth with a few variables from World Bank
 }

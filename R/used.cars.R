@@ -43,4 +43,4 @@
 #'                       nb2listw(usa48.nb), tol.solve=1.0e-13, 
 #'                       control=list(tol.opt=.Machine$double.eps^0.3))
 #' summary(uc.err1)
-"used.cars"
+NULL

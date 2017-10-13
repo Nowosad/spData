@@ -17,4 +17,4 @@
 #' @examples 
 #' data(jenks71)
 #' jenks71
-"jenks71"
+NULL

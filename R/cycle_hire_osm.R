@@ -41,4 +41,4 @@
 #' lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestreets_id, description)
 #' nrow(lnd_cycle_p_mini)
 #' }
-"cycle_hire_osm"
+NULL

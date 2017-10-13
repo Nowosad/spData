@@ -37,9 +37,6 @@ Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.}
 \source{
 Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
 }
-\usage{
-house
-}
 \description{
 Data on 25,357 single family homes sold in Lucas County, Ohio, 1993-1998 from the county auditor, together with an \code{nb} neighbour object constructed as a sphere of influence graph from projected coordinates.
 }

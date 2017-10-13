@@ -40,4 +40,4 @@
 #' library(sf)
 #' wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
 #' plot(wheat)
-"wheat"
+NULL

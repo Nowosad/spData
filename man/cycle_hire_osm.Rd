@@ -15,9 +15,6 @@
 \source{
 \url{http://www.openstreetmap.org}
 }
-\usage{
-cycle_hire_osm
-}
 \description{
 Dataset downloaded using the osmdata package
 representing cycle hire points accross London.
