@@ -65,12 +65,9 @@
 #' logLik(gp0)
 #' lm.morantest(hr0, nb2listw(boston.soi))
 #' \dontrun{
-#' library(maptools)
-#' boston.tr <- readShapePoly(system.file("shapes/boston_tracts.shp",
-#'                            package="spData")[1], ID="poltract",
-#'                            proj4string=CRS(paste("+proj=longlat +datum=NAD27 
-#'                            +no_defs +ellps=clrk66",
-#'                            "+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat")))
+#' library(rgdal)
+#' boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",
+#'                            package="spData")[1])
 #' boston_nb <- poly2nb(boston.tr)
 #' }
 #' \dontrun{
