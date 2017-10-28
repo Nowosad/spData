@@ -1,9 +1,10 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 0.2.6.0
+Version: 0.2.6.1
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com", comment = c(ORCID = "0000-0002-1057-3721")),
-        person("Robin", "Lovelace", role = "aut")
+        person("Robin", "Lovelace", role = "aut",
+        comment = c(ORCID = "0000-0001-5679-6536"))
 	)
 Description: Diverse spatial datasets for demonstrating, benchmarking and teaching spatial data analysis. 
         It includes R data of class sf (defined by the package 'sf'), Spatial (sp), and nb (spdep).

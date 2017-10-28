@@ -30,13 +30,17 @@ plot(cycle_hire_osm)
 # Code used to download the data:
 \dontrun{
 library(osmdata)
+library(dplyr)
 library(sf)
-q = add_feature(opq = opq("London"), key = "network", value = "tfl_cycle_hire")
+q = add_osm_feature(opq = opq("London"), key = "network", value = "tfl_cycle_hire")
 lnd_cycle_hire = osmdata_sf(q)
-lnd_cycle_p = lnd_cycle_hire$osm_points
-plot(lnd_cycle_p)
-lnd_cycle_p_mini = dplyr::select(lnd_cycle_p, osm_id, name, capacity, cyclestreets_id, description)
-nrow(lnd_cycle_p_mini)
+cycle_hire_osm = lnd_cycle_hire$osm_points
+nrow(cycle_hire_osm)
+plot(cycle_hire_osm)
+cycle_hire_osm = dplyr::select(cycle_hire_osm, osm_id, name, capacity, cyclestreets_id, description) \%>\%
+  mutate(capacity = as.numeric(capacity))
+names(cycle_hire_osm)
+nrow(cycle_hire_osm)
 }
 }
 \seealso{
