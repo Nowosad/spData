@@ -88,7 +88,6 @@
 representing cycle hire points accross London.</p>
     
 
-    <pre class="usage"><span class='no'>cycle_hire_osm</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -125,13 +124,18 @@ representing cycle hire points accross London.</p>
 # Code used to download the data:
 </div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>osmdata</span>)
+<span class='fu'>library</span>(<span class='no'>dplyr</span>)
 <span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='no'>q</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/osmdata/topics/add_osm_feature'>add_feature</a></span>(<span class='kw'>opq</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/osmdata/topics/opq'>opq</a></span>(<span class='st'>"London"</span>), <span class='kw'>key</span> <span class='kw'>=</span> <span class='st'>"network"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='st'>"tfl_cycle_hire"</span>)
+<span class='no'>q</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/osmdata/topics/add_osm_feature'>add_osm_feature</a></span>(<span class='kw'>opq</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/osmdata/topics/opq'>opq</a></span>(<span class='st'>"London"</span>), <span class='kw'>key</span> <span class='kw'>=</span> <span class='st'>"network"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='st'>"tfl_cycle_hire"</span>)
 <span class='no'>lnd_cycle_hire</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/osmdata/topics/osmdata_sf'>osmdata_sf</a></span>(<span class='no'>q</span>)
-<span class='no'>lnd_cycle_p</span> <span class='kw'>=</span> <span class='no'>lnd_cycle_hire</span>$<span class='no'>osm_points</span>
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>lnd_cycle_p</span>)
-<span class='no'>lnd_cycle_p_mini</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>lnd_cycle_p</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>, <span class='no'>cyclestreets_id</span>, <span class='no'>description</span>)
-<span class='fu'>nrow</span>(<span class='no'>lnd_cycle_p_mini</span>)
+<span class='no'>cycle_hire_osm</span> <span class='kw'>=</span> <span class='no'>lnd_cycle_hire</span>$<span class='no'>osm_points</span>
+<span class='fu'>nrow</span>(<span class='no'>cycle_hire_osm</span>)
+<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire_osm</span>)
+<span class='no'>cycle_hire_osm</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>cycle_hire_osm</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>,
+                               <span class='no'>cyclestreets_id</span>, <span class='no'>description</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>capacity</span> <span class='kw'>=</span> <span class='fu'>as.numeric</span>(<span class='no'>capacity</span>))
+<span class='fu'>names</span>(<span class='no'>cycle_hire_osm</span>)
+<span class='fu'>nrow</span>(<span class='no'>cycle_hire_osm</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

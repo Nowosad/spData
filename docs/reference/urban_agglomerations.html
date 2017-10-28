@@ -84,21 +84,19 @@
     </div>
 
     
-    <p>Dataset in 'long' form from the United Nations
+    <p>Dataset in a 'long' form from the United Nations
 population division with projections up to 2050.
 Includes only the top 30 largest areas by population at 5 year intervals.</p>
     
 
-    <pre class="usage"><span class='no'>urban_agglomerations</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>Selected variables:</p><ul>
-<li><p>Index Index of row</p></li>
-<li><p>Year Year of population estimate</p></li>
-<li><p>Country code Code of country</p></li>
-<li><p>Urban Agglomeration Name of the urban agglomeration</p></li>
-<li><p>Population (millions) Estimated human population</p></li>
+<li><p>year Year of population estimate</p></li>
+<li><p>country_code Code of country</p></li>
+<li><p>urban_agglomeration Name of the urban agglomeration</p></li>
+<li><p>population_millions Estimated human population</p></li>
 <li><p>geometry sfc_POINT</p></li>
 </ul>
     
@@ -112,12 +110,15 @@ Includes only the top 30 largest areas by population at 5 year intervals.</p>
 <span class='fu'>data</span>(<span class='no'>urban_agglomerations</span>)
 
 <span class='co'># Code used to download the data:</span></div><span class='co'># NOT RUN {</span>
-<span class='fu'>download.file</span>(<span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls"</span>, <span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>)
+<span class='fu'>download.file</span>(<span class='kw'>destfile</span> <span class='kw'>=</span> <span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>,
+<span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls"</span>)
 <span class='fu'>library</span>(<span class='no'>dplyr</span>)
 <span class='fu'>library</span>(<span class='no'>sf</span>)
 <span class='no'>urban_agglomerations</span> <span class='kw'>=</span> <span class='kw pkg'>readxl</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/readxl/topics/read_excel'>read_excel</a></span>(<span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>, <span class='kw'>skip</span> <span class='kw'>=</span> <span class='fl'>16</span>) <span class='kw'>%&gt;%</span>
     <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_as_sf'>st_as_sf</a></span>(<span class='kw'>coords</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"Longitude"</span>, <span class='st'>"Latitude"</span>), <span class='kw'>crs</span> <span class='kw'>=</span> <span class='fl'>4326</span>)
-<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>urban_agglomerations</span>)
+<span class='fu'>names</span>(<span class='no'>urban_agglomerations</span>) <span class='kw'>&lt;-</span> <span class='fu'>gsub</span>(<span class='st'>" "</span>, <span class='st'>"_"</span>, <span class='fu'>tolower</span>(<span class='fu'>names</span>(<span class='no'>urban_agglomerations</span>)) ) <span class='kw'>%&gt;%</span>
+        <span class='fu'>gsub</span>(<span class='st'>"\\(|\\)"</span>, <span class='st'>""</span>, <span class='no'>.</span>)
+<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>urban_agglomerations</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 <span class='fu'>file.remove</span>(<span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>)
 <span class='co'># }</span></pre>
   </div>

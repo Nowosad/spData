@@ -132,13 +132,25 @@
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt; tract conversion table 1980/1970: <a href='https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE'>https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE</a>, <a href='http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes'>http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes</a></p>
+    <p>Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt; tract conversion table 1980/1970: <a href='https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE'>https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&amp;permit[0]=AVAILABLE</a>, <a href='http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes'>http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&amp;study=7913&amp;bundle=all&amp;ds=1&amp;dups=yes</a>. The shapefile contains corrections and extra variables (tract 3592 is corrected to 3593; the extra columns are:</p><ul>
+<li><p>unitsnumber of single family houses</p></li>
+<li><p>cu5kcount of units under USD 5,000</p></li>
+<li><p>c5_7_5counts USD 5,000 to 7,500</p></li>
+<li><p>C*_*interval counts</p></li>
+<li><p>co50kcount of units over USD 50,000</p></li>
+<li><p>medianrecomputed median values</p></li>
+<li><p>BBrecomputed black population proportion</p></li>
+<li><p>censoredwhether censored or not</p></li>
+<li><p>NOXIDNOX model zone ID</p></li>
+<li><p>POPtract population</p></li>
+</ul>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Harrison, David, and Daniel L. Rubinfeld, Hedonic Housing Prices and the Demand for Clean Air, <em>Journal of Environmental Economics and Management</em>, Volume 5, (1978), 81-102. Original data.</p>
 <p>Gilley, O.W., and R. Kelley Pace, On the Harrison and Rubinfeld Data, <em>Journal of Environmental Economics and Management</em>, 31 (1996),403-405. Provided corrections and examined censoring.</p>
 <p>Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to Improve Estimation,  <em>Journal of the Real Estate Finance and Economics</em>, 14 (1997), 333-340.</p>
+<p>Bivand, Roger. Revisiting the Boston data set - Changing the units of observation affects estimated willingness to pay for clean air. REGION, v. 4, n. 1, p. 109-127, 2017. <a href='http://openjournals.wu.ac.at/ojs/index.php/region/article/view/107'>http://openjournals.wu.ac.at/ojs/index.php/region/article/view/107</a>.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -227,12 +239,9 @@
 #&gt; Observed Moran I      Expectation         Variance 
 #&gt;     0.4364296993    -0.0168870829     0.0009762383 
 #&gt; </div><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>maptools</span>)
-<span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/maptools/topics/readShapePoly'>readShapePoly</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
-                           <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>], <span class='kw'>ID</span><span class='kw'>=</span><span class='st'>"poltract"</span>,
-                           <span class='kw'>proj4string</span><span class='kw'>=</span><span class='fu'>CRS</span>(<span class='fu'>paste</span>(<span class='st'>"+proj=longlat +datum=NAD27 
-                           +no_defs +ellps=clrk66"</span>,
-                           <span class='st'>"+nadgrids=@conus,@alaska,@ntv2_0.gsb,@ntv1_can.dat"</span>)))
+<span class='fu'>library</span>(<span class='no'>rgdal</span>)
+<span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
+                           <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])
 <span class='no'>boston_nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/poly2nb'>poly2nb</a></span>(<span class='no'>boston.tr</span>)
 <span class='co'># }</span><span class='co'># NOT RUN {</span>
 <span class='no'>gp1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='fu'>log</span>(<span class='no'>CMEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>)

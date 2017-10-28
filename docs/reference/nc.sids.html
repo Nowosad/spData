@@ -88,7 +88,6 @@
 The <code>nc.sids</code> data frame has 100 rows and 21 columns. It contains data given in Cressie (1991, pp. 386-9), Cressie and Read (1985) and Cressie and Chan (1989) on sudden infant deaths in North Carolina for 1974-78 and 1979-84. The data set also contains the neighbour list given by Cressie and Chan (1989) omitting self-neighbours (ncCC89.nb), and the neighbour list given by Cressie and Read (1985) for contiguities (ncCR85.nb). The data are ordered by county ID number, not alphabetically as in the source tables <code>sidspolys</code> is a "polylist" object of polygon boundaries, and <code>sidscents</code> is a matrix of their centroids.</p>
     
 
-    <pre class="usage"><span class='no'>nc.sids</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -126,8 +125,9 @@ The <code>nc.sids</code> data frame has 100 rows and 21 columns. It contains dat
 <span class='no'>nc.sids</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/sids.shp"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])</div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
 #&gt; Source: "/home/jn/Documents/spData/inst/shapes/sids.shp", layer: "sids"
 #&gt; with 100 features
-#&gt; It has 14 fields
-#&gt; Integer64 fields read as strings:  CNTY_ CNTY_ID FIPSNO </div><div class='input'><span class='no'>rn</span> <span class='kw'>&lt;-</span> <span class='fu'>levels</span>(<span class='no'>nc.sids</span>@<span class='kw'>data</span>$<span class='no'>FIPSNO</span>)
+#&gt; It has 22 fields</div><div class='input'><span class='fu'>proj4string</span>(<span class='no'>nc.sids</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/CRS-class'>CRS</a></span>(<span class='st'>"+proj=longlat +ellps=clrk66"</span>)
+<span class='fu'>row.names</span>(<span class='no'>nc.sids</span>) <span class='kw'>&lt;-</span> <span class='fu'>as.character</span>(<span class='no'>nc.sids</span>$<span class='no'>FIPS</span>)
+<span class='no'>rn</span> <span class='kw'>&lt;-</span> <span class='fu'>row.names</span>(<span class='no'>nc.sids</span>)
 <span class='no'>ncCC89_nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/read.gal'>read.gal</a></span>(<span class='fu'>system.file</span>(<span class='st'>"weights/ncCC89.gal"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>],
                       <span class='kw'>region.id</span><span class='kw'>=</span><span class='no'>rn</span>)
 <span class='no'>ncCR85_nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/read.gal'>read.gal</a></span>(<span class='fu'>system.file</span>(<span class='st'>"weights/ncCR85.gal"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>],
