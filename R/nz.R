@@ -1,6 +1,6 @@
 #' @name nz
 #' @aliases new_zealand
-#' @title Cycle hire points in London
+#' @title Regions in New Zealand
 #'
 #' @description 
 #' 
