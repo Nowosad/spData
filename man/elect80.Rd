@@ -21,6 +21,9 @@
 \source{
 Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
 }
+\usage{
+elect80
+}
 \description{
 A data set for 1980 Presidential election results covering 3,107 US counties using geographical coordinates. In addition, three spatial neighbour objects, \code{k4} not using Great Circle distances, \code{dll} using Great Circle distances, and \code{e80_queen} of Queen contiguities for equivalent County polygons taken from file \code{co1980p020.tar.gz} on the USGS National Atlas site, and a spatial weights object imported from \code{elect.ford} - a 4-nearest neighbour non-GC row-standardised object, but with coercion to symmetry.
 }

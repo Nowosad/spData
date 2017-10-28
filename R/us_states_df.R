@@ -23,4 +23,4 @@
 #' 
 #' summary(us_states_df)
 #' 
-NULL
+"us_states_df"

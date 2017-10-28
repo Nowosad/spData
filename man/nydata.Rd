@@ -24,6 +24,9 @@
 \source{
 http://www.sph.emory.edu/~lwaller/ch9index.htm
 }
+\usage{
+nydata
+}
 \description{
 New York leukemia data taken from the data sets supporting Waller and Gotway 2004 (the data should be loaded by running \code{example(NY_data)} to demonstrate spatial data import techniques)
 }

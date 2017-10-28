@@ -28,4 +28,4 @@
 #' 
 #' summary(worldbank_df)
 #' 
-NULL
+"worldbank_df"

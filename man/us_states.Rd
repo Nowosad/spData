@@ -18,6 +18,9 @@ The object is in geographical coordinates using the NAD83 datum.}
 \source{
 \url{https://www.census.gov/geo/maps-data/data/tiger-line.html}
 }
+\usage{
+us_states
+}
 \description{
 The object loaded is a \code{sf} object containing the contiguous United States data from the US Census Bureau
 with a few variables from American Community Survey (ACS)

@@ -15,6 +15,9 @@
 \source{
 \url{https://esa.un.org/unpd/wup/CD-ROM/}
 }
+\usage{
+urban_agglomerations
+}
 \description{
 Dataset in a 'long' form from the United Nations
 population division with projections up to 2050.

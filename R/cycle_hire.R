@@ -37,4 +37,4 @@
 #' c_names = c("id", "name", "area", "lat", "lon", "nbikes", "nempty")
 #' cycle_hire = st_sf(cycle_hire, st_multipoint(c_names[c("lon", "lat")]))
 #' }
-NULL
+"cycle_hire"

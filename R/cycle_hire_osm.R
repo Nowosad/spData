@@ -46,4 +46,4 @@
 #' names(cycle_hire_osm)
 #' nrow(cycle_hire_osm)
 #' }
-NULL
+"cycle_hire_osm"
