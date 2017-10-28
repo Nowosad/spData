@@ -15,9 +15,6 @@
 \source{
 \url{https://www.census.gov/programs-surveys/acs/}
 }
-\usage{
-us_states_df
-}
 \description{
 The object loaded is a \code{data.frame} object containing the US states data from the American Community Survey (ACS)
 }

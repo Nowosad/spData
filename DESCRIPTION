@@ -27,7 +27,7 @@ Suggests:
     spDataLarge (>= 0.2.3.0),
     spdep
 License: CC0
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 LazyData: true
 URL: https://github.com/Nowosad/spData
 BugReports: https://github.com/Nowosad/spData/issues

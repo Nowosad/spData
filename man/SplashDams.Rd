@@ -16,9 +16,6 @@
 \source{
 R. R. Miller (2010) Is the Past Present? Historical Splash-dam Mapping and Stream Disturbance Detection in the Oregon Coastal Province. MSc. thesis, Oregon State University; packaged by Jonathan Callahan
 }
-\usage{
-SplashDams
-}
 \description{
 Data for Splash Dams in western Oregon
 }

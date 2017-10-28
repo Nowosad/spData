@@ -23,4 +23,4 @@
 #' library(sp)
 #' data(SplashDams)
 #' plot(SplashDams, axes=TRUE)
-"SplashDams"
+NULL

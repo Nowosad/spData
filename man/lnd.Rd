@@ -17,9 +17,6 @@
 \source{
 \url{https://github.com/Robinlovelace/Creating-maps-in-R}
 }
-\usage{
-lnd
-}
 \description{
 Polygons representing large administrative zones in London
 }

@@ -37,4 +37,4 @@
 #' devtools::use_data(urban_agglomerations, overwrite = TRUE)
 #' file.remove("WUP2014-F11a-30_Largest_Cities.xls")
 #' }
-"urban_agglomerations"
+NULL

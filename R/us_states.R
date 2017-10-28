@@ -28,4 +28,4 @@
 #' 
 #' plot(us_states["REGION"])
 #' 
-"us_states"
+NULL

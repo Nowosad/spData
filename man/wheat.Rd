@@ -16,9 +16,6 @@
 \source{
 Cressie, N. A. C. (1993) Statistics for Spatial Data. Wiley, New York, p. 455.
 }
-\usage{
-wheat
-}
 \description{
 Mercer and Hall wheat yield data, based on version in Cressie (1993), p. 455.
 }

@@ -16,9 +16,6 @@
 \source{
 Marshall R M (1991) Mapping disease and mortality rates using Empirical Bayes Estimators, Applied Statistics, 40, 283--294; Bailey T, Gatrell A (1995) Interactive Spatial Data Analysis, Harlow: Longman --- INFOMAP data set used with permission.
 }
-\usage{
-auckland
-}
 \description{
 (Use \code{example(auckland)} to load the data from shapefile and generate neighbour list on the fly).  The \code{auckland} data frame has 167 rows (census area units --- CAU) and 4 columns. The dataset also includes the "nb" object \code{auckland.nb} of neighbour relations based on contiguity, and the "polylist" object \code{auckpolys} of polygon boundaries for the CAU. The \code{auckland} data frame includes the following columns:
 }

@@ -35,4 +35,4 @@
 #' 
 #' plot(world)
 #' 
-"world"
+NULL

@@ -25,4 +25,4 @@
 #' data(elect80)
 #' summary(elect80)
 #' plot(elect80)
-"elect80"
+NULL

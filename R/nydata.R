@@ -1,3 +1,4 @@
+#' @name nydata
 #' @aliases NY_data nydata listw_NY
 #' @title New York leukemia data
 #'
@@ -19,7 +20,7 @@
 #' \item{PEXPOSURE} {"exposure potential": inverse distance between each census tract centroid and the nearest TCE site, IDIST, transformed via log(100*IDIST)}
 #' }
 #' 
-#' @details The examples section shows how the DBF files from the book website for Chapter 9 were converted into the \code{nydata} data frame and the \code{listw_NY} spatial weights list.
+#' @details The examples section shows how the DBF files from the book website for Chapter 9 were converted into the \code{nydata} data frame and the \code{listw_NY} spatial weights list. The \code{shapes} directory includes the original version of the UTM18 census tract boundaries imported from BNA format (http://sedac.ciesin.columbia.edu/ftpsite/pub/census/usa/tiger/ny/bna_st/t8_36.zip) before the OGR/GDAL BNA driver was available. The \code{NY8_utm18} shapefile was constructed using a bna2mif converter and converted to shapefile format after adding data using \code{writeOGR}. The new file \code{NY8_bna_utm18.gpkg} has been constructed from the original BNA file, but read using the OGR BNA driver with GEOS support. The NY8 shapefile includes invalid polygons, but because the OGR BNA driver may have GEOS support (used here), the tract polygon objects are valid.
 #' 
 #' @source http://www.sph.emory.edu/~lwaller/ch9index.htm
 #' @references Waller, L. and C. Gotway (2004) \emph{Applied Spatial Statistics for Public Health Data}. New York: John Wiley and Sons.
@@ -43,4 +44,4 @@
 #' library(spdep)
 #' nyadjlw <- mat2listw(nyadjmat, as.character(nydata$AREAKEY))
 #' listw_NY <- nb2listw(nyadjlw$neighbours, style="B")
-"nydata"
+NULL

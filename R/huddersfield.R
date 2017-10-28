@@ -17,4 +17,4 @@
 #' @examples 
 #' data(huddersfield)
 #' str(huddersfield)
-"huddersfield"
+NULL
