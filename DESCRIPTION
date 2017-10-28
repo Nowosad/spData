@@ -14,7 +14,7 @@ Description: Diverse spatial datasets for demonstrating, benchmarking and teachi
         cycle_hire and cycle_hire_osm, for example, is designed to illustrate point pattern analysis techniques.
         This package interacts with data available through the 'spDataLarge' package, 
         which is available in a 'drat' repository. To access this data package, 
-        run 'install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/"", type = "source")'. 
+        run 'install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")'. 
         The size of the 'spDataLarge' package is approximately 20 MB. 
 Depends:
     R (>= 3.3.0)
