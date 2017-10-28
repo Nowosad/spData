@@ -4,7 +4,7 @@
 \name{nz}
 \alias{nz}
 \alias{new_zealand}
-\title{Cycle hire points in London}
+\title{Regions in New Zealand}
 \format{FORMAT:
 \itemize{
     \item{REGC2017_NAME} {Name}
