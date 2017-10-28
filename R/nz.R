@@ -27,7 +27,8 @@
 #' summary(nz)
 #' plot(nz)
 #' \dontrun{
-#' u_nz = "http://www3.stats.govt.nz/digitalboundaries/annual/ESRI_Geodatabase_2017_Digital_Boundaries_Generalised_Clipped.zip"
+#' u_nz = "http://www3.stats.govt.nz/digitalboundaries/annual/
+#'     ESRI_Geodatabase_2017_Digital_Boundaries_Generalised_Clipped.zip"
 #' download.file(u_nz, destfile = "nz.zip")
 #' unzip("nz.zip")
 #' st_layers("2017 Digital Boundaries Generalised Clipped.gdb/")
