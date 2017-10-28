@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -124,7 +124,7 @@ The <code>nc.sids</code> data frame has 100 rows and 21 columns. It contains dat
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>rgdal</span>)
 <span class='fu'>library</span>(<span class='no'>spdep</span>)
 <span class='no'>nc.sids</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/sids.shp"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])</div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/home/jn/Documents/spData/inst/shapes/sids.shp", layer: "sids"
+#&gt; Source: "/home/robin/repos/spData/inst/shapes/sids.shp", layer: "sids"
 #&gt; with 100 features
 #&gt; It has 22 fields</div><div class='input'><span class='fu'>proj4string</span>(<span class='no'>nc.sids</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/CRS-class'>CRS</a></span>(<span class='st'>"+proj=longlat +ellps=clrk66"</span>)
 <span class='fu'>row.names</span>(<span class='no'>nc.sids</span>) <span class='kw'>&lt;-</span> <span class='fu'>as.character</span>(<span class='no'>nc.sids</span>$<span class='no'>FIPS</span>)

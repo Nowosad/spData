@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -113,7 +113,7 @@ The <code>eire.df</code> data frame has 26 rows and 9 columns. In addition, poly
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>maptools</span>)</div><div class='output co'>#&gt; <span class='message'>Checking rgeos availability: TRUE</span></div><div class='input'><span class='fu'>library</span>(<span class='no'>rgdal</span>)
 <span class='fu'>library</span>(<span class='no'>spdep</span>)
 <span class='no'>eire</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/eire.shp"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])</div><div class='output co'>#&gt; OGR data source with driver: ESRI Shapefile 
-#&gt; Source: "/home/jn/Documents/spData/inst/shapes/eire.shp", layer: "eire"
+#&gt; Source: "/home/robin/repos/spData/inst/shapes/eire.shp", layer: "eire"
 #&gt; with 26 features
 #&gt; It has 10 fields</div><div class='input'><span class='no'>eire.nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/poly2nb'>poly2nb</a></span>(<span class='no'>eire</span>)
 
