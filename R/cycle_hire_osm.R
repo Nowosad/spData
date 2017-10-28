@@ -40,7 +40,8 @@
 #' cycle_hire_osm = lnd_cycle_hire$osm_points
 #' nrow(cycle_hire_osm)
 #' plot(cycle_hire_osm)
-#' cycle_hire_osm = dplyr::select(cycle_hire_osm, osm_id, name, capacity, cyclestreets_id, description) %>%
+#' cycle_hire_osm = dplyr::select(cycle_hire_osm, osm_id, name, capacity, 
+#'                                cyclestreets_id, description) %>%
 #'   mutate(capacity = as.numeric(capacity))
 #' names(cycle_hire_osm)
 #' nrow(cycle_hire_osm)

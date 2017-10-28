@@ -36,5 +36,5 @@
 #' 
 #' library(sf)
 #' baltimore_sf <- baltimore %>% st_as_sf(., coords = c("X","Y"))
-#' plot(baltimore_sf)
+#' plot(baltimore_sf["PRICE"])
 NULL

@@ -36,7 +36,7 @@ str(baltimore)
 
 library(sf)
 baltimore_sf <- baltimore \%>\% st_as_sf(., coords = c("X","Y"))
-plot(baltimore_sf)
+plot(baltimore_sf["PRICE"])
 }
 \references{
 Dubin, Robin A. (1992). Spatial autocorrelation and neighborhood quality. Regional Science and Urban Economics 22(3), 433-452.
