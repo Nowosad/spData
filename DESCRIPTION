@@ -1,7 +1,7 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 0.2.6.2
-Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no", comment = c(ORCID = "0000-0003-2392-6140")),
+Version: 0.2.6.5
+Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"),
         person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com", comment = c(ORCID = "0000-0002-1057-3721")),
         person("Robin", "Lovelace", role = "aut",
         comment = c(ORCID = "0000-0001-5679-6536"))
@@ -12,10 +12,6 @@ Description: Diverse spatial datasets for demonstrating, benchmarking and teachi
         it also contains data stored in a range of file formats including GeoJSON, ESRI Shapefile and GeoPackage. 
         Some of the datasets are designed to illustrate specific analysis techniques.
         cycle_hire and cycle_hire_osm, for example, is designed to illustrate point pattern analysis techniques.
-        This package interacts with data available through the 'spDataLarge' package, 
-        which is available in a 'drat' repository. To access this data package, 
-        run 'install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/"", type = "source")'. 
-        The size of the 'spDataLarge' package is approximately 20 MB. 
 Depends:
     R (>= 3.3.0)
 Suggests:
@@ -24,7 +20,7 @@ Suggests:
     rgdal,
     sf,
     sp,
-    spDataLarge (>= 0.2.3.0),
+    spDataLarge (>= 0.2.3.1),
     spdep
 License: CC0
 RoxygenNote: 6.0.1.9000

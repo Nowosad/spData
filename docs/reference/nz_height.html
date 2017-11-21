@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>World country polygons — world • spData</title>
+<title>High points in New Zealand — nz_height • spData</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,54 +80,51 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>World country polygons</h1>
+    <h1>High points in New Zealand</h1>
     </div>
 
     
-    <p>The object loaded is a <code>sf</code> object containing a world map data from Natural Earth with a few variables from World Bank</p>
+    <p>Top 101 heighest points in New Zealand (2017).
+See <a href='https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/'>https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/</a> for details.</p>
     
 
-    <pre class="usage"><span class='no'>world</span></pre>
+    <pre class="usage"><span class='no'>nz_height</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>Formal class 'sf' [package "sf"]; the data contains a data.frame with 177 obs. of 11 variables:</p><ul>
-<li><p>iso_a2 character vector of ISO 2 character country codes</p></li>
-<li><p>name_long character vector of country names</p></li>
-<li><p>continent character vector of continent names</p></li>
-<li><p>region_un character vector of region names</p></li>
-<li><p>subregion character vector of subregion names</p></li>
-<li><p>type character vector of type names</p></li>
-<li><p>area_km2 integer vector of area values</p></li>
-<li><p>pop integer vector of population in 2014</p></li>
-<li><p>lifeExp integer vector of life expectancy at birth in 2014</p></li>
-<li><p>gdpPercap integer vector of per-capita GDP in 2014</p></li>
-<li><p>geom sfc_MULTIPOLYGON</p></li>
-</ul><p>The object is in geographical coordinates using the WGS84 datum.</p>
+    <p>FORMAT:</p><ul>
+<li><p>t50_fid ID</p></li>
+<li><p>elevation Height above sea level in m</p></li>
+<li><p>geometry sfc_POINT</p></li>
+</ul>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='http://www.naturalearthdata.com/'>http://www.naturalearthdata.com/</a>
-    <a href='http://data.worldbank.org/'>http://data.worldbank.org/</a></p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <p>See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth</p>
+    <p><a href='https://data.linz.govt.nz'>https://data.linz.govt.nz</a></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>data</span>(<span class='no'>world</span>)
-<span class='co'># or</span>
-<span class='no'>world</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/world.gpkg"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `wrld.gpkg' from data source `/home/jn/Documents/spData/inst/shapes/world.gpkg' using driver `GPKG'
-#&gt; Simple feature collection with 177 features and 10 fields
-#&gt; geometry type:  MULTIPOLYGON
-#&gt; dimension:      XY
-#&gt; bbox:           xmin: -180 ymin: -90 xmax: 180 ymax: 83.64513
-#&gt; epsg (SRID):    4326
-#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='input'>
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>world</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot all</span></div><div class='img'><img src='world-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
-</div></pre>
+<span class='fu'>summary</span>(<span class='no'>nz_height</span>)</div><div class='output co'>#&gt;     t50_fid          elevation             geometry  
+#&gt;  Min.   :2353944   Min.   :2706   POINT        :101  
+#&gt;  1st Qu.:2364031   1st Qu.:2782   epsg:2193    :  0  
+#&gt;  Median :2364242   Median :2885   +proj=tmer...:  0  
+#&gt;  Mean   :2369511   Mean   :2951                      
+#&gt;  3rd Qu.:2372292   3rd Qu.:3054                      
+#&gt;  Max.   :2408411   Max.   :3724                      </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>$<span class='no'>geometry</span>)</div><div class='img'><img src='nz_height-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz_height</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: ignoring all but the first attribute</span></div><div class='img'><img src='nz_height-2.png' alt='' width='700' height='432.632880098887' /></div># NOT RUN {
+library(dplyr)
+After downloading data from https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/
+unzip("lds-nz-height-points-topo-150k-SHP.zip")
+nz_height = st_read("nz-height-points-topo-150k.shp") %>% 
+  top_n(n = 100, wt = elevation)
+library(tmap)
+tmap_mode("view")
+qtm(nz) +
+  qtm(nz_height)
+f = list.files(pattern = "*nz-height*")
+file.remove(f)
+# }
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -136,8 +133,6 @@
       <li><a href="#format">Format</a></li>
 
       <li><a href="#source">Source</a></li>
-
-      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

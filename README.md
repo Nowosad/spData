@@ -13,6 +13,8 @@ Datasets for spatial analysis
 -   `cycle_hire` - Cycle hire points in London
 -   `cycle_hire_osm` - Cycle hire points in London from OSM
 -   `lnd` - The boroughs of London
+-   `nz` - The regions of New Zealand
+-   `nz_height` - High points in New Zealand
 -   `urban_agglomerations` - Major urban areas worldwide
 -   `us_states` - US states polygons
 -   `world` - World country polygons
@@ -59,6 +61,17 @@ Get the development version from github:
 ``` r
 devtools::install_github("nowosad/spData")
 ```
+
+spDataLarge
+-----------
+
+This package interacts with data available through the 'spDataLarge' package, which is available in a 'drat' repository. To access this data package, run:
+
+``` r
+install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
+```
+
+The size of the 'spDataLarge' package is approximately 20 MB.
 
 Contributions
 -------------
