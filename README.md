@@ -9,9 +9,12 @@ Datasets for spatial analysis
 
 ### `sf`
 
+-   `aggregating_zones` - See `congruent`
 -   `baltimore` - House sales prices, Baltimore, MD 1978
+-   `congruent` - Sample of UK administrative zones that have shared borders with `aggregating_zones` (`incongruent` does not have shared borders) for teaching the concept of spatial congruence
 -   `cycle_hire` - Cycle hire points in London
 -   `cycle_hire_osm` - Cycle hire points in London from OSM
+-   `incongruent` - See `congruent`
 -   `lnd` - The boroughs of London
 -   `nz` - The regions of New Zealand
 -   `nz_height` - High points in New Zealand
