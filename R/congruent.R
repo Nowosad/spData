@@ -1,0 +1,56 @@
+#' @name congruent
+#' @aliases incongruent aggregating_zones
+#' @title Datasets to illustrate the concept of spatial congruence
+#'
+#' @description Sample of old (incongruent) and new (congruent) administrative zones
+#' from UK statistical agencies
+#' 
+#' @format 
+#' Simple feature geographic data in a projected CRS (OSGB) with random values assigned
+#' for teaching purposes.
+#' 
+#' @source \url{https://en.wikipedia.org/wiki/ONS_coding_system}
+#' @docType data
+#' @keywords datasets sf
+#' 
+#' @examples 
+#' library(sf)
+#' plot(aggregating_zones$geometry, lwd = 5)
+#' plot(congruent$geometry, add = TRUE, border = "green")
+#' plot(incongruent$geometry, add = TRUE, border = "blue")
+#' # Code used to download the data:
+#' \dontrun{
+#' devtools::install_github("robinlovelace/ukboundaries")
+#' library(sf)
+#' library(tmap)
+#' library(ukboundaries)
+#' # data(package = "ukboundaries") # see datasets available
+#' sel_wetherby = grepl("001|002", msoa2011_lds$geo_label)
+#' aggregating_zones = st_transform(msoa2011_lds[sel_wetherby, ], 27700)
+#' 
+#' # find lsoas in the aggregating_zones (there must be a neater way...)
+#' lsoa_touching = st_transform(lsoa2011_lds, 27700)[aggregating_zones, ]
+#' lsoa_cents = st_centroid(lsoa_touching)
+#' lsoa_cents = lsoa_cents[aggregating_zones, ]
+#' congruent = lsoa_touching[lsoa_cents, ]
+#' 
+#' # same for ed zones
+#' ed_touching = st_transform(ed1981, 27700)[aggregating_zones, ]
+#' ed_cents = st_centroid(ed_touching)
+#' ed_cents = ed_cents[aggregating_zones, ]
+#' incongruent = ed_touching[ed_cents, ]
+#' 
+#' # Bind the two types of shape together
+#' incongruent$layer = "Incongruent"
+#' incongruent = incongruent["layer"]
+#' set.seed(2017)
+#' incongruent$value = rnorm(nrow(incongruent), mean = 5)
+#' incongruent_cents = st_centroid(incongruent)
+#' congruent$layer = "Congruent"
+#' congruent = congruent["layer"]
+#' congruent$value = aggregate(incongruent_cents["value"], congruent, mean)$value
+#' devtools::use_data(congruent)
+#' devtools::use_data(incongruent)
+#' devtools::use_data(aggregating_zones)
+#' }
+"congruent"
