@@ -20,33 +20,35 @@ used.cars
 The \code{used.cars} data frame has 48 rows and 2 columns. The data set includes a neighbours list for the 48 states excluding DC from poly2nb().
 }
 \examples{
-library(spdep)
-data(used.cars)
-moran.test(used.cars$price.1960, nb2listw(usa48.nb))
-moran.plot(used.cars$price.1960, nb2listw(usa48.nb),
+if (requireNamespace("spdep", quietly = TRUE)) {
+  library(spdep)
+  data(used.cars)
+  moran.test(used.cars$price.1960, nb2listw(usa48.nb))
+  moran.plot(used.cars$price.1960, nb2listw(usa48.nb),
            labels=rownames(used.cars))
-uc.lm <- lm(price.1960 ~ tax.charges, data=used.cars)
-summary(uc.lm)
+  uc.lm <- lm(price.1960 ~ tax.charges, data=used.cars)
+  summary(uc.lm)
 
-lm.morantest(uc.lm, nb2listw(usa48.nb))
-lm.morantest.sad(uc.lm, nb2listw(usa48.nb))
-lm.LMtests(uc.lm, nb2listw(usa48.nb))
-uc.err <- errorsarlm(price.1960 ~ tax.charges, data=used.cars,
+  lm.morantest(uc.lm, nb2listw(usa48.nb))
+  lm.morantest.sad(uc.lm, nb2listw(usa48.nb))
+  lm.LMtests(uc.lm, nb2listw(usa48.nb))
+  uc.err <- errorsarlm(price.1960 ~ tax.charges, data=used.cars,
                      nb2listw(usa48.nb), tol.solve=1.0e-13, 
                      control=list(tol.opt=.Machine$double.eps^0.3))
-summary(uc.err)
-uc.lag <- lagsarlm(price.1960 ~ tax.charges, data=used.cars,
+  summary(uc.err)
+  uc.lag <- lagsarlm(price.1960 ~ tax.charges, data=used.cars,
                    nb2listw(usa48.nb), tol.solve=1.0e-13, 
                    control=list(tol.opt=.Machine$double.eps^0.3))
-summary(uc.lag)
-uc.lag1 <- lagsarlm(price.1960 ~ 1, data=used.cars,
+  summary(uc.lag)
+  uc.lag1 <- lagsarlm(price.1960 ~ 1, data=used.cars,
                     nb2listw(usa48.nb), tol.solve=1.0e-13, 
                     control=list(tol.opt=.Machine$double.eps^0.3))
-summary(uc.lag1)
-uc.err1 <- errorsarlm(price.1960 ~ 1, data=used.cars,
+  summary(uc.lag1)
+  uc.err1 <- errorsarlm(price.1960 ~ 1, data=used.cars,
                       nb2listw(usa48.nb), tol.solve=1.0e-13, 
                       control=list(tol.opt=.Machine$double.eps^0.3))
-summary(uc.err1)
+  summary(uc.err1)
+}
 }
 \references{
 Hepple, L. W. 1976 A maximum likelihood model for econometric estimation with spatial series, in Masser, I (ed) Theory and practice in regional science, London: Pion, pp. 90-104.

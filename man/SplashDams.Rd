@@ -23,9 +23,11 @@ SplashDams
 Data for Splash Dams in western Oregon
 }
 \examples{
-library(sp)
-data(SplashDams)
-plot(SplashDams, axes=TRUE)
+if (requireNamespace("sp", quietly = TRUE)) {
+  library(sp)
+  data(SplashDams)
+  plot(SplashDams, axes=TRUE)
+}
 }
 \references{
 \url{http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
