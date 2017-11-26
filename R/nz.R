@@ -23,9 +23,11 @@
 #' @keywords datasets sf
 #' 
 #' @examples 
-#' library(sf)
-#' summary(nz)
-#' plot(nz)
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   summary(nz)
+#'   plot(nz)
+#' }
 #' \dontrun{
 #' u_nz = "http://www3.stats.govt.nz/digitalboundaries/annual/
 #'     ESRI_Geodatabase_2017_Digital_Boundaries_Generalised_Clipped.zip"

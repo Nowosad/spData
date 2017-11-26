@@ -23,9 +23,10 @@
 #' @docType data
 #' @keywords datasets sf
 #' @examples 
-#' library(sf)
-#' data(us_states)
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   data(us_states)
 #' 
-#' plot(us_states["REGION"])
-#' 
+#'   plot(us_states["REGION"])
+#' }
 "us_states"
