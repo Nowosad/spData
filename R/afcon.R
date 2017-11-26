@@ -22,12 +22,14 @@
 #' @keywords datasets spdep
 #' 
 #' @examples 
-#' data(afcon)
-#' library(spdep)
-#' plot(africa.rook.nb, afxy)
-#' plot(diffnb(paper.nb, africa.rook.nb), afxy, col="red", add=TRUE)
-#' text(afxy, labels=attr(africa.rook.nb, "region.id"), pos=4, offset=0.4)
-#' moran.test(afcon$totcon, nb2listw(africa.rook.nb))
-#' moran.test(afcon$totcon, nb2listw(paper.nb))
-#' geary.test(afcon$totcon, nb2listw(paper.nb))
+# data(afcon)
+# if (!requireNamespace("spdep", quietly = TRUE)) {
+#         library(spdep)
+#         plot(africa.rook.nb, afxy)
+#         plot(diffnb(paper.nb, africa.rook.nb), afxy, col="red", add=TRUE)
+#         text(afxy, labels=attr(africa.rook.nb, "region.id"), pos=4, offset=0.4)
+#         moran.test(afcon$totcon, nb2listw(africa.rook.nb))
+#         moran.test(afcon$totcon, nb2listw(paper.nb))
+#         geary.test(afcon$totcon, nb2listw(paper.nb))
+# }
 "afcon"
