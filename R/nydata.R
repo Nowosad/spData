@@ -29,6 +29,7 @@
 #' 
 #' @examples 
 #' ## NY leukemia
+#' \dontrun{
 #' library(foreign)
 #' nydata <- read.dbf(system.file("misc/nydata.dbf", package="spData")[1])
 #' library(sp)
@@ -44,4 +45,5 @@
 #' library(spdep)
 #' nyadjlw <- mat2listw(nyadjmat, as.character(nydata$AREAKEY))
 #' listw_NY <- nb2listw(nyadjlw$neighbours, style="B")
+#' }
 "nydata"

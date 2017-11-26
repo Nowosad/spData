@@ -18,7 +18,7 @@
 #' @keywords datasets sf
 #' 
 #' @examples 
-#' #' if (requireNamespace("sf", quietly = TRUE)) {
+#' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sf)
 #'   summary(nz_height)
 #'   plot(nz$geometry)
