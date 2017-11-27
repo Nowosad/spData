@@ -106,37 +106,59 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>spdep</span>)</div><div class='output co'>#&gt; <span class='error'>Error: package ‘spData’ required by ‘spdep’ could not be found</span></div><div class='input'><span class='fu'>data</span>(<span class='no'>used.cars</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; <span class='error'>Error in moran.test(used.cars$price.1960, nb2listw(usa48.nb)): could not find function "moran.test"</span></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.plot'>moran.plot</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>),
-           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))</div><div class='output co'>#&gt; <span class='error'>Error in moran.plot(used.cars$price.1960, nb2listw(usa48.nb), labels = rownames(used.cars)): could not find function "moran.plot"</span></div><div class='input'><span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
-<span class='fu'>summary</span>(<span class='no'>uc.lm</span>)</div><div class='output co'>#&gt; 
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"spdep"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>spdep</span>)
+  <span class='fu'>data</span>(<span class='no'>used.cars</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.test'>moran.test</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/moran.plot'>moran.plot</a></span>(<span class='no'>used.cars</span>$<span class='no'>price.1960</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>),
+           <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>rownames</span>(<span class='no'>used.cars</span>))
+  <span class='no'>uc.lm</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>)
+  <span class='fu'>summary</span>(<span class='no'>uc.lm</span>)
+
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest.sad'>lm.morantest.sad</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.LMtests'>lm.LMtests</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
+  <span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                     <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                     <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+  <span class='fu'>summary</span>(<span class='no'>uc.err</span>)
+  <span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                   <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                   <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+  <span class='fu'>summary</span>(<span class='no'>uc.lag</span>)
+  <span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                    <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                    <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+  <span class='fu'>summary</span>(<span class='no'>uc.lag1</span>)
+  <span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                      <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                      <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+  <span class='fu'>summary</span>(<span class='no'>uc.err1</span>)
+}</div><div class='img'><img src='used.cars-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = price.1960 ~ tax.charges, data = used.cars)
+#&gt; errorsarlm(formula = price.1960 ~ 1, data = used.cars, listw = nb2listw(usa48.nb), 
+#&gt;     tol.solve = 1e-13, control = list(tol.opt = .Machine$double.eps^0.3))
 #&gt; 
 #&gt; Residuals:
 #&gt;      Min       1Q   Median       3Q      Max 
-#&gt; -116.701  -45.053   -1.461   43.400  107.807 
+#&gt; -76.1518 -18.2214   5.2489  21.6309  63.4983 
 #&gt; 
-#&gt; Coefficients:
-#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    
-#&gt; (Intercept) 1435.7506    27.5796  52.058  &lt; 2e-16 ***
-#&gt; tax.charges    0.6872     0.1754   3.918 0.000294 ***
-#&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; Type: error 
+#&gt; Coefficients: (asymptotic standard errors) 
+#&gt;             Estimate Std. Error z value  Pr(&gt;|z|)
+#&gt; (Intercept) 1542.607     27.321  56.462 &lt; 2.2e-16
 #&gt; 
-#&gt; Residual standard error: 57.01 on 46 degrees of freedom
-#&gt; Multiple R-squared:  0.2503,	Adjusted R-squared:  0.234 
-#&gt; F-statistic: 15.35 on 1 and 46 DF,  p-value: 0.0002939
-#&gt; </div><div class='input'>
-<span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lm.morantest(uc.lm, nb2listw(usa48.nb)): could not find function "lm.morantest"</span></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest.sad'>lm.morantest.sad</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lm.morantest.sad(uc.lm, nb2listw(usa48.nb)): could not find function "lm.morantest.sad"</span></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.LMtests'>lm.LMtests</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lm.LMtests(uc.lm, nb2listw(usa48.nb)): could not find function "lm.LMtests"</span></div><div class='input'><span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                     <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                     <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))</div><div class='output co'>#&gt; <span class='error'>Error in errorsarlm(price.1960 ~ tax.charges, data = used.cars, nb2listw(usa48.nb),     tol.solve = 1e-13, control = list(tol.opt = .Machine$double.eps^0.3)): could not find function "errorsarlm"</span></div><div class='input'><span class='fu'>summary</span>(<span class='no'>uc.err</span>)</div><div class='output co'>#&gt; <span class='error'>Error in summary(uc.err): object 'uc.err' not found</span></div><div class='input'><span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                   <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                   <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lagsarlm(price.1960 ~ tax.charges, data = used.cars, nb2listw(usa48.nb),     tol.solve = 1e-13, control = list(tol.opt = .Machine$double.eps^0.3)): could not find function "lagsarlm"</span></div><div class='input'><span class='fu'>summary</span>(<span class='no'>uc.lag</span>)</div><div class='output co'>#&gt; <span class='error'>Error in summary(uc.lag): object 'uc.lag' not found</span></div><div class='input'><span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                    <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                    <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lagsarlm(price.1960 ~ 1, data = used.cars, nb2listw(usa48.nb),     tol.solve = 1e-13, control = list(tol.opt = .Machine$double.eps^0.3)): could not find function "lagsarlm"</span></div><div class='input'><span class='fu'>summary</span>(<span class='no'>uc.lag1</span>)</div><div class='output co'>#&gt; <span class='error'>Error in summary(uc.lag1): object 'uc.lag1' not found</span></div><div class='input'><span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                      <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                      <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))</div><div class='output co'>#&gt; <span class='error'>Error in errorsarlm(price.1960 ~ 1, data = used.cars, nb2listw(usa48.nb),     tol.solve = 1e-13, control = list(tol.opt = .Machine$double.eps^0.3)): could not find function "errorsarlm"</span></div><div class='input'><span class='fu'>summary</span>(<span class='no'>uc.err1</span>)</div><div class='output co'>#&gt; <span class='error'>Error in summary(uc.err1): object 'uc.err1' not found</span></div></pre>
+#&gt; Lambda: 0.82919, LR test value: 54.202, p-value: 1.8086e-13
+#&gt; Asymptotic standard error: 0.070993
+#&gt;     z-value: 11.68, p-value: &lt; 2.22e-16
+#&gt; Wald statistic: 136.42, p-value: &lt; 2.22e-16
+#&gt; 
+#&gt; Log likelihood: -240.977 for error model
+#&gt; ML residual variance (sigma squared): 1045.4, (sigma: 32.333)
+#&gt; Number of observations: 48 
+#&gt; Number of parameters estimated: 3 
+#&gt; AIC: 487.95, (AIC for lm: 540.16)
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

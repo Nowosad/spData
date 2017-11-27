@@ -107,31 +107,12 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sp</span>)
-<span class='fu'>data</span>(<span class='no'>elect80</span>)
-<span class='fu'>summary</span>(<span class='no'>elect80</span>)</div><div class='output co'>#&gt; Object of class SpatialPointsDataFrame
-#&gt; Coordinates:
-#&gt;             min       max
-#&gt; long -124.22990 -67.60999
-#&gt; lat    25.11707  48.83375
-#&gt; Is projected: FALSE 
-#&gt; proj4string : [+proj=longlat +datum=NAD27]
-#&gt; Number of points: 3107
-#&gt; Data attributes:
-#&gt;      FIPS             pc_turnout        pc_college     pc_homeownership 
-#&gt;  Length:3107        Min.   :0.04703   Min.   :0.2087   Min.   :0.02958  
-#&gt;  Class :character   1st Qu.:0.49661   1st Qu.:0.4080   1st Qu.:0.34321  
-#&gt;  Mode  :character   Median :0.56789   Median :0.5046   Median :0.37343  
-#&gt;                     Mean   :0.57259   Mean   :0.4904   Mean   :0.36464  
-#&gt;                     3rd Qu.:0.64295   3rd Qu.:0.5665   3rd Qu.:0.39507  
-#&gt;                     Max.   :1.10526   Max.   :0.8466   Max.   :0.45675  
-#&gt;    pc_income     
-#&gt;  Min.   : 4.322  
-#&gt;  1st Qu.: 7.416  
-#&gt;  Median : 8.395  
-#&gt;  Mean   : 8.552  
-#&gt;  3rd Qu.: 9.515  
-#&gt;  Max.   :24.962  </div><div class='input'><span class='fu'>plot</span>(<span class='no'>elect80</span>)</div><div class='img'><img src='elect80-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sp"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sp</span>)
+  <span class='fu'>data</span>(<span class='no'>elect80</span>)
+  <span class='fu'>summary</span>(<span class='no'>elect80</span>)
+  <span class='fu'>plot</span>(<span class='no'>elect80</span>)
+}</div><div class='img'><img src='elect80-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

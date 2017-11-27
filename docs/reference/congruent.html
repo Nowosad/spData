@@ -101,41 +101,68 @@ for teaching purposes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>aggregating_zones</span>$<span class='no'>geometry</span>, <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>congruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"green"</span>)</div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>incongruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='congruent-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'># Code used to download the data:
+    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>aggregating_zones</span>$<span class='no'>geometry</span>, <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>5</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>congruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"green"</span>, <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>2</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>incongruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"blue"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fl'>NA</span>)
+  <span class='fu'>rbind</span>(<span class='no'>congruent</span>, <span class='no'>incongruent</span>)
+}</div><div class='img'><img src='congruent-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Simple feature collection with 18 features and 2 fields
+#&gt; geometry type:  GEOMETRY
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: 417686.2 ymin: 443703 xmax: 422963 ymax: 447036.8
+#&gt; epsg (SRID):    27700
+#&gt; proj4string:    +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs
+#&gt;          level    value                       geometry
+#&gt; 1    Congruent 5.060934 MULTIPOLYGON (((420725.5527...
+#&gt; 2    Congruent 4.887273 MULTIPOLYGON (((419315.7237...
+#&gt; 3    Congruent 4.968365 MULTIPOLYGON (((421559.9977...
+#&gt; 4    Congruent 5.493269 MULTIPOLYGON (((419023.7707...
+#&gt; 5    Congruent 4.956924 MULTIPOLYGON (((419901.0127...
+#&gt; 6    Congruent 4.790662 MULTIPOLYGON (((420253.0227...
+#&gt; 7    Congruent 5.233551 MULTIPOLYGON (((419788.2427...
+#&gt; 8    Congruent 4.990704 MULTIPOLYGON (((420409.5457...
+#&gt; 9    Congruent 5.136356 MULTIPOLYGON (((418708.8047...
+#&gt; 10 Incongruent 4.037919 POLYGON ((420799.557746798 ...
+#&gt; 11 Incongruent 5.014419 POLYGON ((418663.996224152 ...
+#&gt; 12 Incongruent 4.933000 POLYGON ((419963.995009004 ...
+#&gt; 13 Incongruent 5.120139 POLYGON ((420367.994760023 ...
+#&gt; 14 Incongruent 6.548912 MULTIPOLYGON (((420419.7819...
+#&gt; 15 Incongruent 3.749791 POLYGON ((421778.996801526 ...
+#&gt; 16 Incongruent 5.432837 MULTIPOLYGON (((419576.9965...
+#&gt; 17 Incongruent 4.618049 POLYGON ((417687.624334398 ...
+#&gt; 18 Incongruent 5.956771 POLYGON ((418859.280497968 ...</div><div class='input'># Code used to download the data:
 </div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/install_github'>install_github</a></span>(<span class='st'>"robinlovelace/ukboundaries"</span>)
 <span class='fu'>library</span>(<span class='no'>sf</span>)
 <span class='fu'>library</span>(<span class='no'>tmap</span>)
+<span class='fu'>library</span>(<span class='no'>dplyr</span>)
 <span class='fu'>library</span>(<span class='no'>ukboundaries</span>)
-<span class='co'># data(package = "ukboundaries") # see datasets available</span>
-<span class='no'>sel_wetherby</span> <span class='kw'>=</span> <span class='fu'>grepl</span>(<span class='st'>"001|002"</span>, <span class='no'>msoa2011_lds</span>$<span class='no'>geo_label</span>)
-<span class='no'>aggregating_zones</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_transform'>st_transform</a></span>(<span class='no'>msoa2011_lds</span>[<span class='no'>sel_wetherby</span>, ], <span class='fl'>27700</span>)
-
-<span class='co'># find lsoas in the aggregating_zones (there must be a neater way...)</span>
+<span class='no'>sel</span> <span class='kw'>=</span> <span class='fu'>grepl</span>(<span class='st'>"003|004"</span>, <span class='no'>msoa2011_lds</span>$<span class='no'>geo_label</span>)
+<span class='no'>aggregating_zones</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_transform'>st_transform</a></span>(<span class='no'>msoa2011_lds</span>[<span class='no'>sel</span>, ], <span class='fl'>27700</span>)
+<span class='co'># find lsoas in the aggregating_zones</span>
 <span class='no'>lsoa_touching</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_transform'>st_transform</a></span>(<span class='no'>lsoa2011_lds</span>, <span class='fl'>27700</span>)[<span class='no'>aggregating_zones</span>, ]
 <span class='no'>lsoa_cents</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/geos_unary'>st_centroid</a></span>(<span class='no'>lsoa_touching</span>)
 <span class='no'>lsoa_cents</span> <span class='kw'>=</span> <span class='no'>lsoa_cents</span>[<span class='no'>aggregating_zones</span>, ]
-<span class='no'>congruent</span> <span class='kw'>=</span> <span class='no'>lsoa_touching</span>[<span class='no'>lsoa_cents</span>, ]
-
+<span class='no'>sel</span> <span class='kw'>=</span> <span class='no'>lsoa_touching</span>$<span class='no'>geo_code</span> <span class='kw'>%in%</span> <span class='no'>lsoa_cents</span>$<span class='no'>geo_code</span>
 <span class='co'># same for ed zones</span>
 <span class='no'>ed_touching</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_transform'>st_transform</a></span>(<span class='no'>ed1981</span>, <span class='fl'>27700</span>)[<span class='no'>aggregating_zones</span>, ]
 <span class='no'>ed_cents</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/geos_unary'>st_centroid</a></span>(<span class='no'>ed_touching</span>)
 <span class='no'>ed_cents</span> <span class='kw'>=</span> <span class='no'>ed_cents</span>[<span class='no'>aggregating_zones</span>, ]
-<span class='no'>incongruent</span> <span class='kw'>=</span> <span class='no'>ed_touching</span>[<span class='no'>ed_cents</span>, ]
-
-<span class='co'># Bind the two types of shape together</span>
-<span class='no'>incongruent</span>$<span class='no'>layer</span> <span class='kw'>=</span> <span class='st'>"Incongruent"</span>
-<span class='no'>incongruent</span> <span class='kw'>=</span> <span class='no'>incongruent</span>[<span class='st'>"layer"</span>]
+<span class='no'>incongruent_agg_ed</span> <span class='kw'>=</span> <span class='no'>ed_touching</span>[<span class='no'>ed_cents</span>, ]
 <span class='fu'>set.seed</span>(<span class='fl'>2017</span>)
-<span class='no'>incongruent</span>$<span class='no'>value</span> <span class='kw'>=</span> <span class='fu'>rnorm</span>(<span class='fu'>nrow</span>(<span class='no'>incongruent</span>), <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>5</span>)
-<span class='no'>incongruent_cents</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/geos_unary'>st_centroid</a></span>(<span class='no'>incongruent</span>)
-<span class='no'>congruent</span>$<span class='no'>layer</span> <span class='kw'>=</span> <span class='st'>"Congruent"</span>
-<span class='no'>congruent</span> <span class='kw'>=</span> <span class='no'>congruent</span>[<span class='st'>"layer"</span>]
-<span class='no'>congruent</span>$<span class='no'>value</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/aggregate.sf'>aggregate</a></span>(<span class='no'>incongruent_cents</span>[<span class='st'>"value"</span>], <span class='no'>congruent</span>, <span class='no'>mean</span>)$<span class='no'>value</span>
-<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>congruent</span>)
-<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>incongruent</span>)
-<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>aggregating_zones</span>)
+<span class='no'>incongruent_agg_ed</span>$<span class='no'>value</span> <span class='kw'>=</span> <span class='fu'>rnorm</span>(<span class='fu'>nrow</span>(<span class='no'>incongruent_agg_ed</span>), <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>5</span>)
+<span class='no'>congruent</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/aggregate.sf'>aggregate</a></span>(<span class='no'>incongruent_agg_ed</span>[<span class='st'>"value"</span>], <span class='no'>lsoa_touching</span>[<span class='no'>sel</span>, ], <span class='no'>mean</span>)
+<span class='no'>congruent</span>$<span class='no'>level</span> <span class='kw'>=</span> <span class='st'>"Congruent"</span>
+<span class='no'>congruent</span> <span class='kw'>=</span> <span class='no'>congruent</span>[<span class='fu'>c</span>(<span class='st'>"level"</span>, <span class='st'>"value"</span>)]
+<span class='no'>incongruent_cents</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/geos_unary'>st_centroid</a></span>(<span class='no'>incongruent_agg_ed</span>)
+<span class='no'>aggregating_value</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_join'>st_join</a></span>(<span class='no'>incongruent_cents</span>, <span class='no'>congruent</span>)$<span class='no'>value.y</span>
+<span class='no'>incongruent_agg</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/aggregate.sf'>aggregate</a></span>(<span class='no'>incongruent_agg_ed</span>[<span class='st'>"value"</span>], <span class='fu'>list</span>(<span class='no'>aggregating_value</span>), <span class='kw'>FUN</span> <span class='kw'>=</span> <span class='no'>mean</span>)
+<span class='no'>incongruent_agg</span>$<span class='no'>level</span> <span class='kw'>=</span> <span class='st'>"Incongruent"</span>
+<span class='no'>incongruent</span> <span class='kw'>=</span> <span class='no'>incongruent_agg</span>[<span class='fu'>c</span>(<span class='st'>"level"</span>, <span class='st'>"value"</span>)]
+<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>congruent</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>incongruent</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/devtools/topics/use_data'>use_data</a></span>(<span class='no'>aggregating_zones</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

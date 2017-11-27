@@ -124,10 +124,12 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'>library</span>(<span class='no'>sp</span>)
-<span class='fu'>data</span>(<span class='no'>house</span>)
-<span class='fu'>str</span>(<span class='no'>house</span>)</div><div class='output co'>#&gt; Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sp"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sp</span>)
+  <span class='fu'>data</span>(<span class='no'>house</span>)
+  <span class='fu'>str</span>(<span class='no'>house</span>)
+  <span class='fu'>plot</span>(<span class='no'>house</span>)
+}</div><div class='output co'>#&gt; Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots
 #&gt;   ..@ data       :'data.frame':	25357 obs. of  24 variables:
 #&gt;   .. ..$ price     : int [1:25357] 303000 92000 90000 330000 185000 100000 43065 305000 56493 50000 ...
 #&gt;   .. ..$ yrbuilt   : int [1:25357] 1978 1957 1937 1887 1978 1989 1927 1990 1877 1936 ...
@@ -163,7 +165,7 @@
 #&gt;   .. .. ..$ : chr [1:2] "long" "lat"
 #&gt;   .. .. ..$ : chr [1:2] "min" "max"
 #&gt;   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
-#&gt;   .. .. ..@ projargs: chr " +init=epsg:2834 +proj=lcc +lat_1=41.7 +lat_2=40.43333333333333 +lat_0=39.66666666666666 +lon_0=-82.5 +x_0=6000"| __truncated__</div><div class='input'><span class='fu'>plot</span>(<span class='no'>house</span>)</div><div class='img'><img src='house-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
+#&gt;   .. .. ..@ projargs: chr " +init=epsg:2834 +proj=lcc +lat_1=41.7 +lat_2=40.43333333333333 +lat_0=39.66666666666666 +lon_0=-82.5 +x_0=6000"| __truncated__</div><div class='img'><img src='house-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

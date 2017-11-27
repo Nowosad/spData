@@ -107,9 +107,10 @@ Includes only the top 30 largest areas by population at 5 year intervals.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>data</span>(<span class='no'>urban_agglomerations</span>)
-
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'>data</span>(<span class='no'>urban_agglomerations</span>)
+}
 <span class='co'># Code used to download the data:</span></div><span class='co'># NOT RUN {</span>
 <span class='fu'>download.file</span>(<span class='kw'>destfile</span> <span class='kw'>=</span> <span class='st'>"WUP2014-F11a-30_Largest_Cities.xls"</span>,
 <span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls"</span>)
