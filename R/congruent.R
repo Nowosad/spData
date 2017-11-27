@@ -17,38 +17,35 @@
 #' if(requireNamespace("sf", quietly = TRUE)) {
 #'   library(sf)
 #'   plot(aggregating_zones$geometry, lwd = 5)
-#'   plot(aggregating_zones$geometry, lwd = 5)
-#'   plot(congruent$geometry, add = TRUE, border = "green")
-#'   plot(incongruent$geometry, add = TRUE, border = "blue")
+#'   plot(congruent$geometry, add = TRUE, border = "green", lwd = 2)
+#'   plot(incongruent$geometry, add = TRUE, border = "blue", col = NA)
 #' }
 #' # Code used to download the data:
 #' \dontrun{
 #' devtools::install_github("robinlovelace/ukboundaries")
 #' library(sf)
 #' library(tmap)
+#' library(dplyr)
 #' library(ukboundaries)
-#' sel_wetherby = grepl("003|004", msoa2011_lds$geo_label)
-#' aggregating_zones = st_transform(msoa2011_lds[sel_wetherby, ], 27700)
+#' sel = grepl("003|004", msoa2011_lds$geo_label)
+#' aggregating_zones = st_transform(msoa2011_lds[sel, ], 27700)
 #' # find lsoas in the aggregating_zones
 #' lsoa_touching = st_transform(lsoa2011_lds, 27700)[aggregating_zones, ]
 #' lsoa_cents = st_centroid(lsoa_touching)
 #' lsoa_cents = lsoa_cents[aggregating_zones, ]
-#' congruent = lsoa_touching[lsoa_cents, ]
+#' sel = lsoa_touching$geo_code %in% lsoa_cents$geo_code
 #' # same for ed zones
 #' ed_touching = st_transform(ed1981, 27700)[aggregating_zones, ]
 #' ed_cents = st_centroid(ed_touching)
 #' ed_cents = ed_cents[aggregating_zones, ]
-#' incongruent = ed_touching[ed_cents, ]
-#' 
-#' # Bind the two types of shape together
-#' incongruent$layer = "Incongruent"
-#' incongruent = incongruent["layer"]
-#' set.seed(2017)
-#' incongruent$value = rnorm(nrow(incongruent), mean = 5)
-#' incongruent_cents = st_centroid(incongruent)
-#' congruent$layer = "Congruent"
-#' congruent = congruent["layer"]
-#' congruent$value = aggregate(incongruent_cents["value"], congruent, mean)$value
+#' incongruent_agg_ed = ed_touching[ed_cents, ]
+#' incongruent_agg_ed$value = rnorm(nrow(incongruent_agg_ed), mean = 5)
+#' congruent = aggregate(incongruent_agg_ed["value"], lsoa_touching[sel, ], mean)
+#' incongruent_cents = st_centroid(incongruent_agg_ed)
+#' aggregating_value = st_join(incongruent_cents, congruent)$value.y
+#' incongruent_agg = aggregate(incongruent_agg_ed["value"], list(aggregating_value), FUN = mean)
+#' incongruent_agg$level = "Incongruent"
+#' incongruent = incongruent_agg[c("level", "value")]
 #' devtools::use_data(congruent, overwrite = TRUE)
 #' devtools::use_data(incongruent, overwrite = TRUE)
 #' devtools::use_data(aggregating_zones, overwrite = TRUE)
