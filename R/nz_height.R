@@ -22,7 +22,7 @@
 #'   library(sf)
 #'   summary(nz_height)
 #'   plot(nz$geometry)
-#'   plot(nz_height, add = TRUE)
+#'   plot(nz_height$geom, add = TRUE)
 #' }
 #' \dontrun{
 #' library(dplyr)
