@@ -41,6 +41,8 @@
 #' incongruent_agg_ed = ed_touching[ed_cents, ]
 #' incongruent_agg_ed$value = rnorm(nrow(incongruent_agg_ed), mean = 5)
 #' congruent = aggregate(incongruent_agg_ed["value"], lsoa_touching[sel, ], mean)
+#' congruent$layer = "Congruent"
+#' congruent = congruent[c("layer", "value")]
 #' incongruent_cents = st_centroid(incongruent_agg_ed)
 #' aggregating_value = st_join(incongruent_cents, congruent)$value.y
 #' incongruent_agg = aggregate(incongruent_agg_ed["value"], list(aggregating_value), FUN = mean)
