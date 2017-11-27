@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -154,8 +154,7 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>spdep</span>)
-<span class='fu'>data</span>(<span class='no'>boston</span>)
+    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>spdep</span>)</div><div class='output co'>#&gt; <span class='error'>Error: package ‘spData’ required by ‘spdep’ could not be found</span></div><div class='input'><span class='fu'>data</span>(<span class='no'>boston</span>)
 <span class='no'>hr0</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='fu'>log</span>(<span class='no'>MEDV</span>) ~ <span class='no'>CRIM</span> + <span class='no'>ZN</span> + <span class='no'>INDUS</span> + <span class='no'>CHAS</span> + <span class='fu'>I</span>(<span class='no'>NOX</span>^<span class='fl'>2</span>) + <span class='fu'>I</span>(<span class='no'>RM</span>^<span class='fl'>2</span>) +
                   <span class='no'>AGE</span> + <span class='fu'>log</span>(<span class='no'>DIS</span>) + <span class='fu'>log</span>(<span class='no'>RAD</span>) + <span class='no'>TAX</span> + <span class='no'>PTRATIO</span> + <span class='no'>B</span> + <span class='fu'>log</span>(<span class='no'>LSTAT</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>boston.c</span>)
 <span class='fu'>summary</span>(<span class='no'>hr0</span>)</div><div class='output co'>#&gt; 
@@ -224,21 +223,7 @@
 #&gt; Residual standard error: 0.1799 on 492 degrees of freedom
 #&gt; Multiple R-squared:  0.8108,	Adjusted R-squared:  0.8058 
 #&gt; F-statistic: 162.1 on 13 and 492 DF,  p-value: &lt; 2.2e-16
-#&gt; </div><div class='input'><span class='fu'>logLik</span>(<span class='no'>gp0</span>)</div><div class='output co'>#&gt; 'log Lik.' 156.9788 (df=15)</div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>hr0</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>))</div><div class='output co'>#&gt; 
-#&gt; 	Global Moran I for regression residuals
-#&gt; 
-#&gt; data:  
-#&gt; model: lm(formula = log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) +
-#&gt; I(RM^2) + AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT),
-#&gt; data = boston.c)
-#&gt; weights: nb2listw(boston.soi)
-#&gt; 
-#&gt; Moran I statistic standard deviate = 14.509, p-value &lt; 2.2e-16
-#&gt; alternative hypothesis: greater
-#&gt; sample estimates:
-#&gt; Observed Moran I      Expectation         Variance 
-#&gt;     0.4364296993    -0.0168870829     0.0009762383 
-#&gt; </div><span class='co'># NOT RUN {</span>
+#&gt; </div><div class='input'><span class='fu'>logLik</span>(<span class='no'>gp0</span>)</div><div class='output co'>#&gt; 'log Lik.' 156.9788 (df=15)</div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>hr0</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>))</div><div class='output co'>#&gt; <span class='error'>Error in lm.morantest(hr0, nb2listw(boston.soi)): could not find function "lm.morantest"</span></div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>rgdal</span>)
 <span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
                            <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])

@@ -29,7 +29,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="/index.html">
+  <a href="index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -73,11 +73,19 @@
 </h3>
 <ul>
 <li>
+<code>aggregating_zones</code> - See <code>congruent</code>
+</li>
+<li>
 <code>baltimore</code> - House sales prices, Baltimore, MD 1978</li>
+<li>
+<code>congruent</code> - Sample of UK administrative zones that have shared borders with <code>aggregating_zones</code> (<code>incongruent</code> does not have shared borders) for teaching the concept of spatial congruence</li>
 <li>
 <code>cycle_hire</code> - Cycle hire points in London</li>
 <li>
 <code>cycle_hire_osm</code> - Cycle hire points in London from OSM</li>
+<li>
+<code>incongruent</code> - See <code>congruent</code>
+</li>
 <li>
 <code>lnd</code> - The boroughs of London</li>
 <li>
@@ -156,7 +164,14 @@
 <p>Get the released version from CRAN:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"spData"</span>)</code></pre></div>
 <p>Get the development version from github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">"nowosad/spData"</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"nowosad/spData"</span>)</code></pre></div>
+</div>
+<div id="spdatalarge" class="section level2">
+<h2 class="hasAnchor">
+<a href="#spdatalarge" class="anchor"></a>spDataLarge</h2>
+<p>This package interacts with data available through the ‘spDataLarge’ package, which is available in a ‘drat’ repository. To access this data package, run:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"spDataLarge"</span>, <span class="dt">repos =</span> <span class="st">"https://nowosad.github.io/drat/"</span>, <span class="dt">type =</span> <span class="st">"source"</span>)</code></pre></div>
+<p>The size of the ‘spDataLarge’ package is approximately 20 MB.</p>
 </div>
 <div id="contributions" class="section level2">
 <h2 class="hasAnchor">
