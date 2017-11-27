@@ -29,6 +29,7 @@ The Eire data set has been converted to shapefile format and placed in the etc/s
 The \code{eire.df} data frame has 26 rows and 9 columns. In addition, polygons of the 26 counties are provided as a multipart polylist in eire.polys.utm (coordinates in km, projection UTM zone 30). Their centroids are in eire.coords.utm. The original Cliff and Ord binary contiguities are in eire.nb.
 }
 \examples{
+\dontrun{
 library(maptools)
 library(rgdal)
 library(spdep)
@@ -88,7 +89,7 @@ lm.morantest(e.lm, nb2listw(eire.nb))
 lm.morantest.sad(e.lm, nb2listw(eire.nb))
 lm.LMtests(e.lm, nb2listw(eire.nb), test="LMerr")
 print(localmoran.sad(e.lm, eire.nb, select=1:length(slot(eire, "polygons"))))
-
+}
 }
 \keyword{datasets}
 \keyword{sp}

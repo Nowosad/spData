@@ -38,9 +38,10 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
-#' 
-#' library(sp)
-#' data(house)
-#' str(house)
-#' plot(house)
+#' if (requireNamespace("sp", quietly = TRUE)) {
+#'   library(sp)
+#'   data(house)
+#'   str(house)
+#'   plot(house)
+#' }
 "house"

@@ -68,17 +68,19 @@
 #' @keywords datasets spdep
 #' 
 #' @examples 
-#' library(spdep)
-#' data(boston)
-#' hr0 <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
-#'                   AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
-#' summary(hr0)
-#' logLik(hr0)
-#' gp0 <- lm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
-#'                   AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
-#' summary(gp0)
-#' logLik(gp0)
-#' lm.morantest(hr0, nb2listw(boston.soi))
+#' if (requireNamespace("spdep", quietly = TRUE)) {
+#'   library(spdep)
+#'   data(boston)
+#'   hr0 <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
+#'                     AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
+#'   summary(hr0)
+#'   logLik(hr0)
+#'   gp0 <- lm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
+#'                     AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
+#'   summary(gp0)
+#'   logLik(gp0)
+#'   lm.morantest(hr0, nb2listw(boston.soi))
+#' }
 #' \dontrun{
 #' library(rgdal)
 #' boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",

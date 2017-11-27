@@ -23,12 +23,14 @@ Dataset downloaded using the osmdata package
 representing cycle hire points accross London.
 }
 \examples{
-library(sf)
-data(cycle_hire_osm)
-# or
-cycle_hire_osm <- st_read(system.file("shapes/cycle_hire_osm.geojson", package="spData"))
-
-plot(cycle_hire_osm)
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(cycle_hire_osm)
+  # or
+  cycle_hire_osm <- st_read(system.file("shapes/cycle_hire_osm.geojson", package="spData"))
+  
+  plot(cycle_hire_osm)
+}
 
 # Code used to download the data:
 \dontrun{

@@ -32,13 +32,14 @@ world
 The object loaded is a \code{sf} object containing a world map data from Natural Earth with a few variables from World Bank
 }
 \examples{
-library(sf)
-data(world)
-# or
-world <- st_read(system.file("shapes/world.gpkg", package="spData"))
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(world)
+  # or
+  world <- st_read(system.file("shapes/world.gpkg", package="spData"))
 
-plot(world)
-
+  plot(world)
+}
 }
 \seealso{
 See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth

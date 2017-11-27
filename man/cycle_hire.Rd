@@ -24,12 +24,14 @@ Points
 representing cycle hire points accross London.
 }
 \examples{
-library(sf)
-data(cycle_hire)
-# or
-cycle_hire <- st_read(system.file("shapes/cycle_hire.geojson", package="spData"))
-
-plot(cycle_hire)
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(cycle_hire)
+  # or
+  cycle_hire <- st_read(system.file("shapes/cycle_hire.geojson", package="spData"))
+  
+  plot(cycle_hire)
+}
 
 \dontrun{
 # Download the data

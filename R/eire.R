@@ -24,6 +24,7 @@
 #' @keywords datasets sp spdep
 #' 
 #' @examples 
+#' \dontrun{
 #' library(maptools)
 #' library(rgdal)
 #' library(spdep)
@@ -83,5 +84,5 @@
 #' lm.morantest.sad(e.lm, nb2listw(eire.nb))
 #' lm.LMtests(e.lm, nb2listw(eire.nb), test="LMerr")
 #' print(localmoran.sad(e.lm, eire.nb, select=1:length(slot(eire, "polygons"))))
-#' 
+#' }
 NULL

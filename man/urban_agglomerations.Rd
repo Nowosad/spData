@@ -24,9 +24,10 @@ population division with projections up to 2050.
 Includes only the top 30 largest areas by population at 5 year intervals.
 }
 \examples{
-library(sf)
-data(urban_agglomerations)
-
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(urban_agglomerations)
+}
 # Code used to download the data:
 \dontrun{
 download.file(destfile = "WUP2014-F11a-30_Largest_Cities.xls",

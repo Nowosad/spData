@@ -26,11 +26,12 @@ The object loaded is a \code{sf} object containing the contiguous United States 
 with a few variables from American Community Survey (ACS)
 }
 \examples{
-library(sf)
-data(us_states)
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(us_states)
 
-plot(us_states["REGION"])
-
+  plot(us_states["REGION"])
+}
 }
 \seealso{
 See the tigris package: https://cran.r-project.org/package=tigris
