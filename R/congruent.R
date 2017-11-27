@@ -40,10 +40,11 @@
 #' ed_cents = st_centroid(ed_touching)
 #' ed_cents = ed_cents[aggregating_zones, ]
 #' incongruent_agg_ed = ed_touching[ed_cents, ]
+#' set.seed(2017)
 #' incongruent_agg_ed$value = rnorm(nrow(incongruent_agg_ed), mean = 5)
 #' congruent = aggregate(incongruent_agg_ed["value"], lsoa_touching[sel, ], mean)
 #' congruent$level = "Congruent"
-#' congruent = congruent[c("layer", "value")]
+#' congruent = congruent[c("level", "value")]
 #' incongruent_cents = st_centroid(incongruent_agg_ed)
 #' aggregating_value = st_join(incongruent_cents, congruent)$value.y
 #' incongruent_agg = aggregate(incongruent_agg_ed["value"], list(aggregating_value), FUN = mean)
