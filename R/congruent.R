@@ -14,10 +14,13 @@
 #' @keywords datasets sf
 #' 
 #' @examples 
-#' library(sf)
-#' plot(aggregating_zones$geometry, lwd = 5)
-#' plot(congruent$geometry, add = TRUE, border = "green")
-#' plot(incongruent$geometry, add = TRUE, border = "blue")
+#' if(requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   plot(aggregating_zones$geometry, lwd = 5)
+#'   plot(aggregating_zones$geometry, lwd = 5)
+#'   plot(congruent$geometry, add = TRUE, border = "green")
+#'   plot(incongruent$geometry, add = TRUE, border = "blue")
+#' }
 #' # Code used to download the data:
 #' \dontrun{
 #' devtools::install_github("robinlovelace/ukboundaries")
