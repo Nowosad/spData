@@ -19,6 +19,7 @@
 #'   plot(aggregating_zones$geometry, lwd = 5)
 #'   plot(congruent$geometry, add = TRUE, border = "green", lwd = 2)
 #'   plot(incongruent$geometry, add = TRUE, border = "blue", col = NA)
+#'   rbind(congruent, incongruent)
 #' }
 #' # Code used to download the data:
 #' \dontrun{
@@ -41,7 +42,7 @@
 #' incongruent_agg_ed = ed_touching[ed_cents, ]
 #' incongruent_agg_ed$value = rnorm(nrow(incongruent_agg_ed), mean = 5)
 #' congruent = aggregate(incongruent_agg_ed["value"], lsoa_touching[sel, ], mean)
-#' congruent$layer = "Congruent"
+#' congruent$level = "Congruent"
 #' congruent = congruent[c("layer", "value")]
 #' incongruent_cents = st_centroid(incongruent_agg_ed)
 #' aggregating_value = st_join(incongruent_cents, congruent)$value.y
