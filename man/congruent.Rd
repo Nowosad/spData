@@ -29,16 +29,13 @@ devtools::install_github("robinlovelace/ukboundaries")
 library(sf)
 library(tmap)
 library(ukboundaries)
-# data(package = "ukboundaries") # see datasets available
-sel_wetherby = grepl("001|002", msoa2011_lds$geo_label)
+sel_wetherby = grepl("003|004", msoa2011_lds$geo_label)
 aggregating_zones = st_transform(msoa2011_lds[sel_wetherby, ], 27700)
-
-# find lsoas in the aggregating_zones (there must be a neater way...)
+# find lsoas in the aggregating_zones
 lsoa_touching = st_transform(lsoa2011_lds, 27700)[aggregating_zones, ]
 lsoa_cents = st_centroid(lsoa_touching)
 lsoa_cents = lsoa_cents[aggregating_zones, ]
 congruent = lsoa_touching[lsoa_cents, ]
-
 # same for ed zones
 ed_touching = st_transform(ed1981, 27700)[aggregating_zones, ]
 ed_cents = st_centroid(ed_touching)
@@ -54,9 +51,9 @@ incongruent_cents = st_centroid(incongruent)
 congruent$layer = "Congruent"
 congruent = congruent["layer"]
 congruent$value = aggregate(incongruent_cents["value"], congruent, mean)$value
-devtools::use_data(congruent)
-devtools::use_data(incongruent)
-devtools::use_data(aggregating_zones)
+devtools::use_data(congruent, overwrite = TRUE)
+devtools::use_data(incongruent, overwrite = TRUE)
+devtools::use_data(aggregating_zones, overwrite = TRUE)
 }
 }
 \keyword{datasets}
