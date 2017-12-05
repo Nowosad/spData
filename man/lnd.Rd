@@ -27,8 +27,6 @@ Polygons representing large administrative zones in London
 if (requireNamespace("sf", quietly = TRUE)) {
   library(sf)
   data(lnd)
-  # or
-  lnd <- st_read(system.file("shapes/lnd.geojson", package="spData"))
   summary(lnd)
   plot(lnd)
 }
