@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
+  <a href="..//index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -166,21 +166,7 @@
   <span class='fu'>summary</span>(<span class='no'>gp0</span>)
   <span class='fu'>logLik</span>(<span class='no'>gp0</span>)
   <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>hr0</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>boston.soi</span>))
-}</div><div class='output co'>#&gt; 
-#&gt; 	Global Moran I for regression residuals
-#&gt; 
-#&gt; data:  
-#&gt; model: lm(formula = log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) +
-#&gt; I(RM^2) + AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT),
-#&gt; data = boston.c)
-#&gt; weights: nb2listw(boston.soi)
-#&gt; 
-#&gt; Moran I statistic standard deviate = 14.509, p-value &lt; 2.2e-16
-#&gt; alternative hypothesis: greater
-#&gt; sample estimates:
-#&gt; Observed Moran I      Expectation         Variance 
-#&gt;     0.4364296993    -0.0168870829     0.0009762383 
-#&gt; </div><span class='co'># NOT RUN {</span>
+}</div><div class='output co'>#&gt; <span class='error'>Error: package ‘spData’ required by ‘spdep’ could not be found</span></div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>rgdal</span>)
 <span class='no'>boston.tr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rgdal/topics/readOGR'>readOGR</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/boston_tracts.shp"</span>,
                            <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data for Splash Dams in western Oregon — SplashDams • spData</title>
+<title>Small river network in France — seine • spData</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,41 +80,47 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Data for Splash Dams in western Oregon</h1>
+    <h1>Small river network in France</h1>
     </div>
 
     
-    <p>Data for Splash Dams in western Oregon</p>
+    <p>Lines representing the Seine, Marne and Yonne rivers.</p>
     
 
-    <pre class="usage"><span class='no'>SplashDams</span></pre>
+    <pre class="usage"><span class='no'>seine</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>Formal class 'SpatialPointsDataFrame with 232 obs. of  6 variables:</p><ul>
-<li><p>streamName</p></li>
-<li><p>locationCode</p></li>
-<li><p>height</p></li>
-<li><p>lastDate</p></li>
-<li><p>owner</p></li>
-<li><p>datesUsed</p></li>
-</ul>
+    <p>FORMAT:</p><ul>
+<li><p>name name</p></li>
+<li><p>geometry sfc_MULTILINESTRING</p></li>
+</ul><p>The object is in the RGF93 / Lambert-93 CRS.</p>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>R. R. Miller (2010) Is the Past Present? Historical Splash-dam Mapping and Stream Disturbance Detection in the Oregon Coastal Province. MSc. thesis, Oregon State University; packaged by Jonathan Callahan</p>
+    <p><a href='http://www.naturalearthdata.com/'>http://www.naturalearthdata.com/</a></p>
     
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p><a href='http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf'>http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf</a></p>
+    <p>See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sp"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
-  <span class='fu'>library</span>(<span class='no'>sp</span>)
-  <span class='fu'>data</span>(<span class='no'>SplashDams</span>)
-  <span class='fu'>plot</span>(<span class='no'>SplashDams</span>, <span class='kw'>axes</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-}</div><div class='img'><img src='SplashDams-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='no'>seine</span>
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>seine</span>)
+}</div><div class='img'><img src='seine-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>sf</span>)
+<span class='fu'>library</span>(<span class='no'>rnaturalearth</span>)
+<span class='fu'>library</span>(<span class='no'>tidyverse</span>)
+
+<span class='no'>seine</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rnaturalearth/topics/ne_download'>ne_download</a></span>(<span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"rivers_lake_centerlines"</span>,
+                    <span class='kw'>category</span> <span class='kw'>=</span> <span class='st'>"physical"</span>, <span class='kw'>returnclass</span> <span class='kw'>=</span> <span class='st'>"sf"</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>filter</span>(<span class='no'>name</span> <span class='kw'>%in%</span> <span class='fu'>c</span>(<span class='st'>"Yonne"</span>, <span class='st'>"Seine"</span>, <span class='st'>"Marne"</span>)) <span class='kw'>%&gt;%</span>
+        <span class='fu'>select</span>(<span class='kw'>name</span> <span class='kw'>=</span> <span class='no'>name_en</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_transform'>st_transform</a></span>(<span class='fl'>2154</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -124,7 +130,7 @@
 
       <li><a href="#source">Source</a></li>
 
-      <li><a href="#references">References</a></li>
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
