@@ -1,5 +1,5 @@
 #' @name elev
-#' @title Artificial toy raster data set representing elevation
+#' @title Artificial elevation raster data set
 #'
 #' @description The raster data represents elevation in meters and uses WGS84 as
 #'   a coordinate reference system.
