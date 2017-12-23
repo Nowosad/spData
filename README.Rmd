@@ -57,8 +57,8 @@ Datasets for spatial analysis
 
 ### **raster**
 
-- `elev` - Small toy raster dataset representing elevation values
-- `grain` - Small toy raster dataset representing grain size classes
+- `elev` - Small raster dataset representing elevation values
+- `grain` - Small raster dataset representing grain size classes
 
 ### misc
 

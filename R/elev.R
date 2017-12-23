@@ -7,7 +7,9 @@
 #' @keywords datasets raster
 #' 
 #' @examples 
-#' library(raster)
-#' data(elev)
-#' 
+#' if (requireNamespace("sp", quietly = TRUE)) {
+#'   library(raster)
+#'   data(elev)
+#'   elev
+#' }
 "elev"

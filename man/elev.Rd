@@ -13,9 +13,11 @@ The raster data represents elevation in meters and uses WGS84 as
   a coordinate reference system.
 }
 \examples{
-library(raster)
-data(elev)
-
+if (requireNamespace("sp", quietly = TRUE)) {
+  library(raster)
+  data(elev)
+  elev
+}
 }
 \keyword{datasets}
 \keyword{raster}

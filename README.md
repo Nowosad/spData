@@ -7,7 +7,7 @@ spData
 
 Datasets for spatial analysis
 
-### `sf`
+### **sf**
 
 -   `aggregating_zones` - See `congruent`
 -   `baltimore` - House sales prices, Baltimore, MD 1978
@@ -23,7 +23,7 @@ Datasets for spatial analysis
 -   `world` - World country polygons
 -   `wheat` - Mercer and Hall wheat yield data
 
-### `sp`
+### **sp**
 
 -   `auckland` - Marshall's infant mortality in Auckland dataset
 -   `elect80` - 1980 Presidential election results
@@ -31,7 +31,7 @@ Datasets for spatial analysis
 -   `SplashDams` - Data for Splash Dams in western Oregon
 -   `state.vbm` - US State Visibility Based Map
 
-### `spdep`
+### **spdep**
 
 -   `afcon` - Spatial patterns of conflict in Africa 1966-78
 -   `boston` - Boston Housing Data
@@ -40,6 +40,11 @@ Datasets for spatial analysis
 -   `nc.sids` - North Carolina SIDS data
 -   `NY_data` - New York leukemia data
 -   `used.cars` - US 1960 used car prices
+
+### **raster**
+
+-   `elev` - Small raster dataset representing elevation values
+-   `grain` - Small raster dataset representing grain size classes
 
 ### misc
 
