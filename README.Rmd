@@ -32,6 +32,7 @@ Datasets for spatial analysis
 - `lnd` - The boroughs of London
 - `nz` - The regions of New Zealand
 - `nz_height` - High points in New Zealand
+- `seine` - Small river network in France 
 - `urban_agglomerations` - Major urban areas worldwide
 - `us_states` - US states polygons
 - `world` - World country polygons
