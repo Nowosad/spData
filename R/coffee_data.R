@@ -30,14 +30,17 @@
 #' file.remove("coffee-data-messy.csv")
 #' file.remove("data.pdf")
 #' coffee_data = slice(d, -c(1:9)) %>% 
-#'         select(name_long = 1, y16 = 2, y17 = 3) %>% 
-#'         filter(!is.na(y16)) %>% 
+#'         select(name_long = 1, coffee_production_2016 = 2, coffee_production_2017 = 3) %>% 
+#'         filter(!is.na(coffee_production_2016)) %>% 
 #'         mutate_at(2:3, str_replace, " ", "") %>% 
 #'         mutate_at(2:3, as.integer)
 #' world_coffee = left_join(world, coffee_data)
-#' plot(world_coffee[c("y16", "y17")])
-#' # library(tmap)
-#' # qtm(world_coffee, "y17", fill.title = "Thousand 60kg bags")
-#' # tmap_mode("view") # for an interactive version
+#' plot(world_coffee[c("coffee_production_2016", "coffee_production_2017")])
+#' b = c(0, 500, 1000, 2000, 3000)
+#' library(tmap)
+#' tm_shape(world_coffee) +
+#'   tm_fill("coffee_production_2017", title = "Thousand 60kg bags", breaks = b,
+#'           textNA = "No data", colorNA = NULL)
+#' tmap_mode("view") # for an interactive version
 #' }
 "coffee_data"
