@@ -15,7 +15,7 @@
 #' @source The International Coffee Organization (ICO). See http://www.ico.org/ and
 #' http://www.ico.org/prices/m1-exports.pdf
 #' @docType data
-#' @keywords datasets 
+#' @keywords datasets misc
 #' @examples 
 #' head(coffee_data)
 #' \dontrun{
