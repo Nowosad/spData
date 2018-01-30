@@ -7,8 +7,8 @@
 \format{A data frame (tibble) with 58 for the following 12 variables:
 \itemize{
 \item{name_long} {name of country or coffee variety}
-\item{y16} {production in 2016}
-\item{y17} {production in 2017}
+\item{coffee_production_2016} {production in 2016}
+\item{coffee_production_2017} {production in 2017}
 }}
 \source{
 The International Coffee Organization (ICO). See http://www.ico.org/ and
