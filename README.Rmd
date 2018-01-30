@@ -63,13 +63,13 @@ Datasets for spatial analysis
 
 ### misc
 
+- `coffee_data` - World coffee production statistics by country, 2016 - 2017
 - `getisord` - Getis-Ord remote sensing example data
 - `hopkins` - Hopkins burnt savanna herb remains
 - `huddersfield` - Prevalence of respiratory symptoms
 - `jenks71` - Illinois 1959 county gross farm product value per acre
 - `us_states_df` - Selected American Community Survey (ACS) data
 - `worldbank_df` - Selected World Bank data
-- `coffee_data` - world coffee production statistics by country, 2016 - 2017
 
 ## Installation
 

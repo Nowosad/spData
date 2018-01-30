@@ -53,3 +53,4 @@ tmap_mode("view") # for an interactive version
 }
 }
 \keyword{datasets}
+\keyword{misc}
