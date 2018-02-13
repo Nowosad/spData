@@ -112,11 +112,12 @@ with a few variables from American Community Survey (ACS)</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>data</span>(<span class='no'>us_states</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'>data</span>(<span class='no'>us_states</span>)
 
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>us_states</span>[<span class='st'>"REGION"</span>])</div><div class='img'><img src='us_states-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
-</div></pre>
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>us_states</span>[<span class='st'>"REGION"</span>])
+}</div><div class='img'><img src='us_states-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

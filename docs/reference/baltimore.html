@@ -140,8 +140,11 @@
 #&gt;  $ SQFT   : num  11.2 28.9 30.6 26.1 22 ...
 #&gt;  $ X      : num  907 922 920 923 918 900 918 907 918 897 ...
 #&gt;  $ Y      : num  534 574 581 578 574 577 576 576 562 576 ...</div><div class='input'>
-<span class='fu'>library</span>(<span class='no'>sf</span>)</div><div class='output co'>#&gt; <span class='message'>Linking to GEOS 3.5.0, GDAL 2.1.2, proj.4 4.9.2</span></div><div class='input'><span class='no'>baltimore_sf</span> <span class='kw'>&lt;-</span> <span class='no'>baltimore</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_as_sf'>st_as_sf</a></span>(<span class='no'>.</span>, <span class='kw'>coords</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"X"</span>,<span class='st'>"Y"</span>))
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>baltimore_sf</span>[<span class='st'>"PRICE"</span>])</div><div class='img'><img src='baltimore-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
+<span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='no'>baltimore_sf</span> <span class='kw'>&lt;-</span> <span class='no'>baltimore</span> <span class='kw'>%&gt;%</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_as_sf'>st_as_sf</a></span>(<span class='no'>.</span>, <span class='kw'>coords</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"X"</span>,<span class='st'>"Y"</span>))
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>baltimore_sf</span>[<span class='st'>"PRICE"</span>])
+}</div><div class='img'><img src='baltimore-1.png' alt='' width='700' height='432.632880098887' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

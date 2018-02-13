@@ -7,20 +7,26 @@ spData
 
 Datasets for spatial analysis
 
-### `sf`
+### **sf**
 
+-   `alaska` - Alaska multipolygon
+-   `aggregating_zones` - See `congruent`
 -   `baltimore` - House sales prices, Baltimore, MD 1978
+-   `congruent` - Sample of UK administrative zones that have shared borders with `aggregating_zones` (`incongruent` does not have shared borders) for teaching the concept of spatial congruence
 -   `cycle_hire` - Cycle hire points in London
 -   `cycle_hire_osm` - Cycle hire points in London from OSM
+-   `hawaii` - Hawaii multipolygon
+-   `incongruent` - See `congruent`
 -   `lnd` - The boroughs of London
 -   `nz` - The regions of New Zealand
 -   `nz_height` - High points in New Zealand
+-   `seine` - Small river network in France
 -   `urban_agglomerations` - Major urban areas worldwide
 -   `us_states` - US states polygons
 -   `world` - World country polygons
 -   `wheat` - Mercer and Hall wheat yield data
 
-### `sp`
+### **sp**
 
 -   `auckland` - Marshall's infant mortality in Auckland dataset
 -   `elect80` - 1980 Presidential election results
@@ -28,7 +34,7 @@ Datasets for spatial analysis
 -   `SplashDams` - Data for Splash Dams in western Oregon
 -   `state.vbm` - US State Visibility Based Map
 
-### `spdep`
+### **spdep**
 
 -   `afcon` - Spatial patterns of conflict in Africa 1966-78
 -   `boston` - Boston Housing Data
@@ -38,8 +44,14 @@ Datasets for spatial analysis
 -   `NY_data` - New York leukemia data
 -   `used.cars` - US 1960 used car prices
 
+### **raster**
+
+-   `elev` - Small raster dataset representing elevation values
+-   `grain` - Small raster dataset representing grain size classes
+
 ### misc
 
+-   `coffee_data` - World coffee production statistics by country, 2016 - 2017
 -   `getisord` - Getis-Ord remote sensing example data
 -   `hopkins` - Hopkins burnt savanna herb remains
 -   `huddersfield` - Prevalence of respiratory symptoms

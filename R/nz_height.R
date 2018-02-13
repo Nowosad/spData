@@ -18,10 +18,12 @@
 #' @keywords datasets sf
 #' 
 #' @examples 
-#' library(sf)
-#' summary(nz_height)
-#' plot(nz$geometry)
-#' plot(nz_height, add = TRUE)
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   summary(nz_height)
+#'   plot(nz$geometry)
+#'   plot(nz_height$geom, add = TRUE)
+#' }
 #' \dontrun{
 #' library(dplyr)
 #' After downloading data from https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/

@@ -44,11 +44,12 @@ house
 Data on 25,357 single family homes sold in Lucas County, Ohio, 1993-1998 from the county auditor, together with an \code{nb} neighbour object constructed as a sphere of influence graph from projected coordinates.
 }
 \examples{
-
-library(sp)
-data(house)
-str(house)
-plot(house)
+if (requireNamespace("sp", quietly = TRUE)) {
+  library(sp)
+  data(house)
+  str(house)
+  plot(house)
+}
 }
 \keyword{datasets}
 \keyword{sp}

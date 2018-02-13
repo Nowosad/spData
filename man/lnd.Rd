@@ -24,13 +24,12 @@ lnd
 Polygons representing large administrative zones in London
 }
 \examples{
-library(sf)
-data(lnd)
-# or
-lnd <- st_read(system.file("shapes/lnd.geojson", package="spData"))
-summary(lnd)
-plot(lnd)
-
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  data(lnd)
+  summary(lnd)
+  plot(lnd)
+}
 }
 \keyword{datasets}
 \keyword{sf}

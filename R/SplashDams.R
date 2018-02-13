@@ -20,7 +20,9 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
-#' library(sp)
-#' data(SplashDams)
-#' plot(SplashDams, axes=TRUE)
+#' if (requireNamespace("sp", quietly = TRUE)) {
+#'   library(sp)
+#'   data(SplashDams)
+#'   plot(SplashDams, axes=TRUE)
+#' }
 "SplashDams"

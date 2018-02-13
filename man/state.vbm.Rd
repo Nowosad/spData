@@ -20,15 +20,16 @@ This map can be useful for plotting state data using colors patterns without the
 The original map is copyrighted by Mark Monmonier.  Official publications based on this map should acknowledge him. Comercial publications of maps based on this probably need permission from him to use.
 }
 \examples{
-library(sp)
-data(state.vbm)
-plot(state.vbm)
+if (requireNamespace("sp", quietly = TRUE)) {
+  library(sp)
+  data(state.vbm)
+  plot(state.vbm)
 
-tmp <- state.x77[, 'HS Grad']
-tmp2 <- cut(tmp, seq(min(tmp), max(tmp), length.out=11),
+  tmp <- state.x77[, 'HS Grad']
+  tmp2 <- cut(tmp, seq(min(tmp), max(tmp), length.out=11),
             include.lowest=TRUE)
-plot(state.vbm, col=cm.colors(10)[tmp2])
-
+  plot(state.vbm, col=cm.colors(10)[tmp2])
+}
 }
 \references{
 \url{http://www.markmonmonier.com/index.htm},

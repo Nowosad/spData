@@ -107,17 +107,20 @@ representing cycle hire points accross London.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>data</span>(<span class='no'>cycle_hire</span>)
-<span class='co'># or</span>
-<span class='no'>cycle_hire</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/cycle_hire.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/jn/Documents/spData/inst/shapes/cycle_hire.geojson' using driver `GeoJSON'
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'>data</span>(<span class='no'>cycle_hire</span>)
+  <span class='co'># or</span>
+  <span class='no'>cycle_hire</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/cycle_hire.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))
+
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire</span>)
+}</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/jn/Documents/spData/inst/shapes/cycle_hire.geojson' using driver `GeoJSON'
 #&gt; Simple feature collection with 742 features and 5 fields
 #&gt; geometry type:  POINT
 #&gt; dimension:      XY
 #&gt; bbox:           xmin: -0.2367699 ymin: 51.45475 xmax: -0.002275 ymax: 51.54214
 #&gt; epsg (SRID):    4326
-#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='input'>
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire</span>)</div><div class='img'><img src='cycle_hire-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='img'><img src='cycle_hire-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div><span class='co'># NOT RUN {</span>
 <span class='co'># Download the data</span>
 <span class='no'>cycle_hire</span> <span class='kw'>=</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/readr/topics/read_delim'>read_csv</a></span>(<span class='st'>"http://cyclehireapp.com/cyclehirelive/cyclehire.csv"</span>,

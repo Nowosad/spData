@@ -34,6 +34,7 @@ wheat$c <- factor(wheat$lon)
 wheat_sp <- wheat
 coordinates(wheat_sp) <- c("lon", "lat1")
 wheat_spg <- wheat_sp
+
 gridded(wheat_spg) <- TRUE
 wheat_spl <- as(wheat_spg, "SpatialPolygons")
 df <- as(wheat_spg, "data.frame")
@@ -42,9 +43,11 @@ row.names(df) <- sapply(slot(wheat_spl, "polygons"),
 wheat <- SpatialPolygonsDataFrame(wheat_spl, data=df)
 }
 
-library(sf)
-wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
-plot(wheat)
+if (requireNamespace("sf", quietly = TRUE)) {
+  library(sf)
+  wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
+  plot(wheat)
+}
 }
 \references{
 Mercer, W. B. and Hall, A. D. (1911) The experimental error of field trials. Journal of Agricultural Science 4, 107-132.

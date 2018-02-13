@@ -108,23 +108,11 @@ and <a href='www.stats.govt.nz'>www.stats.govt.nz</a> for information on the dat
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>summary</span>(<span class='no'>nz</span>)</div><div class='output co'>#&gt;     REGC2017                   REGC2017_NAME   AREA_SQ_KM     
-#&gt;  01     : 1   Auckland Region         : 1    Min.   :  424.4  
-#&gt;  02     : 1   Bay of Plenty Region    : 1    1st Qu.: 8319.2  
-#&gt;  03     : 1   Canterbury Region       : 1    Median :12396.6  
-#&gt;  04     : 1   Gisborne Region         : 1    Mean   :16706.4  
-#&gt;  05     : 1   Hawke's Bay Region      : 1    3rd Qu.:23634.3  
-#&gt;  06     : 1   Manawatu-Wanganui Region: 1    Max.   :45207.2  
-#&gt;  (Other):10   (Other)                 :10                     
-#&gt;  LAND_AREA_SQ_KM    Shape_Length       Shape_Area                 geometry 
-#&gt;  Min.   :  424.4   Min.   : 170792   Min.   :4.244e+08   MULTIPOLYGON :16  
-#&gt;  1st Qu.: 8301.5   1st Qu.: 883990   1st Qu.:8.319e+09   epsg:2193    : 0  
-#&gt;  Median :12285.4   Median :1453476   Median :1.240e+10   +proj=tmer...: 0  
-#&gt;  Mean   :16507.0   Mean   :1623505   Mean   :1.671e+10                     
-#&gt;  3rd Qu.:23407.8   3rd Qu.:2209404   3rd Qu.:2.363e+10                     
-#&gt;  Max.   :44507.6   Max.   :3623172   Max.   :4.521e+10                     
-#&gt;                                                                            </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>)</div><div class='img'><img src='nz-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'>summary</span>(<span class='no'>nz</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>)
+}</div><div class='img'><img src='nz-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
 <span class='no'>u_nz</span> <span class='kw'>=</span> <span class='st'>"http://www3.stats.govt.nz/digitalboundaries/annual/
     ESRI_Geodatabase_2017_Digital_Boundaries_Generalised_Clipped.zip"</span>
 <span class='fu'>download.file</span>(<span class='no'>u_nz</span>, <span class='kw'>destfile</span> <span class='kw'>=</span> <span class='st'>"nz.zip"</span>)

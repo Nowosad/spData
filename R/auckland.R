@@ -18,10 +18,15 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
-#' library(rgdal)
-#' auckland <- readOGR(system.file("shapes/auckland.shp", package="spData")[1])
-#' plot(auckland)
+#' if (requireNamespace("rgdal", quietly = TRUE)) {
+#'   library(rgdal)
+#'   auckland <- readOGR(system.file("shapes/auckland.shp", package="spData")[1])
+#'   plot(auckland)
+#'   if (requireNamespace("spdep", quietly = TRUE)) {
+#'     library(spdep)
+#'     auckland.nb <- poly2nb(auckland)
+#'   }
+#' }
 #' 
-#' library(spdep)
-#' auckland.nb <- poly2nb(auckland)
+
 "auckland"

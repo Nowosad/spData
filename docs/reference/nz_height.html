@@ -104,14 +104,12 @@ See <a href='https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/'>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>sf</span>)
-<span class='fu'>summary</span>(<span class='no'>nz_height</span>)</div><div class='output co'>#&gt;     t50_fid          elevation             geometry  
-#&gt;  Min.   :2353944   Min.   :2706   POINT        :101  
-#&gt;  1st Qu.:2364031   1st Qu.:2782   epsg:2193    :  0  
-#&gt;  Median :2364242   Median :2885   +proj=tmer...:  0  
-#&gt;  Mean   :2369511   Mean   :2951                      
-#&gt;  3rd Qu.:2372292   3rd Qu.:3054                      
-#&gt;  Max.   :2408411   Max.   :3724                      </div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>$<span class='no'>geometry</span>)</div><div class='img'><img src='nz_height-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz_height</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: ignoring all but the first attribute</span></div><div class='img'><img src='nz_height-2.png' alt='' width='700' height='432.632880098887' /></div># NOT RUN {
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'>requireNamespace</span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+  <span class='fu'>library</span>(<span class='no'>sf</span>)
+  <span class='fu'>summary</span>(<span class='no'>nz_height</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>$<span class='no'>geometry</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz_height</span>$<span class='no'>geom</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+}</div><div class='img'><img src='nz_height-1.png' alt='' width='700' height='432.632880098887' /></div># NOT RUN {
 library(dplyr)
 After downloading data from https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/
 unzip("lds-nz-height-points-topo-150k-SHP.zip")

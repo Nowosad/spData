@@ -34,7 +34,9 @@
 #' data(baltimore)
 #' str(baltimore)
 #' 
-#' library(sf)
-#' baltimore_sf <- baltimore %>% st_as_sf(., coords = c("X","Y"))
-#' plot(baltimore_sf["PRICE"])
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   baltimore_sf <- baltimore %>% st_as_sf(., coords = c("X","Y"))
+#'   plot(baltimore_sf["PRICE"])
+#' }
 "baltimore"

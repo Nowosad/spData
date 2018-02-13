@@ -28,11 +28,12 @@
 #' @docType data
 #' @keywords datasets sf
 #' @examples 
-#' library(sf)
-#' data(world)
-#' # or
-#' world <- st_read(system.file("shapes/world.gpkg", package="spData"))
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sf)
+#'   data(world)
+#'   # or
+#'   world <- st_read(system.file("shapes/world.gpkg", package="spData"))
 #' 
-#' plot(world)
-#' 
+#'   plot(world)
+#' }
 "world"
