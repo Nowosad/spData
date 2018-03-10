@@ -25,6 +25,6 @@
 #'   library(sf)
 #'   data(lnd)
 #'   summary(lnd)
-#'   plot(lnd)
+#'   plot(st_geometry(lnd))
 #' }
 "lnd"
