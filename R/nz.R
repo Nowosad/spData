@@ -33,18 +33,17 @@
 #' # select the GeoPackage option in the "Vectors/tables" dropdown
 #' # at https://datafinder.stats.govt.nz/data/ (requires registration)
 #' # Save the result as:
-#' # "statsnzregional-council-2017-generalised-version-GPKG.zip"
-#' unzip("statsnzregional-council-2017-generalised-version-GPKG.zip")
+#' unzip("statsnzregional-council-2018-clipped-generalised-GPKG.zip")
 #' library(sf)
 #' library(tidyverse)
-#' nz_full = st_read("regional-council-2017-generalised-version.gpkg")
+#' nz_full = st_read("regional-council-2018-clipped-generalised.gpkg")
 #' object.size(nz_full) / 1000000 # ~2 MB
-#' nz = rmapshaper::ms_simplify(nz_full, keep = 0.01)
+#' nz = rmapshaper::ms_simplify(nz_full, keep = 0.001)
 #' object.size(nz) / 1000 # ~40 KB
 #' names(nz)
-#' nz$REGC2017_NAME
-#' nz = filter(nz, REGC2017_NAME != "Area Outside Region") %>% 
-#'   select(Name = REGC2017_NAME, `Land area` = LAND_AREA_SQ_KM)
+#' nz$REGC2018_V1_00_NAME
+#' nz = filter(nz, REGC2018_V1_00_NAME != "Area Outside Region") %>% 
+#'   select(Name = REGC2018_V1_00_NAME, `Land area` = LAND_AREA_SQ_KM)
 #' devtools::install_github("hadley/rvest")
 #' library(rvest)
 #' doc = read_html("https://en.wikipedia.org/wiki/Regions_of_New_Zealand") %>% 
