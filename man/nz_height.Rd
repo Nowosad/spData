@@ -24,7 +24,7 @@ See \url{https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/} for 
 if (requireNamespace("sf", quietly = TRUE)) {
   library(sf)
   summary(nz_height)
-  plot(nz$geometry)
+  plot(nz$geom)
   plot(nz_height$geom, add = TRUE)
 }
 \dontrun{
