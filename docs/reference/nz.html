@@ -84,7 +84,7 @@
     </div>
 
     
-    <p>Polygons representing the 16 regions of New Zealand (2017).
+    <p>Polygons representing the 16 regions of New Zealand (2018).
 See <a href='https://en.wikipedia.org/wiki/Regions_of_New_Zealand'>https://en.wikipedia.org/wiki/Regions_of_New_Zealand</a> for a description of these regions
 and <a href='www.stats.govt.nz'>www.stats.govt.nz</a> for information on the data source</p>
     
@@ -94,17 +94,23 @@ and <a href='www.stats.govt.nz'>www.stats.govt.nz</a> for information on the dat
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>FORMAT:</p><ul>
-<li><p>REGC2017_NAME Name</p></li>
-<li><p>AREA_SQ_KM Area</p></li>
-<li><p>LAND_AREA_SQ_KM Land area</p></li>
-<li><p>Shape_Length Perimeter length (m)</p></li>
-<li><p>Shape_Area Area (meters squared)</p></li>
-<li><p>geometry sfc_MULTIPOLYGON</p></li>
+<li><p>Name Name</p></li>
+<li><p>Island Island</p></li>
+<li><p>Land_area Land area</p></li>
+<li><p>Population Population</p></li>
+<li><p>Median_income Median income (NZD)</p></li>
+<li><p>Sex_ratio Sex ratio (male/female)</p></li>
+<li><p>geom sfc_MULTIPOLYGON</p></li>
 </ul>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='www.stats.govt.nz'>www.stats.govt.nz</a></p>
+    <p><a href='www.stats.govt.nz'>www.stats.govt.nz</a>
+    <a href='https://en.wikipedia.org/wiki/Regions_of_New_Zealand'>https://en.wikipedia.org/wiki/Regions_of_New_Zealand</a></p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p>See the nzcensus package: https://github.com/ellisp/nzelect</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -113,19 +119,46 @@ and <a href='www.stats.govt.nz'>www.stats.govt.nz</a> for information on the dat
   <span class='fu'>summary</span>(<span class='no'>nz</span>)
   <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>nz</span>)
 }</div><div class='img'><img src='nz-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
-<span class='no'>u_nz</span> <span class='kw'>=</span> <span class='st'>"http://www3.stats.govt.nz/digitalboundaries/annual/
-    ESRI_Geodatabase_2017_Digital_Boundaries_Generalised_Clipped.zip"</span>
-<span class='fu'>download.file</span>(<span class='no'>u_nz</span>, <span class='kw'>destfile</span> <span class='kw'>=</span> <span class='st'>"nz.zip"</span>)
-<span class='fu'>unzip</span>(<span class='st'>"nz.zip"</span>)
-<span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_layers'>st_layers</a></span>(<span class='st'>"2017 Digital Boundaries Generalised Clipped.gdb/"</span>)
-<span class='no'>nz</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='st'>"2017 Digital Boundaries Generalised Clipped.gdb"</span>, <span class='kw'>layer</span> <span class='kw'>=</span> <span class='st'>"REGC2017_GV_Clipped"</span>)
-<span class='fu'>object.size</span>(<span class='no'>nz</span>) / <span class='fl'>1000000</span> <span class='co'># ~15 MB</span>
-<span class='no'>nz</span> <span class='kw'>=</span> <span class='kw pkg'>rmapshaper</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/rmapshaper/topics/ms_simplify'>ms_simplify</a></span>(<span class='no'>nz</span>, <span class='kw'>keep</span> <span class='kw'>=</span> <span class='fl'>0.001</span>)
-<span class='fu'>object.size</span>(<span class='no'>nz</span>) / <span class='fl'>1000</span> <span class='co'># 41 KB!</span>
-<span class='no'>nz</span> <span class='kw'>=</span> <span class='no'>nz_orig</span>[<span class='fl'>1</span>:<span class='fl'>16</span>, ] <span class='co'># remove areas outside nz territory</span>
-<span class='co'># Tidy-up</span>
-<span class='fu'>unlink</span>(<span class='st'>"2017 Digital Boundaries Generalised Clipped.gdb/"</span>, <span class='kw'>recursive</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='fu'>unlink</span>(<span class='st'>"nz.zip"</span>)
+<span class='co'># Find "Regional Council 2018 Clipped (generalised)"</span>
+<span class='co'># select the GeoPackage option in the "Vectors/tables" dropdown</span>
+<span class='co'># at https://datafinder.stats.govt.nz/data/ (requires registration)</span>
+<span class='co'># Save the result as:</span>
+<span class='fu'>unzip</span>(<span class='st'>"statsnzregional-council-2018-clipped-generalised-GPKG.zip"</span>)
+<span class='fu'>library</span>(<span class='no'>sf</span>)
+<span class='fu'>library</span>(<span class='no'>tidyverse</span>)
+<span class='no'>nz_full</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='st'>"regional-council-2018-clipped-generalised.gpkg"</span>)
+<span class='fu'>print</span>(<span class='fu'>object.size</span>(<span class='no'>nz_full</span>), <span class='kw'>units</span> <span class='kw'>=</span> <span class='st'>"Kb"</span>) <span class='co'># 14407.2 Kb</span>
+<span class='no'>nz</span> <span class='kw'>=</span> <span class='kw pkg'>rmapshaper</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/rmapshaper/topics/ms_simplify'>ms_simplify</a></span>(<span class='no'>nz_full</span>, <span class='kw'>keep</span> <span class='kw'>=</span> <span class='fl'>0.001</span>, <span class='kw'>sys</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='fu'>print</span>(<span class='fu'>object.size</span>(<span class='no'>nz</span>), <span class='kw'>units</span> <span class='kw'>=</span> <span class='st'>"Kb"</span>) <span class='co'># 39.9 Kb</span>
+<span class='fu'>names</span>(<span class='no'>nz</span>)
+<span class='no'>nz</span>$<span class='no'>REGC2018_V1_00_NAME</span>
+<span class='no'>nz</span> <span class='kw'>=</span> <span class='fu'>filter</span>(<span class='no'>nz</span>, <span class='no'>REGC2018_V1_00_NAME</span> <span class='kw'>!=</span> <span class='st'>"Area Outside Region"</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>select</span>(<span class='kw'>Name</span> <span class='kw'>=</span> <span class='no'>REGC2018_V1_00_NAME</span>, <span class='kw'>`Land_area`</span> <span class='kw'>=</span> <span class='no'>LAND_AREA_SQ_KM</span>)
+<span class='co'># regions basic info</span>
+<span class='co'># devtools::install_github("hadley/rvest")</span>
+<span class='fu'>library</span>(<span class='no'>rvest</span>)
+<span class='no'>doc</span> <span class='kw'>=</span> <span class='fu'>read_html</span>(<span class='st'>"https://en.wikipedia.org/wiki/Regions_of_New_Zealand"</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'><a href='http://www.rdocumentation.org/packages/rvest/topics/html_nodes'>html_nodes</a></span>(<span class='st'>"div table"</span>)
+<span class='no'>tab</span> <span class='kw'>=</span> <span class='no'>doc</span><span class='kw'>[[</span><span class='fl'>3</span>]] <span class='kw'>%&gt;%</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/rvest/topics/html_table'>html_table</a></span>()
+<span class='no'>tab</span> <span class='kw'>=</span> <span class='no'>tab</span> <span class='kw'>%&gt;%</span> <span class='fu'>select</span>(<span class='kw'>Name</span> <span class='kw'>=</span> <span class='no'>Region</span>, <span class='kw'>Population</span> <span class='kw'>=</span> <span class='no'>`Population[20]`</span>, <span class='no'>Island</span>)
+<span class='no'>tab</span> <span class='kw'>=</span> <span class='no'>tab</span> <span class='kw'>%&gt;%</span> <span class='fu'>mutate</span>(<span class='kw'>Population</span> <span class='kw'>=</span> <span class='fu'>str_replace_all</span>(<span class='no'>Population</span>, <span class='st'>","</span>, <span class='st'>""</span>)) <span class='kw'>%&gt;%</span>
+        <span class='fu'>mutate</span>(<span class='kw'>Population</span> <span class='kw'>=</span> <span class='fu'>as.numeric</span>(<span class='no'>Population</span>)) <span class='kw'>%&gt;%</span>
+        <span class='fu'>mutate</span>(<span class='kw'>Name</span> <span class='kw'>=</span> <span class='fu'>str_remove_all</span>(<span class='no'>Name</span>, <span class='st'>" \\([1-9]\\)?.+"</span>))
+<span class='no'>nz</span>$<span class='no'>Name</span> <span class='kw'>=</span> <span class='fu'>as.character</span>(<span class='no'>nz</span>$<span class='no'>Name</span>)
+<span class='no'>nz</span>$<span class='no'>Name</span> <span class='kw'>=</span> <span class='fu'>str_remove</span>(<span class='no'>nz</span>$<span class='no'>Name</span>, <span class='st'>" Region"</span>)
+<span class='no'>nz</span>$<span class='no'>Name</span> <span class='kw'>%in%</span> <span class='no'>tab</span>$<span class='no'>Name</span>
+<span class='co'># regions additional info</span>
+<span class='fu'>library</span>(<span class='no'>nzcensus</span>)
+<span class='no'>nz_add_data</span> <span class='kw'>=</span> <span class='no'>REGC2013</span> <span class='kw'>%&gt;%</span>
+        <span class='fu'>select</span>(<span class='kw'>Name</span> <span class='kw'>=</span> <span class='no'>REGC2013_N</span>, <span class='kw'>Median_income</span> <span class='kw'>=</span> <span class='no'>MedianIncome2013</span>,
+               <span class='no'>PropFemale2013</span>, <span class='no'>PropMale2013</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>mutate</span>(<span class='kw'>Sex_ratio</span> <span class='kw'>=</span> <span class='no'>PropMale2013</span> / <span class='no'>PropFemale2013</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>mutate</span>(<span class='kw'>Name</span> <span class='kw'>=</span> <span class='fu'>gsub</span>(<span class='st'>" Region"</span>, <span class='st'>""</span>, <span class='no'>Name</span>)) <span class='kw'>%&gt;%</span>
+        <span class='fu'>select</span>(<span class='no'>Name</span>, <span class='no'>Median_income</span>, <span class='no'>Sex_ratio</span>)
+<span class='co'># data join</span>
+<span class='no'>nz</span> <span class='kw'>=</span> <span class='fu'>left_join</span>(<span class='no'>nz</span>, <span class='no'>tab</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='st'>"Name"</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>left_join</span>(<span class='no'>nz_add_data</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='st'>"Name"</span>) <span class='kw'>%&gt;%</span>
+        <span class='fu'>select</span>(<span class='no'>Name</span>, <span class='no'>Island</span>, <span class='no'>Land_area</span>, <span class='no'>Population</span>, <span class='no'>Median_income</span>, <span class='no'>Sex_ratio</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -135,6 +168,8 @@ and <a href='www.stats.govt.nz'>www.stats.govt.nz</a> for information on the dat
       <li><a href="#format">Format</a></li>
 
       <li><a href="#source">Source</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
