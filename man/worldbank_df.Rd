@@ -4,7 +4,7 @@
 \name{worldbank_df}
 \alias{worldbank_df}
 \title{World Bank data}
-\format{Formal class 'data.frame'; the data contains a data.frame with 217 obs. of 7 variables:
+\format{Formal class 'data.frame'; the data contains a data.frame with 177 obs. of 7 variables:
 \itemize{
     \item{name} {character vector of country names}
     \item{iso_a2} {character vector of ISO 2 character country codes}
@@ -21,7 +21,7 @@
 worldbank_df
 }
 \description{
-The object loaded is a \code{data.frame} object containing a data from World Bank
+The object loaded is a \code{data.frame} object containing data from World Bank
 }
 \examples{
 data(worldbank_df)
