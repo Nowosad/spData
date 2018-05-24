@@ -20,7 +20,7 @@ Suggests:
     rgdal,
     sf,
     sp,
-    spDataLarge (>= 0.2.6.4),
+    spDataLarge (>= 0.2.6.5),
     spdep
 License: CC0
 RoxygenNote: 6.0.1
