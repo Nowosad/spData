@@ -55,6 +55,11 @@ aggregating_value = st_join(incongruent_cents, congruent)$value.y
 incongruent_agg = aggregate(incongruent_agg_ed["value"], list(aggregating_value), FUN = mean)
 incongruent_agg$level = "Incongruent"
 incongruent = incongruent_agg[c("level", "value")]
+summary(st_geometry_type(congruent))
+summary(st_geometry_type(incongruent))
+incongruent = st_cast(incongruent, "MULTIPOLYGON")
+summary(st_geometry_type(incongruent))
+summary(st_geometry_type(aggregating_zones))
 devtools::use_data(congruent, overwrite = TRUE)
 devtools::use_data(incongruent, overwrite = TRUE)
 devtools::use_data(aggregating_zones, overwrite = TRUE)
