@@ -29,7 +29,7 @@ if (requireNamespace("sf", quietly = TRUE)) {
 }
 \dontrun{
 library(dplyr)
-After downloading data from https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/
+# After downloading data
 unzip("lds-nz-height-points-topo-150k-SHP.zip")
 nz_height = st_read("nz-height-points-topo-150k.shp") \%>\% 
   top_n(n = 100, wt = elevation)
