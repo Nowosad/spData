@@ -16,7 +16,7 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
-#' @source \url{https://esa.un.org/unpd/wup/CD-ROM/}
+#' @source \url{https://esa.un.org/unpd/wup}
 #' @docType data
 #' @keywords datasets sf
 #' 
