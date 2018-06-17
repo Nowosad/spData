@@ -18,13 +18,26 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Cycle hire points in London from OSM — cycle_hire_osm" />
+
+<meta property="og:description" content="Dataset downloaded using the osmdata package
+representing cycle hire points accross London." />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,12 +60,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">spData</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">spData</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.0</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -70,6 +87,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -77,16 +95,20 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Cycle hire points in London from OSM</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Nowosad/spData/blob/master/R/cycle_hire_osm.R'><code>R/cycle_hire_osm.R</code></a></small>
+    <div class="hidden name"><code>cycle_hire_osm.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Dataset downloaded using the osmdata package
 representing cycle hire points accross London.</p>
     
+    </div>
 
     <pre class="usage"><span class='no'>cycle_hire_osm</span></pre>
         
@@ -107,7 +129,7 @@ representing cycle hire points accross London.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>See the osmdata package: https://cran.r-project.org/package=osmdata</p>
+    <div class='dont-index'><p>See the osmdata package: https://cran.r-project.org/package=osmdata</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -118,15 +140,15 @@ representing cycle hire points accross London.</p>
   <span class='no'>cycle_hire_osm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='fu'>system.file</span>(<span class='st'>"shapes/cycle_hire_osm.geojson"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>))
 
   <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire_osm</span>)
-}</div><div class='output co'>#&gt; Reading layer `OGRGeoJSON' from data source `/home/jn/Documents/spData/inst/shapes/cycle_hire_osm.geojson' using driver `GeoJSON'
+}</div><div class='output co'>#&gt; Reading layer `cycle_hire_osm' from data source `/home/jn/Documents/spData/inst/shapes/cycle_hire_osm.geojson' using driver `GeoJSON'
 #&gt; Simple feature collection with 532 features and 5 fields
 #&gt; geometry type:  POINT
 #&gt; dimension:      XY
 #&gt; bbox:           xmin: -0.229123 ymin: 51.45927 xmax: -0.0079843 ymax: 51.54683
 #&gt; epsg (SRID):    4326
-#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='input'>
+#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs</div><div class='img'><img src='cycle_hire_osm-1.png' alt='' width='700' height='433' /></div><div class='input'>
 # Code used to download the data:
-</div><div class='img'><img src='cycle_hire_osm-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+</div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>osmdata</span>)
 <span class='fu'>library</span>(<span class='no'>dplyr</span>)
 <span class='fu'>library</span>(<span class='no'>sf</span>)
@@ -164,11 +186,14 @@ representing cycle hire points accross London.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

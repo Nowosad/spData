@@ -18,13 +18,22 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Function reference" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,12 +56,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">spData</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">spData</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.0</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -70,6 +83,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -77,244 +91,240 @@
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9">
+<div class="row">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.2.8.5</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    <table class="ref-index">
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="afcon.html">afcon</a></code> </p>
-          </td>
-          <td><p>Spatial patterns of conflict in Africa 1966-78</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="alaska.html">alaska</a></code> </p>
-          </td>
-          <td><p>Alaska multipolygon</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="auckland.html">auckland</a></code> </p>
-          </td>
-          <td><p>Marshall's infant mortality in Auckland dataset</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="baltimore.html">baltimore</a></code> </p>
-          </td>
-          <td><p>House sales prices, Baltimore, MD 1978</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p></p>
-          </td>
-          <td><p>Corrected Boston Housing Data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="coffee_data.html">coffee_data</a></code> </p>
-          </td>
-          <td><p>World coffee production data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="columbus.html">columbus</a></code> </p>
-          </td>
-          <td><p>Columbus OH spatial analysis data set</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="congruent.html">congruent</a></code> </p>
-          </td>
-          <td><p>Datasets to illustrate the concept of spatial congruence</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="cycle_hire_osm.html">cycle_hire_osm</a></code> </p>
-          </td>
-          <td><p>Cycle hire points in London from OSM</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="cycle_hire.html">cycle_hire</a></code> </p>
-          </td>
-          <td><p>Cycle hire points in London</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p></p>
-          </td>
-          <td><p>Eire data sets</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="elect80.html">elect80</a></code> </p>
-          </td>
-          <td><p>1980 Presidential election results</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="elev.html">elev</a></code> </p>
-          </td>
-          <td><p>Artificial elevation raster data set</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p></p>
-          </td>
-          <td><p>Getis-Ord remote sensing example data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="grain.html">grain</a></code> </p>
-          </td>
-          <td><p>Artificial raster dataset representing grain sizes</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="hawaii.html">hawaii</a></code> </p>
-          </td>
-          <td><p>Hawaii multipolygon</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="hopkins.html">hopkins</a></code> </p>
-          </td>
-          <td><p>Hopkins burnt savanna herb remains</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="house.html">house</a></code> </p>
-          </td>
-          <td><p>Lucas county OH housing</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="huddersfield.html">huddersfield</a></code> </p>
-          </td>
-          <td><p>Prevalence of respiratory symptoms</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="jenks71.html">jenks71</a></code> </p>
-          </td>
-          <td><p>Illinois 1959 county gross farm product value per acre</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="lnd.html">lnd</a></code> </p>
-          </td>
-          <td><p>The boroughs of London</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="nc.sids.html">nc.sids</a></code> </p>
-          </td>
-          <td><p>North Carolina SIDS data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="nydata.html">nydata</a></code> </p>
-          </td>
-          <td><p>New York leukemia data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="nz_height.html">nz_height</a></code> </p>
-          </td>
-          <td><p>High points in New Zealand</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="nz.html">nz</a></code> </p>
-          </td>
-          <td><p>Regions in New Zealand</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="seine.html">seine</a></code> </p>
-          </td>
-          <td><p>Small river network in France</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="SplashDams.html">SplashDams</a></code> </p>
-          </td>
-          <td><p>Data for Splash Dams in western Oregon</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="state.vbm.html">state.vbm</a></code> </p>
-          </td>
-          <td><p>US State Visibility Based Map</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="urban_agglomerations.html">urban_agglomerations</a></code> </p>
-          </td>
-          <td><p>Major urban areas worldwide</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="us_states_df.html">us_states_df</a></code> </p>
-          </td>
-          <td><p>the American Community Survey (ACS) data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="us_states.html">us_states</a></code> </p>
-          </td>
-          <td><p>US states polygons</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="used.cars.html">used.cars</a></code> </p>
-          </td>
-          <td><p>US 1960 used car prices</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="wheat.html">wheat</a></code> </p>
-          </td>
-          <td><p>Mercer and Hall wheat yield data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="world.html">world</a></code> </p>
-          </td>
-          <td><p>World country polygons</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="worldbank_df.html">worldbank_df</a></code> </p>
-          </td>
-          <td><p>World Bank data</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="SplashDams.html">SplashDams</a></code> </p>
+        </td>
+        <td><p>Data for Splash Dams in western Oregon</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="afcon.html">afcon</a></code> </p>
+        </td>
+        <td><p>Spatial patterns of conflict in Africa 1966-78</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="alaska.html">alaska</a></code> </p>
+        </td>
+        <td><p>Alaska multipolygon</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="auckland.html">auckland</a></code> </p>
+        </td>
+        <td><p>Marshall's infant mortality in Auckland dataset</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="baltimore.html">baltimore</a></code> </p>
+        </td>
+        <td><p>House sales prices, Baltimore, MD 1978</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="boston.html">boston</a></code> </p>
+        </td>
+        <td><p>Corrected Boston Housing Data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="coffee_data.html">coffee_data</a></code> </p>
+        </td>
+        <td><p>World coffee production data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="columbus.html">columbus</a></code> </p>
+        </td>
+        <td><p>Columbus OH spatial analysis data set</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="congruent.html">congruent</a></code> </p>
+        </td>
+        <td><p>Datasets to illustrate the concept of spatial congruence</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cycle_hire.html">cycle_hire</a></code> </p>
+        </td>
+        <td><p>Cycle hire points in London</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cycle_hire_osm.html">cycle_hire_osm</a></code> </p>
+        </td>
+        <td><p>Cycle hire points in London from OSM</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="eire.html">eire</a></code> </p>
+        </td>
+        <td><p>Eire data sets</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="elect80.html">elect80</a></code> </p>
+        </td>
+        <td><p>1980 Presidential election results</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="elev.html">elev</a></code> </p>
+        </td>
+        <td><p>Artificial elevation raster data set</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="getisord.html">getisord</a></code> </p>
+        </td>
+        <td><p>Getis-Ord remote sensing example data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="grain.html">grain</a></code> </p>
+        </td>
+        <td><p>Artificial raster dataset representing grain sizes</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="hawaii.html">hawaii</a></code> </p>
+        </td>
+        <td><p>Hawaii multipolygon</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="hopkins.html">hopkins</a></code> </p>
+        </td>
+        <td><p>Hopkins burnt savanna herb remains</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="house.html">house</a></code> </p>
+        </td>
+        <td><p>Lucas county OH housing</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="huddersfield.html">huddersfield</a></code> </p>
+        </td>
+        <td><p>Prevalence of respiratory symptoms</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="jenks71.html">jenks71</a></code> </p>
+        </td>
+        <td><p>Illinois 1959 county gross farm product value per acre</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="lnd.html">lnd</a></code> </p>
+        </td>
+        <td><p>The boroughs of London</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="nc.sids.html">nc.sids</a></code> </p>
+        </td>
+        <td><p>North Carolina SIDS data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="nydata.html">nydata</a></code> </p>
+        </td>
+        <td><p>New York leukemia data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="nz.html">nz</a></code> </p>
+        </td>
+        <td><p>Regions in New Zealand</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="nz_height.html">nz_height</a></code> </p>
+        </td>
+        <td><p>High points in New Zealand</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="seine.html">seine</a></code> </p>
+        </td>
+        <td><p>Small river network in France</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="state.vbm.html">state.vbm</a></code> </p>
+        </td>
+        <td><p>US State Visibility Based Map</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="urban_agglomerations.html">urban_agglomerations</a></code> </p>
+        </td>
+        <td><p>Major urban areas worldwide</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="us_states.html">us_states</a></code> </p>
+        </td>
+        <td><p>US states polygons</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="us_states_df.html">us_states_df</a></code> </p>
+        </td>
+        <td><p>the American Community Survey (ACS) data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="used.cars.html">used.cars</a></code> </p>
+        </td>
+        <td><p>US 1960 used car prices</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="wheat.html">wheat</a></code> </p>
+        </td>
+        <td><p>Mercer and Hall wheat yield data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="world.html">world</a></code> </p>
+        </td>
+        <td><p>World country polygons</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="worldbank_df.html">worldbank_df</a></code> </p>
+        </td>
+        <td><p>World Bank data</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -331,11 +341,14 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+
