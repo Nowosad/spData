@@ -62,7 +62,7 @@ See https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/ for detail
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spData</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.3</span>
       </span>
     </div>
 
@@ -136,7 +136,7 @@ See <a href='https://data.linz.govt.nz/layer/50284-nz-height-points-topo-150k/'>
 <span class='co'># After downloading data</span>
 <span class='fu'>unzip</span>(<span class='st'>"lds-nz-height-points-topo-150k-SHP.zip"</span>)
 <span class='no'>nz_height</span> <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/st_read'>st_read</a></span>(<span class='st'>"nz-height-points-topo-150k.shp"</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='http://dplyr.tidyverse.org/reference/top_n.html'>top_n</a></span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>wt</span> <span class='kw'>=</span> <span class='no'>elevation</span>)
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/top_n'>top_n</a></span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>wt</span> <span class='kw'>=</span> <span class='no'>elevation</span>)
 <span class='fu'>library</span>(<span class='no'>tmap</span>)
 <span class='fu'><a href='http://www.rdocumentation.org/packages/tmap/topics/tmap_mode'>tmap_mode</a></span>(<span class='st'>"view"</span>)
 <span class='fu'><a href='http://www.rdocumentation.org/packages/tmap/topics/qtm'>qtm</a></span>(<span class='no'>nz</span>) +

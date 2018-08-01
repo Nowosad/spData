@@ -62,7 +62,7 @@ representing cycle hire points accross London." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spData</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.2.9.3</span>
       </span>
     </div>
 
@@ -157,9 +157,9 @@ representing cycle hire points accross London.</p>
 <span class='no'>cycle_hire_osm</span> <span class='kw'>=</span> <span class='no'>lnd_cycle_hire</span>$<span class='no'>osm_points</span>
 <span class='fu'>nrow</span>(<span class='no'>cycle_hire_osm</span>)
 <span class='fu'><a href='http://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>cycle_hire_osm</span>)
-<span class='no'>cycle_hire_osm</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>cycle_hire_osm</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>,
+<span class='no'>cycle_hire_osm</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/select'>select</a></span>(<span class='no'>cycle_hire_osm</span>, <span class='no'>osm_id</span>, <span class='no'>name</span>, <span class='no'>capacity</span>,
                                <span class='no'>cyclestreets_id</span>, <span class='no'>description</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>capacity</span> <span class='kw'>=</span> <span class='fu'>as.numeric</span>(<span class='no'>capacity</span>))
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/mutate'>mutate</a></span>(<span class='kw'>capacity</span> <span class='kw'>=</span> <span class='fu'>as.numeric</span>(<span class='no'>capacity</span>))
 <span class='fu'>names</span>(<span class='no'>cycle_hire_osm</span>)
 <span class='fu'>nrow</span>(<span class='no'>cycle_hire_osm</span>)
 <span class='co'># }</span></pre>
