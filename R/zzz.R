@@ -14,7 +14,7 @@
                 msg <- paste("To access larger datasets in this package, install the",
                              "spDataLarge package with:\n",
                              "`install.packages('spDataLarge',", 
-                             "repos='https://nowosad.github.io/drat/', type='source'))`")
+                             "repos='https://nowosad.github.io/drat/', type='source')`")
                 msg <- paste(strwrap(msg), collapse="\n")
                 packageStartupMessage(msg)
         }
