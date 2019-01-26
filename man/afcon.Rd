@@ -31,7 +31,7 @@ All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Depa
 }
 \examples{
 data(afcon)
-if (!requireNamespace("spdep", quietly = TRUE)) {
+if (requireNamespace("spdep", quietly = TRUE)) {
   library(spdep)
   plot(africa.rook.nb, afxy)
   plot(diffnb(paper.nb, africa.rook.nb), afxy, col="red", add=TRUE)

@@ -125,31 +125,16 @@ for teaching purposes.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/ns-load'>requireNamespace</a></span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/ns-load'>requireNamespace</a></span>(<span class='st'>"sf"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
   <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>sf</span>)
   <span class='fu'><a href='https://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>aggregating_zones</span>$<span class='no'>geometry</span>, <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>5</span>)
   <span class='fu'><a href='https://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>congruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"green"</span>, <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>2</span>)
   <span class='fu'><a href='https://www.rdocumentation.org/packages/sf/topics/plot'>plot</a></span>(<span class='no'>incongruent</span>$<span class='no'>geometry</span>, <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>border</span> <span class='kw'>=</span> <span class='st'>"blue"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fl'>NA</span>)
   <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/cbind'>rbind</a></span>(<span class='no'>congruent</span>, <span class='no'>incongruent</span>)
-}</div><div class='img'><img src='congruent-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; Simple feature collection with 18 features and 2 fields
-#&gt; geometry type:  MULTIPOLYGON
-#&gt; dimension:      XY
-#&gt; bbox:           xmin: 417686.2 ymin: 443703 xmax: 422963 ymax: 447036.8
-#&gt; epsg (SRID):    27700
-#&gt; proj4string:    +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs
-#&gt; First 10 features:
-#&gt;          level    value                       geometry
-#&gt; 1    Congruent 5.060934 MULTIPOLYGON (((420725.6 44...
-#&gt; 2    Congruent 4.887273 MULTIPOLYGON (((419315.7 44...
-#&gt; 3    Congruent 4.968365 MULTIPOLYGON (((421560 4454...
-#&gt; 4    Congruent 5.493269 MULTIPOLYGON (((419023.8 44...
-#&gt; 5    Congruent 4.956924 MULTIPOLYGON (((419901 4467...
-#&gt; 6    Congruent 4.790662 MULTIPOLYGON (((420253 4461...
-#&gt; 7    Congruent 5.233551 MULTIPOLYGON (((419788.2 44...
-#&gt; 8    Congruent 4.990704 MULTIPOLYGON (((420409.5 44...
-#&gt; 9    Congruent 5.136356 MULTIPOLYGON (((418708.8 44...
-#&gt; 10 Incongruent 4.037919 MULTIPOLYGON (((420799.6 44...</div><div class='input'># Code used to download the data:
-</div><span class='co'># NOT RUN {</span>
+}
+<span class='co'># Code used to download the data:</span>
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>devtools</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/devtools/topics/reexports'>install_github</a></span>(<span class='st'>"robinlovelace/ukboundaries"</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>sf</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>tmap</span>)
@@ -207,7 +192,7 @@ for teaching purposes.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
 </div>
       </footer>
    </div>
