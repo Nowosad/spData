@@ -23,7 +23,8 @@ Suggests:
     sf,
     sp,
     spDataLarge (>= 0.3.0),
-    spdep
+    spdep,
+    spatialreg
 License: CC0
 RoxygenNote: 6.1.1
 LazyData: true

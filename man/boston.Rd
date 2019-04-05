@@ -65,19 +65,19 @@ Details of the creation of the tract shapefile given in final don't run block; t
  }
 }
 \examples{
-if (requireNamespace("spdep", quietly = TRUE)) {
+#if (requireNamespace("spdep", quietly = TRUE)) {
   library(spdep)
   data(boston)
   hr0 <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
-                    AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
+                    AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data = boston.c)
   summary(hr0)
   logLik(hr0)
   gp0 <- lm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
-                    AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data=boston.c)
+                    AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT), data = boston.c)
   summary(gp0)
   logLik(gp0)
   lm.morantest(hr0, nb2listw(boston.soi))
-}
+#}
 \dontrun{
 library(rgdal)
 boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",
@@ -85,17 +85,21 @@ boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",
 boston_nb <- poly2nb(boston.tr)
 }
 \dontrun{
-gp1 <- errorsarlm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2)
-                           + I(RM^2) +  AGE + log(DIS) + log(RAD) +
-                            TAX + PTRATIO + B + log(LSTAT),
-                           data=boston.c, nb2listw(boston.soi), method="Matrix", 
-                           control=list(tol.opt = .Machine$double.eps^(1/4)))
-summary(gp1)
-gp2 <- lagsarlm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2)
-                +  AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT),
-                data=boston.c, nb2listw(boston.soi), method="Matrix")
-summary(gp2)
+if (requireNamespace("spatialreg", quietly = TRUE)) {
+  library(spatialreg)
+  gp1 <- errorsarlm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2)
+                             + I(RM^2) +  AGE + log(DIS) + log(RAD) +
+                              TAX + PTRATIO + B + log(LSTAT),
+                             data=boston.c, nb2listw(boston.soi), method="Matrix", 
+                             control=list(tol.opt = .Machine$double.eps^(1/4)))
+  summary(gp1)
+  gp2 <- lagsarlm(log(CMEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2)
+                  +  AGE + log(DIS) + log(RAD) + TAX + PTRATIO + B + log(LSTAT),
+                  data=boston.c, nb2listw(boston.soi), method="Matrix")
+  summary(gp2)
 }
+}
+
 }
 \references{
 Harrison, David, and Daniel L. Rubinfeld, Hedonic Housing Prices and the Demand for Clean Air, \emph{Journal of Environmental Economics and Management}, Volume 5, (1978), 81-102. Original data.
