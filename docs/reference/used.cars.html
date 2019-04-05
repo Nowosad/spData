@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -141,22 +141,25 @@
   <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/lm.morantest'>lm.morantest</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
   <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/lm.morantest.sad'>lm.morantest.sad</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
   <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/lm.LMtests'>lm.LMtests</a></span>(<span class='no'>uc.lm</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>))
-  <span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+  <span class='kw'>if</span> (<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/ns-load'>requireNamespace</a></span>(<span class='st'>"spatialreg"</span>, <span class='kw'>quietly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)) {
+    <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>spatialreg</span>)
+    <span class='no'>uc.err</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/spdep-deprecated'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                       <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                       <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+    <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.err</span>)
+    <span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/spdep-deprecated'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
                      <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                      <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
-  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.err</span>)
-  <span class='no'>uc.lag</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='no'>tax.charges</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                   <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                   <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
-  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.lag</span>)
-  <span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/lagsarlm'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
-                    <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
-                    <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
-  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.lag1</span>)
-  <span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/errorsarlm'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+    <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.lag</span>)
+    <span class='no'>uc.lag1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/spdep-deprecated'>lagsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
                       <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
                       <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
-  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.err1</span>)
+    <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.lag1</span>)
+    <span class='no'>uc.err1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/spdep-deprecated'>errorsarlm</a></span>(<span class='no'>price.1960</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>used.cars</span>,
+                        <span class='fu'><a href='https://www.rdocumentation.org/packages/spdep/topics/nb2listw'>nb2listw</a></span>(<span class='no'>usa48.nb</span>), <span class='kw'>tol.solve</span><span class='kw'>=</span><span class='fl'>1.0e-13</span>,
+                        <span class='kw'>control</span><span class='kw'>=</span><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>tol.opt</span><span class='kw'>=</span><span class='no'>.Machine</span>$<span class='no'>double.eps</span>^<span class='fl'>0.3</span>))
+    <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>uc.err1</span>)
+  }
 }</div><div class='output co'>#&gt; <span class='error'>Error: package ‘spData’ required by ‘spdep’ could not be found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
