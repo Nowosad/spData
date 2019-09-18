@@ -65,7 +65,7 @@ Details of the creation of the tract shapefile given in final don't run block; t
  }
 }
 \examples{
-#if (requireNamespace("spdep", quietly = TRUE)) {
+if (requireNamespace("spdep", quietly = TRUE)) {
   library(spdep)
   data(boston)
   hr0 <- lm(log(MEDV) ~ CRIM + ZN + INDUS + CHAS + I(NOX^2) + I(RM^2) +
@@ -77,7 +77,7 @@ Details of the creation of the tract shapefile given in final don't run block; t
   summary(gp0)
   logLik(gp0)
   lm.morantest(hr0, nb2listw(boston.soi))
-#}
+}
 \dontrun{
 library(rgdal)
 boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",

@@ -4,5 +4,5 @@
 ^docs$
 ^README\.Rmd$
 ^README-.*\.png$
-
+^data-raw$
 ^_pkgdown\.yml$
