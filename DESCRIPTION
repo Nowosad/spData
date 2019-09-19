@@ -28,6 +28,6 @@ Suggests:
 License: CC0
 RoxygenNote: 6.1.1
 LazyData: true
-URL: https://github.com/Nowosad/spData
+URL: https://nowosad.github.io/spData/
 BugReports: https://github.com/Nowosad/spData/issues
 Additional_repositories: https://nowosad.github.io/drat
