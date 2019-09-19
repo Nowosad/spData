@@ -6,7 +6,7 @@
 #' 
 #' Polygons representing the 16 regions of New Zealand (2018).
 #' See \url{https://en.wikipedia.org/wiki/Regions_of_New_Zealand} for a description of these regions
-#' and \url{www.stats.govt.nz} for information on the data source
+#' and \url{https://www.stats.govt.nz} for information on the data source
 #' 
 #' @format FORMAT:
 #' \itemize{
