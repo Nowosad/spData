@@ -14,7 +14,7 @@
     \item{geometry} {sfc_POINT}
 }}
 \source{
-\url{cyclehireapp.com/cyclehirelive/cyclehire.csv}
+\url{https://cyclehireapp.com/cyclehirelive/cyclehire.csv}
 }
 \usage{
 cycle_hire

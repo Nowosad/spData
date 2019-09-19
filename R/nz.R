@@ -22,7 +22,7 @@
 #' @seealso 
 #' See the nzcensus package: https://github.com/ellisp/nzelect
 #' 
-#' @source \url{www.stats.govt.nz}
+#' @source \url{https://www.stats.govt.nz}
 #' @source \url{https://en.wikipedia.org/wiki/Regions_of_New_Zealand}
 #' @docType data
 #' @keywords datasets sf

@@ -16,7 +16,7 @@
     \item{geom} {sfc_MULTIPOLYGON}
 }}
 \source{
-\url{www.stats.govt.nz}
+\url{https://www.stats.govt.nz}
 
 \url{https://en.wikipedia.org/wiki/Regions_of_New_Zealand}
 }

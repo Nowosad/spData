@@ -17,7 +17,7 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
-#' @source \url{cyclehireapp.com/cyclehirelive/cyclehire.csv}
+#' @source \url{https://cyclehireapp.com/cyclehirelive/cyclehire.csv}
 #' @docType data
 #' @keywords datasets sf
 #' 
