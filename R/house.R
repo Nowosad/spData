@@ -36,6 +36,7 @@
 #' @source Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
 #' @docType data
 #' @keywords datasets sp
+#' @importClassesFrom sp SpatialPointsDataFrame
 #' 
 #' @examples 
 #' if (requireNamespace("sp", quietly = TRUE)) {

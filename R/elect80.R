@@ -19,6 +19,7 @@
 #' @source Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
 #' @docType data
 #' @keywords datasets sp
+#' @importClassesFrom sp SpatialPointsDataFrame
 #' 
 #' @examples 
 #' if (requireNamespace("sp", quietly = TRUE)) {

@@ -13,7 +13,7 @@ The raster data represents elevation in meters and uses WGS84 as
   a coordinate reference system.
 }
 \examples{
-if (requireNamespace("sp", quietly = TRUE)) {
+if (requireNamespace("raster", quietly = TRUE)) {
   library(raster)
   data(elev)
   elev

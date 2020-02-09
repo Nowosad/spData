@@ -5,9 +5,10 @@
 #'   a coordinate reference system.
 #' @docType data
 #' @keywords datasets raster
+#' @importClassesFrom raster RasterLayer
 #' 
 #' @examples 
-#' if (requireNamespace("sp", quietly = TRUE)) {
+#' if (requireNamespace("raster", quietly = TRUE)) {
 #'   library(raster)
 #'   data(elev)
 #'   elev
