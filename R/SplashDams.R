@@ -18,6 +18,7 @@
 #' @references \url{http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
 #' @docType data
 #' @keywords datasets sp
+#' @importClassesFrom sp SpatialPointsDataFrame
 #' 
 #' @examples 
 #' if (requireNamespace("sp", quietly = TRUE)) {

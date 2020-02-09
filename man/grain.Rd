@@ -14,7 +14,7 @@ The ratified raster dataset represents grain sizes with the
   system.
 }
 \examples{
-if (requireNamespace("sp", quietly = TRUE)) {
+if (requireNamespace("raster", quietly = TRUE)) {
   library(raster)
   data(grain)
   grain

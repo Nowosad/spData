@@ -18,6 +18,7 @@
 #' 
 #' @docType data
 #' @keywords datasets sp
+#' @importClassesFrom sp SpatialPolygonsDataFrame
 #' 
 #' @examples 
 #' if (requireNamespace("sp", quietly = TRUE)) {
