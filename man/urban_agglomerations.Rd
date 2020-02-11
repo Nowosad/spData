@@ -13,7 +13,7 @@
     \item{geometry} {sfc_POINT}
 }}
 \source{
-\url{https://esa.un.org/unpd/wup}
+\url{https://population.un.org/wup/}
 }
 \usage{
 urban_agglomerations
