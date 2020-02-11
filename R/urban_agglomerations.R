@@ -16,7 +16,7 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
-#' @source \url{https://esa.un.org/unpd/wup}
+#' @source \url{https://population.un.org/wup/}
 #' @docType data
 #' @keywords datasets sf
 #' 
