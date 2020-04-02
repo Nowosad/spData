@@ -4,7 +4,8 @@
 \name{lnd}
 \alias{lnd}
 \title{The boroughs of London}
-\format{\itemize{
+\format{
+\itemize{
     \item{NAME} {Borough name}
     \item{GSS_CODE} {Official code}
     \item{HECTARES} {How many hectares}
@@ -13,7 +14,8 @@
     \item{SUB_2009} {Empty column}
     \item{SUB_2006} {Empty column}
     \item{geometry} {sfc_MULTIPOLYGON}
-}}
+}
+}
 \source{
 \url{https://github.com/Robinlovelace/Creating-maps-in-R}
 }

@@ -23,7 +23,7 @@
 #' @examples 
 #' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sf)
-#'   data(urban_agglomerations)
+#'   plot(urban_agglomerations)
 #' }
 #' # Code used to download the data:
 #' \dontrun{
@@ -35,6 +35,7 @@
 #'     st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
 #' names(urban_agglomerations) <- gsub(" ", "_", tolower(names(urban_agglomerations)) ) %>% 
 #'         gsub("\\(|\\)", "", .)
+#' urban_agglomerations
 #' devtools::use_data(urban_agglomerations, overwrite = TRUE)
 #' file.remove("WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls")
 #' }

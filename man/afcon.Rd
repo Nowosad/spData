@@ -7,14 +7,16 @@
 \alias{afxy}
 \alias{paper.nb}
 \title{Spatial patterns of conflict in Africa 1966-78}
-\format{This data frame contains the following columns:
+\format{
+This data frame contains the following columns:
 \itemize{
         \item{x} {an easting in decimal degrees (taken as centroid of shapefile polygon)}
         \item{y} {an northing in decimal degrees (taken as centroid of shapefile polygon)}
         \item{totcon} {index of total conflict 1966-78}
         \item{name} {country name}
         \item{id} {country id number as in paper}
-}}
+}
+}
 \source{
 Anselin, L. and John O'Loughlin. 1992. Geography of international conflict and cooperation: spatial dependence and regional context in Africa.  In The New Geopolitics, ed. M. Ward, pp. 39-75.  Philadelphia, PA: Gordon and Breach. 
 also: 

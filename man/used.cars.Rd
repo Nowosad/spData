@@ -5,11 +5,13 @@
 \alias{used.cars}
 \alias{usa48.nb}
 \title{US 1960 used car prices}
-\format{This data frame contains the following columns:
+\format{
+This data frame contains the following columns:
 \itemize{
 \item{tax.charges} {taxes and delivery charges for 1955-9 new cars}
 \item{price.1960} {1960 used car prices by state}
-}}
+}
+}
 \source{
 Hanna, F. A. 1966 Effects of regional differences in taxes and transport charges on automobile consumption, in Ostry, S., Rhymes, J. K. (eds) Papers on regional statistical studies, Toronto: Toronto University Press, pp. 199-223.
 }

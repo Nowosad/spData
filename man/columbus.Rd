@@ -8,7 +8,8 @@
 \alias{polys}
 \alias{bbs}
 \title{Columbus OH spatial analysis data set}
-\format{This data frame contains the following columns:
+\format{
+This data frame contains the following columns:
        \itemize{
                \item{AREA} {computed by ArcView}
                \item{PERIMETER} {computed by ArcView}
@@ -32,7 +33,8 @@
                \item{CP} {core-periphery dummy (Core=1)}
                \item{THOUS} {constant=1,000}
                \item{NEIGNO} {NEIG+1,000, alternative neighborhood id value}
-       }}
+       }
+}
 \source{
 Anselin, Luc.  1988.  Spatial econometrics: methods and models.  Dordrecht: Kluwer Academic, Table 12.1 p. 189.
 }

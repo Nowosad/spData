@@ -4,7 +4,9 @@
 \name{state.vbm}
 \alias{state.vbm}
 \title{US State Visibility Based Map}
-\format{An object of class \code{SpatialPolygonsDataFrame} with 50 rows and 2 columns.}
+\format{
+An object of class \code{SpatialPolygonsDataFrame} with 50 rows and 2 columns.
+}
 \source{
 The data was converted from the maps library for S-PLUS.  S-PLUS uses the map with permission from the author. This version of the data has not received permission from the author (no attempt made, not that it was refused), most of my uses I feel fall under fair use and do not violate copyright, but you will need to decide for yourself and your applications.
 }

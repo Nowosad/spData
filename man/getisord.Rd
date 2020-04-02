@@ -7,12 +7,14 @@
 \alias{go_y}
 \alias{go_xyz}
 \title{Getis-Ord remote sensing example data}
-\format{This data frame contains the following columns:
+\format{
+This data frame contains the following columns:
 \itemize{
         \item{x} {grid eastings}
         \item{y} {grid northings}
         \item{val} {remote sensing values}
-}}
+}
+}
 \source{
 Getis, A. and Ord, J. K. 1996 Local spatial statistics: an overview. In P. Longley and M. Batty (eds) \emph{Spatial analysis: modelling in a GIS environment} (Cambridge: Geoinformation International), 266.
 }

@@ -4,12 +4,14 @@
 \name{coffee_data}
 \alias{coffee_data}
 \title{World coffee production data}
-\format{A data frame (tibble) with 58 for the following 12 variables:
+\format{
+A data frame (tibble) with 58 for the following 12 variables:
 \itemize{
 \item{name_long} {name of country or coffee variety}
 \item{coffee_production_2016} {production in 2016}
 \item{coffee_production_2017} {production in 2017}
-}}
+}
+}
 \source{
 The International Coffee Organization (ICO). See http://www.ico.org/ and
 http://www.ico.org/prices/m1-exports.pdf
