@@ -32,16 +32,19 @@ if (requireNamespace("sf", quietly = TRUE)) {
 }
 # Code used to download the data:
 \dontrun{
-download.file(destfile = "WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls",
-url = "https://population.un.org/wup/Download/Files/WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls")
+f = "WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls"
+download.file(
+  destfile = f,
+  url = paste0("https://population.un.org/wup/Download/Files/", f)
+ )
 library(dplyr)
 library(sf)
-urban_agglomerations = readxl::read_excel("WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls", skip = 16) \%>\%
+urban_agglomerations = readxl::read_excel(f, skip = 16) \%>\%
     st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
 names(urban_agglomerations) <- gsub(" ", "_", tolower(names(urban_agglomerations)) ) \%>\% 
         gsub("\\\\(|\\\\)", "", .)
 urban_agglomerations
-devtools::use_data(urban_agglomerations, overwrite = TRUE)
+usethis::use_data(urban_agglomerations, overwrite = TRUE)
 file.remove("WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls")
 }
 }
