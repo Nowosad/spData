@@ -58,7 +58,7 @@ Datasets for spatial analysis
 
   - `baltimore` - House sales prices, Baltimore, MD 1978
   - `coffee_data` - World coffee production statistics by country, 2016
-    - 2017
+    and 2017
   - `getisord` - Getis-Ord remote sensing example data
   - `hopkins` - Hopkins burnt savanna herb remains
   - `huddersfield` - Prevalence of respiratory symptoms
