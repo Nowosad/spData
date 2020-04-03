@@ -6,8 +6,10 @@
 \alias{incongruent}
 \alias{aggregating_zones}
 \title{Datasets to illustrate the concept of spatial congruence}
-\format{Simple feature geographic data in a projected CRS (OSGB) with random values assigned
-for teaching purposes.}
+\format{
+Simple feature geographic data in a projected CRS (OSGB) with random values assigned
+for teaching purposes.
+}
 \source{
 \url{https://en.wikipedia.org/wiki/ONS_coding_system}
 }

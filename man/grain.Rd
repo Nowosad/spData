@@ -4,7 +4,9 @@
 \name{grain}
 \alias{grain}
 \title{Artificial raster dataset representing grain sizes}
-\format{An object of class \code{RasterLayer} of dimension 6 x 6 x 1.}
+\format{
+An object of class \code{RasterLayer} of dimension 6 x 6 x 1.
+}
 \usage{
 grain
 }

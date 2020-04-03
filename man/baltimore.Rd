@@ -4,7 +4,8 @@
 \name{baltimore}
 \alias{baltimore}
 \title{House sales prices, Baltimore, MD 1978}
-\format{A data frame with 211 observations on the following 17 variables.
+\format{
+A data frame with 211 observations on the following 17 variables.
 \itemize{
         \item{STATION} {a numeric vector}
         \item{PRICE} {a numeric vector}
@@ -23,7 +24,8 @@
         \item{SQFT} {a numeric vector}
         \item{X} {a numeric vector}
         \item{Y} {a numeric vector}
-}}
+}
+}
 \source{
 Prepared by Luc Anselin. Original data made available by Robin Dubin, Weatherhead School of Management, Case Western Research University, Cleveland, OH. http://sal.agecon.uiuc.edu/datasets/baltimore.zip
 }

@@ -6,7 +6,8 @@
 \alias{NY_data}
 \alias{listw_NY}
 \title{New York leukemia data}
-\format{A data frame with 281 observations on the following 12 variables, and the binary coded spatial weights used in the source.
+\format{
+A data frame with 281 observations on the following 12 variables, and the binary coded spatial weights used in the source.
 \itemize{
 \item{AREANAME} {name of census tract}
 \item{AREAKEY} {unique FIPS code for each tract}
@@ -20,7 +21,8 @@
 \item{Z} {ransformed propoprtions}
 \item{AVGIDIST} {average distance between centroid and TCE sites}
 \item{PEXPOSURE} {"exposure potential": inverse distance between each census tract centroid and the nearest TCE site, IDIST, transformed via log(100*IDIST)}
-}}
+}
+}
 \source{
 http://www.sph.emory.edu/~lwaller/ch9index.htm
 }

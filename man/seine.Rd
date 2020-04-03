@@ -5,12 +5,14 @@
 \alias{seine}
 \alias{rivers}
 \title{Small river network in France}
-\format{FORMAT:
+\format{
+FORMAT:
 \itemize{
     \item{name} {name}
     \item{geometry} {sfc_MULTILINESTRING}
 }
-The object is in the RGF93 / Lambert-93 CRS.}
+The object is in the RGF93 / Lambert-93 CRS.
+}
 \source{
 \url{http://www.naturalearthdata.com/}
 }

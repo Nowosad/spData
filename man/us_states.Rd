@@ -4,7 +4,8 @@
 \name{us_states}
 \alias{us_states}
 \title{US states polygons}
-\format{Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 7 variables:
+\format{
+Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 7 variables:
 \itemize{
     \item{GEOID} {character vector of geographic identifiers}
     \item{NAME} {character vector of state names}
@@ -14,7 +15,8 @@
     \item{total_pop_15} {numerical vector of total population in 2015}
     \item{geometry} {sfc_MULTIPOLYGON}
 }
-The object is in geographical coordinates using the NAD83 datum.}
+The object is in geographical coordinates using the NAD83 datum.
+}
 \source{
 \url{https://www.census.gov/geo/maps-data/data/tiger-line.html}
 }

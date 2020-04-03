@@ -5,7 +5,8 @@
 \alias{nz}
 \alias{new_zealand}
 \title{Regions in New Zealand}
-\format{FORMAT:
+\format{
+FORMAT:
 \itemize{
     \item{Name} {Name}
     \item{Island} {Island}
@@ -14,7 +15,8 @@
     \item{Median_income} {Median income (NZD)}
     \item{Sex_ratio} {Sex ratio (male/female)}
     \item{geom} {sfc_MULTIPOLYGON}
-}}
+}
+}
 \source{
 \url{https://www.stats.govt.nz}
 

@@ -4,7 +4,8 @@
 \name{cycle_hire}
 \alias{cycle_hire}
 \title{Cycle hire points in London}
-\format{FORMAT:
+\format{
+FORMAT:
 \itemize{
     \item{id} {Id of the hire point}
     \item{name} {Name of the point}
@@ -12,7 +13,8 @@
     \item{nbikes} {The number of bikes currently parked there}
     \item{nempty} {The number of empty places}
     \item{geometry} {sfc_POINT}
-}}
+}
+}
 \source{
 \url{https://cyclehireapp.com/cyclehirelive/cyclehire.csv}
 }

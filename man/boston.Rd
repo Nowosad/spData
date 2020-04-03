@@ -7,7 +7,8 @@
 \alias{boston.soi}
 \alias{boston.utm}
 \title{Corrected Boston Housing Data}
-\format{This data frame contains the following columns:
+\format{
+This data frame contains the following columns:
 \itemize{
         \item{TOWN} {a factor with levels given by town names}
         \item{TOWNNO} {a numeric vector corresponding to TOWN}
@@ -42,7 +43,8 @@
                 proportion of blacks}
         \item{LSTAT} {a numeric vector of percentage values of lower status
                 population}
-}}
+}
+}
 \source{
 \url{http://lib.stat.cmu.edu/datasets/boston_corrected.txt}
 }

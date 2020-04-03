@@ -4,7 +4,9 @@
 \name{elev}
 \alias{elev}
 \title{Artificial elevation raster data set}
-\format{An object of class \code{RasterLayer} of dimension 6 x 6 x 1.}
+\format{
+An object of class \code{RasterLayer} of dimension 6 x 6 x 1.
+}
 \usage{
 elev
 }

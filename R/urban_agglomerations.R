@@ -23,19 +23,25 @@
 #' @examples 
 #' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sf)
-#'   data(urban_agglomerations)
+#'   plot(urban_agglomerations)
 #' }
 #' # Code used to download the data:
 #' \dontrun{
-#' download.file(destfile = "WUP2014-F11a-30_Largest_Cities.xls",
-#' url = "https://esa.un.org/unpd/wup/CD-ROM/WUP2014_XLS_CD_FILES/WUP2014-F11a-30_Largest_Cities.xls")
+#' f = "WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls"
+#' download.file(
+#'   destfile = f,
+#'   url = paste0("https://population.un.org/wup/Download/Files/", f)
+#'  )
 #' library(dplyr)
 #' library(sf)
-#' urban_agglomerations = readxl::read_excel("WUP2014-F11a-30_Largest_Cities.xls", skip = 16) %>%
+#' urban_agglomerations = readxl::read_excel(f, skip = 16) %>%
 #'     st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
-#' names(urban_agglomerations) <- gsub(" ", "_", tolower(names(urban_agglomerations)) ) %>% 
+#' names(urban_agglomerations)
+#' names(urban_agglomerations) <- gsub(" |\\n", "_", tolower(names(urban_agglomerations)) ) %>% 
 #'         gsub("\\(|\\)", "", .)
-#' devtools::use_data(urban_agglomerations, overwrite = TRUE)
-#' file.remove("WUP2014-F11a-30_Largest_Cities.xls")
+#' names(urban_agglomerations)
+#' urban_agglomerations
+#' usethis::use_data(urban_agglomerations, overwrite = TRUE)
+#' file.remove("WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls")
 #' }
 "urban_agglomerations"

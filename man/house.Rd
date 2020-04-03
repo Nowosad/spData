@@ -6,7 +6,8 @@
 \alias{LO_nb}
 \alias{trMat}
 \title{Lucas county OH housing}
-\format{Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots. The data slot is a data frame with 25357 observations on the following 24 variables.
+\format{
+Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots. The data slot is a data frame with 25357 observations on the following 24 variables.
 \itemize{
         \item{price} {a numeric vector}
         \item{yrbuilt} {a numeric vector}
@@ -33,7 +34,8 @@
         \item{syear} {a factor with levels \code{1993} \code{1994} \code{1995} \code{1996} \code{1997} \code{1998}}
         \item{age} {a numeric vector}
 }
-Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.}
+Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.
+}
 \source{
 Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
 }

@@ -5,7 +5,8 @@
 \alias{world}
 \alias{wrld}
 \title{World country polygons}
-\format{Formal class 'sf' [package "sf"]; the data contains a data.frame with 177 obs. of 11 variables:
+\format{
+Formal class 'sf' [package "sf"]; the data contains a data.frame with 177 obs. of 11 variables:
 \itemize{
     \item{iso_a2} {character vector of ISO 2 character country codes}
     \item{name_long} {character vector of country names}
@@ -19,7 +20,8 @@
     \item{gdpPercap} {integer vector of per-capita GDP in 2014}
     \item{geom} {sfc_MULTIPOLYGON}
 }
-The object is in geographical coordinates using the WGS84 datum.}
+The object is in geographical coordinates using the WGS84 datum.
+}
 \source{
 \url{http://www.naturalearthdata.com/}
 

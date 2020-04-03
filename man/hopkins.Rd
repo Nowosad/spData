@@ -4,7 +4,9 @@
 \name{hopkins}
 \alias{hopkins}
 \title{Hopkins burnt savanna herb remains}
-\format{num [1:40, 1:40] 0 0 0 0 0 0 0 0 0 1 ...}
+\format{
+num [1:40, 1:40] 0 0 0 0 0 0 0 0 0 1 ...
+}
 \source{
 Upton, G., Fingleton, B. 1985 Spatial data analysis by example: point pattern and quatitative data, Wiley, pp. 38--39.
 }
