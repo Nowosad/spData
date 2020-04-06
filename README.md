@@ -83,7 +83,7 @@ devtools::install_github("nowosad/spData")
 
 ## spDataLarge
 
-This package interacts with data available through the ‘spDataLarge’
+This package interacts with data available through the **spDataLarge**
 package, which is available in a ‘drat’ repository. To access this data
 package,
 run:
@@ -92,7 +92,9 @@ run:
 install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
 ```
 
-The size of the ‘spDataLarge’ package is approximately 20 MB.
+The size of the **spDataLarge** package is approximately 20 MB. Learn
+more about the **spDataLarge** package at
+<https://github.com/Nowosad/spDataLarge>.
 
 ## Contributions
 
