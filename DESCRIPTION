@@ -22,7 +22,7 @@ Suggests:
     foreign,
     maptools,
     rgdal,
-    sf (0.9),
+    sf (>= 0.9),
     spDataLarge (>= 0.3.0),
     spdep,
     spatialreg
