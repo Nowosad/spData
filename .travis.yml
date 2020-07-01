@@ -9,7 +9,7 @@ cache: packages
 
 sudo: required
 
-dist: trusty
+dist: bionic
   
 before_install:
   # spatial stack:
