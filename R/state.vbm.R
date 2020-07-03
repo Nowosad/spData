@@ -14,7 +14,7 @@
 #' 
 #' @references   
 #' \url{http://www.markmonmonier.com/index.htm},
-#' \url{http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html}
+#' \url{http://euclid.psych.yorku.ca/SCS/Gallery/bright-ideas.html}
 #' 
 #' @docType data
 #' @keywords datasets sp
