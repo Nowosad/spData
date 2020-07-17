@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 0.3.8
+Version: 0.3.9
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no", comment = c(ORCID = "0000-0003-2392-6140")),
     person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com", comment = c(ORCID = "0000-0002-1057-3721")),
     person("Robin", "Lovelace", role = "aut", comment = c(ORCID = "0000-0001-5679-6536")),
@@ -27,7 +27,7 @@ Suggests:
     spdep,
     spatialreg
 License: CC0
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 LazyData: true
 URL: https://nowosad.github.io/spData/
 BugReports: https://github.com/Nowosad/spData/issues

@@ -16,7 +16,7 @@ FORMAT:
 }
 }
 \source{
-\url{https://cyclehireapp.com/cyclehirelive/cyclehire.csv}
+\url{https://data.gov.uk/dataset/a1db6899-75c4-4f12-bf98-7ec2aafd3135/london-cycle-hire-stations}
 }
 \usage{
 cycle_hire

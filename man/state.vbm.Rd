@@ -35,7 +35,7 @@ if (requireNamespace("sp", quietly = TRUE)) {
 }
 \references{
 \url{http://www.markmonmonier.com/index.htm},
-\url{http://www.math.yorku.ca/SCS/Gallery/bright-ideas.html}
+\url{http://euclid.psych.yorku.ca/SCS/Gallery/bright-ideas.html}
 }
 \author{
 Greg Snow \email{greg.snow@imail.org} (of this compilation)
