@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.org/Nowosad/spData.png?branch=master)](https://travis-ci.org/Nowosad/spData)
 [![CRAN version](http://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio total mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/spData)](https://cran.r-project.org/package=spData)
 
 Datasets for spatial analysis
 
