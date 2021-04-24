@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,7 +42,6 @@
 <meta property="og:title" content="Eire data sets — eire" />
 <meta property="og:description" content="The Eire data set has been converted to shapefile format and placed in the etc/shapes directory. The initial data objects are now stored as a SpatialPolygonsDataFrame object, from which the contiguity neighbour list is recreated. For purposes of record, the original data set is retained. 
 The eire.df data frame has 26 rows and 9 columns. In addition, polygons of the 26 counties are provided as a multipart polylist in eire.polys.utm (coordinates in km, projection UTM zone 30). Their centroids are in eire.coords.utm. The original Cliff and Ord binary contiguities are in eire.nb." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -56,7 +59,7 @@ The eire.df data frame has 26 rows and 9 columns. In addition, polygons of the 2
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -70,7 +73,7 @@ The eire.df data frame has 26 rows and 9 columns. In addition, polygons of the 2
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.9</span>
       </span>
     </div>
 
@@ -78,7 +81,7 @@ The eire.df data frame has 26 rows and 9 columns. In addition, polygons of the 2
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -88,8 +91,8 @@ The eire.df data frame has 26 rows and 9 columns. In addition, polygons of the 2
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/Nowosad/spData">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/Nowosad/spData/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -132,81 +135,79 @@ The <code>eire.df</code> data frame has 26 rows and 9 columns. In addition, poly
 <li><p>INCOME total personal income British Pound000</p></li>
 <li><p>names County names</p></li>
 </ul>
+
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Upton and Fingleton 1985, - Bailey and Gatrell 1995, ch. 1 for blood group data, Cliff and Ord (1973), p. 107 for remaining variables (also after O'Sullivan, 1968). Polygon borders and Irish data sourced from Michael Tiefelsdorf's SPSS Saddlepoint bundle, originally hosted at: http://geog-www.sbs.ohio-state.edu/faculty/tiefelsdorf/GeoStat.htm.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>maptools</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>rgdal</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>spdep</span>)
-<span class='no'>eire</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/rgdal/man/readOGR.html'>readOGR</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"shapes/eire.shp"</span>, <span class='kw'>package</span><span class='kw'>=</span><span class='st'>"spData"</span>)[<span class='fl'>1</span>])
-<span class='no'>eire.nb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/poly2nb.html'>poly2nb</a></span>(<span class='no'>eire</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://maptools.r-forge.r-project.org/'>maptools</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://rgdal.r-forge.r-project.org'>rgdal</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/r-spatial/spdep/'>spdep</a></span><span class='op'>)</span>
+<span class='va'>eire</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://rgdal.r-forge.r-project.org/reference/readOGR.html'>readOGR</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"shapes/eire.shp"</span>, package<span class='op'>=</span><span class='st'>"spData"</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>eire.nb</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/poly2nb.html'>poly2nb</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>eire</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>)</span>
 <span class='co'># Eire physical anthropology blood group data</span>
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>)
-<span class='no'>brks</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/fivenum.html'>fivenum</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>), <span class='kw'>digits</span><span class='kw'>=</span><span class='fl'>2</span>)
-<span class='no'>cols</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>heat.colors</a></span>(<span class='fl'>4</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>cols</span>[<span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>, <span class='no'>brks</span>, <span class='kw'>all.inside</span><span class='kw'>=</span><span class='fl'>TRUE</span>)])
-<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Percentage with blood group A in Eire"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>50</span>, <span class='fl'>70</span>), <span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6120</span>, <span class='fl'>6050</span>), <span class='fu'><a href='https://rdrr.io/pkg/maptools/man/leglabs.html'>leglabs</a></span>(<span class='no'>brks</span>), <span class='kw'>fill</span><span class='kw'>=</span><span class='no'>cols</span>, <span class='kw'>bty</span><span class='kw'>=</span><span class='st'>"n"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span><span class='op'>)</span>
+<span class='va'>brks</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/fivenum.html'>fivenum</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span><span class='op'>)</span>, digits<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>cols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>heat.colors</a></span><span class='op'>(</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire</span>, col<span class='op'>=</span><span class='va'>cols</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span>, <span class='va'>brks</span>, all.inside<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span>main<span class='op'>=</span><span class='st'>"Percentage with blood group A in Eire"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>50</span>, <span class='fl'>70</span><span class='op'>)</span>, y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6120</span>, <span class='fl'>6050</span><span class='op'>)</span>, <span class='fu'><a href='http://maptools.r-forge.r-project.org/reference/leglabs.html'>leglabs</a></span><span class='op'>(</span><span class='va'>brks</span><span class='op'>)</span>, fill<span class='op'>=</span><span class='va'>cols</span>, bty<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire.nb</span>, <span class='fu'>coordinates</span>(<span class='no'>eire</span>), <span class='kw'>add</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>)</span>
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire.nb</span>, <span class='fu'><a href='https://rdrr.io/pkg/sp/man/coordinates.html'>coordinates</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>)</span>, add<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
-<span class='no'>lA</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lag.listw.html'>lag.listw</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>), <span class='no'>eire</span>$<span class='no'>A</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>lA</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.test.html'>moran.test</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/geary.test.html'>geary.test</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span>(<span class='no'>lA</span>, <span class='no'>eire</span>$<span class='no'>A</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.plot.html'>moran.plot</a></span>(<span class='no'>eire</span>$<span class='no'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>), <span class='kw'>labels</span><span class='kw'>=</span><span class='no'>eire</span>$<span class='no'>names</span>)
-<span class='no'>A.lm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>A</span> ~ <span class='no'>towns</span> + <span class='no'>pale</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>eire</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>A.lm</span>)
-<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>residuals</a></span>(<span class='no'>A.lm</span>)
-<span class='no'>brks</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>res</span>),-<span class='fl'>2</span>,-<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>res</span>))
-<span class='no'>cols</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span>(<span class='fl'>6</span>))
+<span class='va'>lA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lag.listw.html'>lag.listw</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span>, <span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>lA</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.test.html'>moran.test</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/geary.test.html'>geary.test</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>lA</span>, <span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.plot.html'>moran.plot</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>A</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span>, labels<span class='op'>=</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>names</span><span class='op'>)</span>
+<span class='va'>A.lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>A</span> <span class='op'>~</span> <span class='va'>towns</span> <span class='op'>+</span> <span class='va'>pale</span>, data<span class='op'>=</span><span class='va'>eire</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>A.lm</span><span class='op'>)</span>
+<span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>residuals</a></span><span class='op'>(</span><span class='va'>A.lm</span><span class='op'>)</span>
+<span class='va'>brks</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span>,<span class='op'>-</span><span class='fl'>2</span>,<span class='op'>-</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>cols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>cols</span>[<span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span>(<span class='no'>res</span>, <span class='no'>brks</span>, <span class='kw'>all.inside</span><span class='kw'>=</span><span class='fl'>TRUE</span>)])
-<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Regression residuals"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>50</span>, <span class='fl'>70</span>), <span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6120</span>, <span class='fl'>6050</span>), <span class='kw'>legend</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/pkg/maptools/man/leglabs.html'>leglabs</a></span>(<span class='no'>brks</span>), <span class='kw'>fill</span><span class='kw'>=</span><span class='no'>cols</span>, <span class='kw'>bty</span><span class='kw'>=</span><span class='st'>"n"</span>)
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire</span>, col<span class='op'>=</span><span class='va'>cols</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span><span class='op'>(</span><span class='va'>res</span>, <span class='va'>brks</span>, all.inside<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span>main<span class='op'>=</span><span class='st'>"Regression residuals"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>50</span>, <span class='fl'>70</span><span class='op'>)</span>, y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6120</span>, <span class='fl'>6050</span><span class='op'>)</span>, legend<span class='op'>=</span><span class='fu'><a href='http://maptools.r-forge.r-project.org/reference/leglabs.html'>leglabs</a></span><span class='op'>(</span><span class='va'>brks</span><span class='op'>)</span>, fill<span class='op'>=</span><span class='va'>cols</span>, bty<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.html'>lm.morantest</a></span>(<span class='no'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.sad.html'>lm.morantest.sad</a></span>(<span class='no'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.LMtests.html'>lm.LMtests</a></span>(<span class='no'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>), <span class='kw'>test</span><span class='kw'>=</span><span class='st'>"LMerr"</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.html'>lm.morantest</a></span><span class='op'>(</span><span class='va'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.sad.html'>lm.morantest.sad</a></span><span class='op'>(</span><span class='va'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.LMtests.html'>lm.LMtests</a></span><span class='op'>(</span><span class='va'>A.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span>, test<span class='op'>=</span><span class='st'>"LMerr"</span><span class='op'>)</span>
 
 <span class='co'># Eire agricultural data</span>
-<span class='no'>brks</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/fivenum.html'>fivenum</a></span>(<span class='no'>eire</span>$<span class='no'>OWNCONS</span>), <span class='kw'>digits</span><span class='kw'>=</span><span class='fl'>2</span>)
-<span class='no'>cols</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span>(<span class='fl'>4</span>:<span class='fl'>1</span>/<span class='fl'>5</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>cols</span>[<span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span>(<span class='no'>eire</span>$<span class='no'>OWNCONS</span>, <span class='no'>brks</span>, <span class='kw'>all.inside</span><span class='kw'>=</span><span class='fl'>TRUE</span>)])
-<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Percentage own consumption of agricultural produce"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>50</span>, <span class='fl'>70</span>), <span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6120</span>, <span class='fl'>6050</span>), <span class='kw'>legend</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/pkg/maptools/man/leglabs.html'>leglabs</a></span>(<span class='no'>brks</span>), <span class='kw'>fill</span><span class='kw'>=</span><span class='no'>cols</span>, <span class='kw'>bty</span><span class='kw'>=</span><span class='st'>"n"</span>)
+<span class='va'>brks</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/fivenum.html'>fivenum</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>OWNCONS</span><span class='op'>)</span>, digits<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>cols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/gray.html'>grey</a></span><span class='op'>(</span><span class='fl'>4</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>5</span><span class='op'>)</span>
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire</span>, col<span class='op'>=</span><span class='va'>cols</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>OWNCONS</span>, <span class='va'>brks</span>, all.inside<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span>main<span class='op'>=</span><span class='st'>"Percentage own consumption of agricultural produce"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>50</span>, <span class='fl'>70</span><span class='op'>)</span>, y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6120</span>, <span class='fl'>6050</span><span class='op'>)</span>, legend<span class='op'>=</span><span class='fu'><a href='http://maptools.r-forge.r-project.org/reference/leglabs.html'>leglabs</a></span><span class='op'>(</span><span class='va'>brks</span><span class='op'>)</span>, fill<span class='op'>=</span><span class='va'>cols</span>, bty<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.plot.html'>moran.plot</a></span>(<span class='no'>eire</span>$<span class='no'>OWNCONS</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.test.html'>moran.test</a></span>(<span class='no'>eire</span>$<span class='no'>OWNCONS</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='no'>e.lm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>OWNCONS</span> ~ <span class='no'>ROADACC</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>eire</span>)
-<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>residuals</a></span>(<span class='no'>e.lm</span>)
-<span class='no'>brks</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>res</span>),-<span class='fl'>2</span>,-<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>res</span>))
-<span class='no'>cols</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span>(<span class='fl'>6</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eire</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>cols</span>[<span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span>(<span class='no'>res</span>, <span class='no'>brks</span>, <span class='kw'>all.inside</span><span class='kw'>=</span><span class='fl'>TRUE</span>)])
-<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Regression residuals"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>50</span>, <span class='fl'>70</span>), <span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6120</span>, <span class='fl'>6050</span>), <span class='kw'>legend</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/pkg/maptools/man/leglabs.html'>leglabs</a></span>(<span class='no'>brks</span>), <span class='kw'>fill</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span>(<span class='fl'>6</span>), <span class='kw'>bty</span><span class='kw'>=</span><span class='st'>"n"</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.plot.html'>moran.plot</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>OWNCONS</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/moran.test.html'>moran.test</a></span><span class='op'>(</span><span class='va'>eire</span><span class='op'>$</span><span class='va'>OWNCONS</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>e.lm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>OWNCONS</span> <span class='op'>~</span> <span class='va'>ROADACC</span>, data<span class='op'>=</span><span class='va'>eire</span><span class='op'>)</span>
+<span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>residuals</a></span><span class='op'>(</span><span class='va'>e.lm</span><span class='op'>)</span>
+<span class='va'>brks</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span>,<span class='op'>-</span><span class='fl'>2</span>,<span class='op'>-</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>cols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://r-spatial.github.io/sf/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>eire</span>, col<span class='op'>=</span><span class='va'>cols</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/findInterval.html'>findInterval</a></span><span class='op'>(</span><span class='va'>res</span>, <span class='va'>brks</span>, all.inside<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span>main<span class='op'>=</span><span class='st'>"Regression residuals"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>50</span>, <span class='fl'>70</span><span class='op'>)</span>, y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6120</span>, <span class='fl'>6050</span><span class='op'>)</span>, legend<span class='op'>=</span><span class='fu'><a href='http://maptools.r-forge.r-project.org/reference/leglabs.html'>leglabs</a></span><span class='op'>(</span><span class='va'>brks</span><span class='op'>)</span>, fill<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/palettes.html'>cm.colors</a></span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span>, bty<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.html'>lm.morantest</a></span>(<span class='no'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.sad.html'>lm.morantest.sad</a></span>(<span class='no'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.LMtests.html'>lm.LMtests</a></span>(<span class='no'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span>(<span class='no'>eire.nb</span>), <span class='kw'>test</span><span class='kw'>=</span><span class='st'>"LMerr"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/localmoran.sad.html'>localmoran.sad</a></span>(<span class='no'>e.lm</span>, <span class='no'>eire.nb</span>, <span class='kw'>select</span><span class='kw'>=</span><span class='fl'>1</span>:<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'>slot</span>(<span class='no'>eire</span>, <span class='st'>"polygons"</span>))))
-}</div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.html'>lm.morantest</a></span><span class='op'>(</span><span class='va'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.morantest.sad.html'>lm.morantest.sad</a></span><span class='op'>(</span><span class='va'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/spdep/man/lm.LMtests.html'>lm.LMtests</a></span><span class='op'>(</span><span class='va'>e.lm</span>, <span class='fu'><a href='https://rdrr.io/pkg/spdep/man/nb2listw.html'>nb2listw</a></span><span class='op'>(</span><span class='va'>eire.nb</span><span class='op'>)</span>, test<span class='op'>=</span><span class='st'>"LMerr"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/spdep/man/localmoran.sad.html'>localmoran.sad</a></span><span class='op'>(</span><span class='va'>e.lm</span>, <span class='va'>eire.nb</span>, select<span class='op'>=</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'>slot</span><span class='op'>(</span><span class='va'>eire</span>, <span class='st'>"polygons"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#format">Format</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -217,7 +218,7 @@ The <code>eire.df</code> data frame has 26 rows and 9 columns. In addition, poly
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
