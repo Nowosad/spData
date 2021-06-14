@@ -36,3 +36,26 @@ world = ne_countries(returnclass = "sf") %>%
                type, area_km2, pop, lifeExp, gdpPercap)
 
 usethis::use_data(world)
+
+# fix world (post sf 1.0.0)
+library(sf)
+library(s2)
+library(giscoR)
+data("world", package = "spData")
+sf_use_s2(FALSE)
+
+bb = st_bbox(giscoR::gisco_get_countries())
+world2 = st_intersection(world, st_as_sfc(bb))
+
+sf_use_s2(TRUE)
+world2$geom = s2::as_s2_geography(world2$geom, check = FALSE)
+world2$geom = s2::s2_union(world2$geom)
+world2$geom = s2::s2_rebuild(world2$geom, s2::s2_options(split_crossing_edges = TRUE))
+world2$geom = st_as_sfc(world2$geom)
+
+# isv = sf::st_is_valid(world2)
+# world2$name_long[!isv]
+world = world2
+usethis::use_data(world, overwrite = TRUE)
+write_sf(world, "inst/shapes/world.gpkg")
+write_sf(world, "inst/shapes/world.shp")
