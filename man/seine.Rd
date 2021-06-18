@@ -14,7 +14,7 @@ FORMAT:
 The object is in the RGF93 / Lambert-93 CRS.
 }
 \source{
-\url{http://www.naturalearthdata.com/}
+\url{https://www.naturalearthdata.com/}
 }
 \usage{
 seine

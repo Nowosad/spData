@@ -20,7 +20,7 @@
 #' @seealso 
 #' See the tigris package: https://cran.r-project.org/package=tigris
 #' 
-#' @source \url{https://www.census.gov/geo/maps-data/data/tiger-line.html}
+#' @source \url{https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html}
 #' @docType data
 #' @keywords datasets sf
 #' @examples 

@@ -23,9 +23,9 @@ Formal class 'sf' [package "sf"]; the data contains a data.frame with 177 obs. o
 The object is in geographical coordinates using the WGS84 datum.
 }
 \source{
-\url{http://www.naturalearthdata.com/}
+\url{https://www.naturalearthdata.com/}
 
-\url{http://data.worldbank.org/}
+\url{https://data.worldbank.org/}
 }
 \usage{
 world

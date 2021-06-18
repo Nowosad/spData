@@ -15,7 +15,7 @@
 }
 }
 \source{
-\url{http://www.openstreetmap.org}
+\url{https://www.openstreetmap.org}
 }
 \usage{
 cycle_hire_osm

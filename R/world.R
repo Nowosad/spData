@@ -23,8 +23,8 @@
 #' @seealso 
 #' See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth
 #' 
-#' @source \url{http://www.naturalearthdata.com/}
-#' @source \url{http://data.worldbank.org/}
+#' @source \url{https://www.naturalearthdata.com/}
+#' @source \url{https://data.worldbank.org/}
 #' @docType data
 #' @keywords datasets sf
 #' @examples 

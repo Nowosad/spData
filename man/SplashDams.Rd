@@ -32,7 +32,7 @@ if (requireNamespace("sp", quietly = TRUE)) {
 }
 }
 \references{
-\url{http://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
+\url{https://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
 }
 \keyword{datasets}
 \keyword{sp}

@@ -18,7 +18,7 @@ Formal class 'sf' [package "sf"]; the data contains a data.frame with 1 obs. of 
 The object is in projected coordinates using Hawaii Albers Equal Area Conic (ESRI:102007).
 }
 \source{
-\url{https://www.census.gov/geo/maps-data/data/tiger-line.html}
+\url{https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html}
 }
 \usage{
 hawaii

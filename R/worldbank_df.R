@@ -18,7 +18,7 @@
 #' @seealso 
 #' See the wbstats package: https://cran.r-project.org/web/packages/wbstats
 #' 
-#' @source \url{http://data.worldbank.org/}
+#' @source \url{https://data.worldbank.org/}
 #' @docType data
 #' @keywords datasets
 #' @examples 

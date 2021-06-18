@@ -17,7 +17,7 @@ Formal class 'data.frame'; the data contains a data.frame with 177 obs. of 7 var
 }
 }
 \source{
-\url{http://data.worldbank.org/}
+\url{https://data.worldbank.org/}
 }
 \usage{
 worldbank_df

@@ -16,7 +16,7 @@
 #' @seealso 
 #' See the rnaturalearth package: https://cran.r-project.org/package=rnaturalearth
 #' 
-#' @source \url{http://www.naturalearthdata.com/}
+#' @source \url{https://www.naturalearthdata.com/}
 #' 
 #' @docType data
 #' @keywords datasets sf
