@@ -1,11 +1,16 @@
 set.seed(2017-12-16)
-library("raster")
-elev = raster(nrow = 6, ncol = 6, res = 0.5, 
-              xmn = -1.5, xmx = 1.5, ymn = -1.5, ymx = 1.5,
+library(terra)
+elev = rast(nrow = 6, ncol = 6, res = 0.5, 
+              xmin = -1.5, xmax = 1.5, ymin = -1.5, ymax = 1.5,
               vals = 1:36)
+names(elev) = "elev"
 
 grain_size = c("clay", "silt", "sand")
-grain = raster(nrow = 6, ncol = 6, res = 0.5, 
-               xmn = -1.5, xmx = 1.5, ymn = -1.5, ymx = 1.5,
+grain = rast(nrow = 6, ncol = 6, res = 0.5, 
+               xmin = -1.5, xmax = 1.5, ymin = -1.5, ymax = 1.5,
                vals = factor(sample(grain_size, 36, replace = TRUE), 
                              levels = grain_size))
+names(grain) = "grain"
+
+writeRaster(elev, "inst/raster/elev.tif")
+writeRaster(grain, "inst/raster/grain.tif")

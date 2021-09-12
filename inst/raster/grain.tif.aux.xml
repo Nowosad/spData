@@ -1,0 +1,10 @@
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Description>grain</Description>
+    <CategoryNames>
+      <Category>clay</Category>
+      <Category>silt</Category>
+      <Category>sand</Category>
+    </CategoryNames>
+  </PAMRasterBand>
+</PAMDataset>
