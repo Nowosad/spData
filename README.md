@@ -3,8 +3,8 @@
 
 # spData
 
-[![Build
-Status](https://travis-ci.org/Nowosad/spData.png?branch=master)](https://travis-ci.org/Nowosad/spData)
+[![GitHub action build
+status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
 [![CRAN
 version](http://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
 [![CRAN RStudio mirror
