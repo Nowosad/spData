@@ -6,3 +6,6 @@
 ^README-.*\.png$
 ^data-raw$
 ^_pkgdown\.yml$
+^CRAN-RELEASE$
+^pkgdown$
+^\.github$
