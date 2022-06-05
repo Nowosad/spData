@@ -1,16 +1,11 @@
-#' @name grain
+#' @name grain.tif
 #' @title Artificial raster dataset representing grain sizes
 #' @description The ratified raster dataset represents grain sizes with the
 #'   three classes clay, silt and sand, and WGS84 as a coordinate reference
 #'   system.
 #' @docType data
 #' @keywords datasets raster
-#' @importClassesFrom raster RasterLayer
 #' 
 #' @examples 
-#' if (requireNamespace("raster", quietly = TRUE)) {
-#'   library(raster)
-#'   data(grain)
-#'   grain
-#' }
-"grain"
+#' system.file("raster/grain.tif", package = "spData")
+NULL
