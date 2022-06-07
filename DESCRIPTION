@@ -19,7 +19,6 @@ Imports:
     sp
 Suggests:
     foreign,
-    rgdal,
     sf (>= 0.9-1),
     spDataLarge (>= 0.4.0),
     spdep,

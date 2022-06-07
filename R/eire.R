@@ -25,10 +25,11 @@
 #' 
 #' @examples 
 #' \dontrun{
+#' options(sp_evolution_status = 2L)
 #' library(maptools)
-#' library(rgdal)
 #' library(spdep)
-#' eire <- readOGR(system.file("shapes/eire.shp", package="spData")[1])
+#' eire <- sf::st_read(system.file("shapes/eire.shp", package="spData")[1])
+#' eire <- as(eire, "Spatial")
 #' eire.nb <- poly2nb(eire)
 #' 
 #' data(eire)
