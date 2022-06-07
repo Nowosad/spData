@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 2.0.1
+Version: 2.1.0
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no", comment = c(ORCID = "0000-0003-2392-6140")),
     person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com", comment = c(ORCID = "0000-0002-1057-3721")),
     person("Robin", "Lovelace", role = "aut", comment = c(ORCID = "0000-0001-5679-6536")),
@@ -16,8 +16,7 @@ Description: Diverse spatial datasets for demonstrating, benchmarking and teachi
 Depends:
     R (>= 3.3.0)
 Imports:
-    sp,
-    raster
+    sp
 Suggests:
     foreign,
     maptools,
@@ -25,10 +24,11 @@ Suggests:
     sf (>= 0.9-1),
     spDataLarge (>= 0.4.0),
     spdep,
-    spatialreg
+    spatialreg,
 License: CC0
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 LazyData: true
 URL: https://jakubnowosad.com/spData/
 BugReports: https://github.com/Nowosad/spData/issues
 Additional_repositories: https://jakubnowosad.com/drat
+Encoding: UTF-8
