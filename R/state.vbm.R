@@ -2,9 +2,9 @@
 #' @aliases state.vbm
 #' @title US State Visibility Based Map
 #'
-#' @description A SpatialPolygonsDataFrame object (for use with the maptools package) to plot a Visibility Based Map.
+#' @description A SpatialPolygonsDataFrame object to plot a Visibility Based Map.
 #' 
-#' @details A SpatialPolygonsDataFrame object (for use with the maptools package) to plot a map of the US states where the sizes of the states have been adjusted to be more equal. 
+#' @details A SpatialPolygonsDataFrame object to plot a map of the US states where the sizes of the states have been adjusted to be more equal. 
 #' This map can be useful for plotting state data using colors patterns without the larger states dominating and the smallest states being lost.
 #' The original map is copyrighted by Mark Monmonier.  Official publications based on this map should acknowledge him. Comercial publications of maps based on this probably need permission from him to use. 
 #' 

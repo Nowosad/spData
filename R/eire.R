@@ -38,7 +38,9 @@
 #' cols <- rev(heat.colors(4))
 #' plot(eire, col=cols[findInterval(eire$A, brks, all.inside=TRUE)])
 #' title(main="Percentage with blood group A in Eire")
-#' legend(x=c(-50, 70), y=c(6120, 6050), leglabs(brks), fill=cols, bty="n")
+#' legend(x=c(-50, 70), y=c(6120, 6050), 
+#'   c("under 27.91", "27.91 - 29.26", "29.26 - 31.02", "over 31.02"),
+#'   fill=cols, bty="n")
 #' 
 #' plot(eire)
 #' plot(eire.nb, coordinates(eire), add=TRUE)
@@ -57,7 +59,9 @@
 #' 
 #' plot(eire, col=cols[findInterval(res, brks, all.inside=TRUE)])
 #' title(main="Regression residuals")
-#' legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cols, bty="n")
+#' legend(x=c(-50, 70), y=c(6120, 6050),
+#'   legend=c("under -2", "-2 - -1", "-1 - 0", "0 - 1", "1 - 2", "over 2"),
+#'   fill=cols, bty="n")
 #' 
 #' lm.morantest(A.lm, nb2listw(eire.nb))
 #' lm.morantest.sad(A.lm, nb2listw(eire.nb))
@@ -68,7 +72,8 @@
 #' cols <- grey(4:1/5)
 #' plot(eire, col=cols[findInterval(eire$OWNCONS, brks, all.inside=TRUE)])
 #' title(main="Percentage own consumption of agricultural produce")
-#' legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cols, bty="n")
+#' legend(x=c(-50, 70), y=c(6120, 6050),
+#'   legend=c("under 9", "9 - 12.2", "12.2 - 19", "over 19"), fill=cols, bty="n")
 #' 
 #' moran.plot(eire$OWNCONS, nb2listw(eire.nb))
 #' moran.test(eire$OWNCONS, nb2listw(eire.nb))
@@ -78,7 +83,9 @@
 #' cols <- rev(cm.colors(6))
 #' plot(eire, col=cols[findInterval(res, brks, all.inside=TRUE)])
 #' title(main="Regression residuals")
-#' legend(x=c(-50, 70), y=c(6120, 6050), legend=leglabs(brks), fill=cm.colors(6), bty="n")
+#' legend(x=c(-50, 70), y=c(6120, 6050),
+#'   legend=c("under -2", "-2 - -1", "-1 - 0", "0 - 1", "1 - 2", "over 2"),
+#'   fill=cm.colors(6), bty="n")
 #' 
 #' lm.morantest(e.lm, nb2listw(eire.nb))
 #' lm.morantest.sad(e.lm, nb2listw(eire.nb))
