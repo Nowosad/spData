@@ -32,7 +32,6 @@ The \code{eire.df} data frame has 26 rows and 9 columns. In addition, polygons o
 }
 \examples{
 \dontrun{
-options(sp_evolution_status = 2L)
 library(maptools)
 library(spdep)
 eire <- sf::st_read(system.file("shapes/eire.shp", package="spData")[1])

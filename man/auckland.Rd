@@ -28,7 +28,6 @@ auckland
 The contiguous neighbours object does not completely replicate results in the sources, and was reconstructed from \code{auckpolys}; examination of figures in the sources suggests that there are differences in detail, although probably not in substance.
 }
 \examples{
-options(sp_evolution_status = 2L)
 if (requireNamespace("sf", quietly = TRUE)) {
   library(sp)
   auckland <- sf::st_read(system.file("shapes/auckland.shp", package="spData")[1])

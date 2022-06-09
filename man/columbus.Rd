@@ -51,7 +51,6 @@ The row names of \code{columbus} and the \code{region.id} attribute of \code{pol
 All source data files prepared by Luc Anselin, Spatial Analysis Laboratory, Department of Agricultural and Consumer Economics, University of Illinois, Urbana-Champaign, http://sal.agecon.uiuc.edu/datasets/columbus.zip.
 }
 \examples{
-options(sp_evolution_status = 2L)
 if (requireNamespace("sf", quietly = TRUE)) {
   library(sp)
   columbus <- sf::st_read(system.file("shapes/columbus.shp", package="spData")[1])
