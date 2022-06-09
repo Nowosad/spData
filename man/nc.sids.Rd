@@ -44,11 +44,11 @@ nc.sids
 The \code{nc.sids} data frame has 100 rows and 21 columns. It contains data given in Cressie (1991, pp. 386-9), Cressie and Read (1985) and Cressie and Chan (1989) on sudden infant deaths in North Carolina for 1974-78 and 1979-84. The data set also contains the neighbour list given by Cressie and Chan (1989) omitting self-neighbours (ncCC89.nb), and the neighbour list given by Cressie and Read (1985) for contiguities (ncCR85.nb). The data are ordered by county ID number, not alphabetically as in the source tables \code{sidspolys} is a "polylist" object of polygon boundaries, and \code{sidscents} is a matrix of their centroids.
 }
 \examples{
-if (requireNamespace("rgdal", quietly = TRUE)) {
-  library(rgdal)
+if (requireNamespace("sf", quietly = TRUE)) {
   if (requireNamespace("spdep", quietly = TRUE)) {
     library(spdep)
-    nc.sids <- readOGR(system.file("shapes/sids.shp", package="spData")[1])
+    nc.sids <- sf::st_read(system.file("shapes/sids.shp", package="spData")[1])
+    nc.sids <- as(nc.sids, "Spatial")
     proj4string(nc.sids) <- CRS("+proj=longlat +ellps=clrk66")
     row.names(nc.sids) <- as.character(nc.sids$FIPS)
     rn <- row.names(nc.sids)

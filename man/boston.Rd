@@ -81,9 +81,9 @@ if (requireNamespace("spdep", quietly = TRUE)) {
   lm.morantest(hr0, nb2listw(boston.soi))
 }
 \dontrun{
-library(rgdal)
-boston.tr <- readOGR(system.file("shapes/boston_tracts.shp",
+boston.tr <- sf::st_read(system.file("shapes/boston_tracts.shp",
                            package="spData")[1])
+boston.tr <- as(boston.tr, "Spatial")                           
 boston_nb <- poly2nb(boston.tr)
 }
 \dontrun{

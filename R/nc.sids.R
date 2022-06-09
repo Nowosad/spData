@@ -35,11 +35,11 @@
 #' @keywords datasets spdep
 #' 
 #' @examples 
-#' if (requireNamespace("rgdal", quietly = TRUE)) {
-#'   library(rgdal)
+#' if (requireNamespace("sf", quietly = TRUE)) {
 #'   if (requireNamespace("spdep", quietly = TRUE)) {
 #'     library(spdep)
-#'     nc.sids <- readOGR(system.file("shapes/sids.shp", package="spData")[1])
+#'     nc.sids <- sf::st_read(system.file("shapes/sids.shp", package="spData")[1])
+#'     nc.sids <- as(nc.sids, "Spatial")
 #'     proj4string(nc.sids) <- CRS("+proj=longlat +ellps=clrk66")
 #'     row.names(nc.sids) <- as.character(nc.sids$FIPS)
 #'     rn <- row.names(nc.sids)

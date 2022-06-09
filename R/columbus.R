@@ -36,9 +36,10 @@
 #' @keywords datasets sp spdep
 #' 
 #' @examples 
-#' if (requireNamespace("rgdal", quietly = TRUE)) {
-#'   library(rgdal)
-#'   columbus <- readOGR(system.file("shapes/columbus.shp", package="spData")[1])
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sp)
+#'   columbus <- sf::st_read(system.file("shapes/columbus.shp", package="spData")[1])
+#'   columbus <- as(columbus, "Spatial")
 #'   plot(columbus)
 #' }
 #' 

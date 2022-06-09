@@ -18,9 +18,10 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
-#' if (requireNamespace("rgdal", quietly = TRUE)) {
-#'   library(rgdal)
-#'   auckland <- readOGR(system.file("shapes/auckland.shp", package="spData")[1])
+#' if (requireNamespace("sf", quietly = TRUE)) {
+#'   library(sp)
+#'   auckland <- sf::st_read(system.file("shapes/auckland.shp", package="spData")[1])
+#'   auckland <- as(auckland, "Spatial")
 #'   plot(auckland)
 #'   if (requireNamespace("spdep", quietly = TRUE)) {
 #'     library(spdep)
