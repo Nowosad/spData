@@ -18,7 +18,6 @@
 #' @keywords datasets sp
 #' 
 #' @examples 
-#' options(sp_evolution_status = 2L)
 #' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sp)
 #'   auckland <- sf::st_read(system.file("shapes/auckland.shp", package="spData")[1])

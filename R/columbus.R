@@ -36,7 +36,6 @@
 #' @keywords datasets sp spdep
 #' 
 #' @examples 
-#' options(sp_evolution_status = 2L)
 #' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sp)
 #'   columbus <- sf::st_read(system.file("shapes/columbus.shp", package="spData")[1])
