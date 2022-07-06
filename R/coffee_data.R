@@ -19,7 +19,7 @@
 #' @examples 
 #' head(coffee_data)
 #' \dontrun{
-#' library(tidyverse)
+#' library(dplyr)
 #' library(sf)
 #' # found by searching for "global coffee data"
 #' u = "http://www.ico.org/prices/m1-exports.pdf"
