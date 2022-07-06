@@ -52,7 +52,7 @@ representing cycle hire points accross London.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="va">cycle_hire</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">cycle_hire</span></span></code></pre></div>
     </div>
 
     <div id="format">
@@ -71,14 +71,14 @@ representing cycle hire points accross London.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cycle_hire</span><span class="op">)</span></span>
-<span class="r-in">  <span class="co"># or</span></span>
-<span class="r-in">  <span class="va">cycle_hire</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shapes/cycle_hire.geojson"</span>, package<span class="op">=</span><span class="st">"spData"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in">  </span>
-<span class="r-in">  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cycle_hire</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="co"># or</span></span></span>
+<span class="r-in"><span>  <span class="va">cycle_hire</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shapes/cycle_hire.geojson"</span>, package<span class="op">=</span><span class="st">"spData"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  </span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `cycle_hire' from data source </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   `/home/runner/work/_temp/Library/spData/shapes/cycle_hire.geojson' </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   using driver `GeoJSON'</span>
@@ -88,15 +88,15 @@ representing cycle hire points accross London.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -0.2367699 ymin: 51.45475 xmax: -0.002275 ymax: 51.54214</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-plt img"><img src="cycle_hire-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># Download the data</span></span>
-<span class="r-in"><span class="va">cycle_hire</span> <span class="op">=</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"http://cyclehireapp.com/cyclehirelive/cyclehire.csv"</span>, </span>
-<span class="r-in">  col_names <span class="op">=</span> <span class="cn">FALSE</span>, skip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cycle_hire</span> <span class="op">=</span> <span class="va">cycle_hire</span><span class="op">[</span><span class="va">c_names</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">c_names</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"name"</span>, <span class="st">"area"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span>, <span class="st">"nbikes"</span>, <span class="st">"nempty"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cycle_hire</span> <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/sf.html" class="external-link">st_sf</a></span><span class="op">(</span><span class="va">cycle_hire</span>, <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st.html" class="external-link">st_multipoint</a></span><span class="op">(</span><span class="va">c_names</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Download the data</span></span></span>
+<span class="r-in"><span><span class="va">cycle_hire</span> <span class="op">=</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu">read_csv</span><span class="op">(</span><span class="st">"http://cyclehireapp.com/cyclehirelive/cyclehire.csv"</span>, </span></span>
+<span class="r-in"><span>  col_names <span class="op">=</span> <span class="cn">FALSE</span>, skip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cycle_hire</span> <span class="op">=</span> <span class="va">cycle_hire</span><span class="op">[</span><span class="va">c_names</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">c_names</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"name"</span>, <span class="st">"area"</span>, <span class="st">"lat"</span>, <span class="st">"lon"</span>, <span class="st">"nbikes"</span>, <span class="st">"nempty"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cycle_hire</span> <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/sf.html" class="external-link">st_sf</a></span><span class="op">(</span><span class="va">cycle_hire</span>, <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st.html" class="external-link">st_multipoint</a></span><span class="op">(</span><span class="va">c_names</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -111,7 +111,7 @@ representing cycle hire points accross London.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

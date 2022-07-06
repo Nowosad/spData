@@ -52,7 +52,7 @@ representing cycle hire points accross London.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="va">cycle_hire_osm</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">cycle_hire_osm</span></span></code></pre></div>
     </div>
 
     <div id="format">
@@ -76,14 +76,14 @@ representing cycle hire points accross London.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in">  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
-<span class="r-in">  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in">  <span class="co"># or</span></span>
-<span class="r-in">  <span class="va">cycle_hire_osm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shapes/cycle_hire_osm.geojson"</span>, package<span class="op">=</span><span class="st">"spData"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in">  </span>
-<span class="r-in">  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="co"># or</span></span></span>
+<span class="r-in"><span>  <span class="va">cycle_hire_osm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shapes/cycle_hire_osm.geojson"</span>, package<span class="op">=</span><span class="st">"spData"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  </span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `cycle_hire_osm' from data source </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   `/home/runner/work/_temp/Library/spData/shapes/cycle_hire_osm.geojson' </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   using driver `GeoJSON'</span>
@@ -93,23 +93,23 @@ representing cycle hire points accross London.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -0.229123 ymin: 51.45927 xmax: -0.0079843 ymax: 51.54683</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-plt img"><img src="cycle_hire_osm-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Code used to download the data:</span></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/osmdata/" class="external-link">osmdata</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="va">q</span> <span class="op">=</span> <span class="fu">add_osm_feature</span><span class="op">(</span>opq <span class="op">=</span> <span class="fu">opq</span><span class="op">(</span><span class="st">"London"</span><span class="op">)</span>, key <span class="op">=</span> <span class="st">"network"</span>, value <span class="op">=</span> <span class="st">"tfl_cycle_hire"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">lnd_cycle_hire</span> <span class="op">=</span> <span class="fu">osmdata_sf</span><span class="op">(</span><span class="va">q</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cycle_hire_osm</span> <span class="op">=</span> <span class="va">lnd_cycle_hire</span><span class="op">$</span><span class="va">osm_points</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://r-spatial.github.io/sf/reference/plot.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cycle_hire_osm</span> <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">select</span><span class="op">(</span><span class="va">cycle_hire_osm</span>, <span class="va">osm_id</span>, <span class="va">name</span>, <span class="va">capacity</span>, </span>
-<span class="r-in">                               <span class="va">cyclestreets_id</span>, <span class="va">description</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu">mutate</span><span class="op">(</span>capacity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">capacity</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Code used to download the data:</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/osmdata/" class="external-link">osmdata</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">q</span> <span class="op">=</span> <span class="fu">add_osm_feature</span><span class="op">(</span>opq <span class="op">=</span> <span class="fu">opq</span><span class="op">(</span><span class="st">"London"</span><span class="op">)</span>, key <span class="op">=</span> <span class="st">"network"</span>, value <span class="op">=</span> <span class="st">"tfl_cycle_hire"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">lnd_cycle_hire</span> <span class="op">=</span> <span class="fu">osmdata_sf</span><span class="op">(</span><span class="va">q</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cycle_hire_osm</span> <span class="op">=</span> <span class="va">lnd_cycle_hire</span><span class="op">$</span><span class="va">osm_points</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cycle_hire_osm</span> <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">select</span><span class="op">(</span><span class="va">cycle_hire_osm</span>, <span class="va">osm_id</span>, <span class="va">name</span>, <span class="va">capacity</span>, </span></span>
+<span class="r-in"><span>                               <span class="va">cyclestreets_id</span>, <span class="va">description</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu">mutate</span><span class="op">(</span>capacity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">capacity</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">cycle_hire_osm</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -124,7 +124,7 @@ representing cycle hire points accross London.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>
