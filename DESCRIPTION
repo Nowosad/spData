@@ -24,7 +24,7 @@ Suggests:
     spdep,
     spatialreg,
 License: CC0
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 LazyData: true
 URL: https://jakubnowosad.com/spData/
 BugReports: https://github.com/Nowosad/spData/issues

@@ -17,7 +17,7 @@
 #'     \item{geometry} {sfc_POINT}
 #' }
 #' 
-#' @source \url{https://data.gov.uk/}
+#' @source \url{https://www.data.gov.uk/}
 #' @docType data
 #' @keywords datasets sf
 #' 
