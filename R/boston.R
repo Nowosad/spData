@@ -40,7 +40,7 @@
 #'         \item{LSTAT} {a numeric vector of percentage values of lower status
 #'                 population}
 #' }
-#' @note Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt; tract conversion table 1980/1970: \url{https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&permit[0]=AVAILABLE}, \url{http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&study=7913&bundle=all&ds=1&dups=yes}. The shapefile contains corrections and extra variables (tract 3592 is corrected to 3593; the extra columns are:
+#' @note Details of the creation of the tract shapefile given in final don't run block; tract boundaries for 1990 (formerly at: http://www.census.gov/geo/cob/bdy/tr/tr90shp/tr25_d90_shp.zip, counties in the BOSTON SMSA http://www.census.gov/population/metro/files/lists/historical/63mfips.txt); tract conversion table 1980/1970 (formerly at : https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/7913?q=07913&permit[0]=AVAILABLE, http://www.icpsr.umich.edu/cgi-bin/bob/zipcart2?path=ICPSR&study=7913&bundle=all&ds=1&dups=yes). The shapefile contains corrections and extra variables (tract 3592 is corrected to 3593; the extra columns are:
 #'  \itemize{
 #'    \item{units}{number of single family houses}
 #'    \item{cu5k}{count of units under USD 5,000}
@@ -62,7 +62,7 @@
 #' 
 #' Pace, R. Kelley, and O.W. Gilley, Using the Spatial Configuration of the Data to Improve Estimation,  \emph{Journal of the Real Estate Finance and Economics}, 14 (1997), 333-340.
 #'
-#' Bivand, Roger. Revisiting the Boston data set - Changing the units of observation affects estimated willingness to pay for clean air. REGION, v. 4, n. 1, p. 109-127, 2017. \url{http://openjournals.wu.ac.at/ojs/index.php/region/article/view/107}. 
+#' Bivand, Roger. Revisiting the Boston data set - Changing the units of observation affects estimated willingness to pay for clean air. REGION, v. 4, n. 1, p. 109-127, 2017. \url{https://openjournals.wu.ac.at/ojs/index.php/region/article/view/107}. 
 #' 
 #' @docType data
 #' @keywords datasets spdep
