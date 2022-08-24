@@ -18,8 +18,8 @@ This data frame contains the following columns:
                \item{POLYID} {yet another polygon ID}
                \item{NEIG} {neighborhood id value (1-49);
                        conforms to id value used in Spatial Econometrics book.}
-               \item{HOVAL} {housing value (in $1,000)}
-               \item{INC} {household income (in $1,000)}
+               \item{HOVAL} {housing value (in 1,000 USD)}
+               \item{INC} {household income (in 1,000 USD)}
                \item{CRIME} {residential burglaries and vehicle thefts per thousand
                        households in the neighborhood}
                \item{OPEN} {open space in neighborhood}
