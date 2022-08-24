@@ -14,9 +14,6 @@ Selected variables:
     \item{geometry} {sfc_POINT}
 }
 }
-\source{
-\url{https://population.un.org/wup/}
-}
 \usage{
 urban_agglomerations
 }

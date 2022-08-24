@@ -31,8 +31,5 @@ if (requireNamespace("sp", quietly = TRUE)) {
   plot(SplashDams, axes=TRUE)
 }
 }
-\references{
-\url{https://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
-}
 \keyword{datasets}
 \keyword{sp}

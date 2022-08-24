@@ -15,7 +15,6 @@
 #' }
 #' 
 #' @source R. R. Miller (2010) Is the Past Present? Historical Splash-dam Mapping and Stream Disturbance Detection in the Oregon Coastal Province. MSc. thesis, Oregon State University; packaged by Jonathan Callahan
-#' @references \url{https://www.fs.fed.us/pnw/lwm/aem/docs/burnett/miller_rebecca_r2010rev.pdf}
 #' @docType data
 #' @keywords datasets sp
 #' @importClassesFrom sp SpatialPointsDataFrame
