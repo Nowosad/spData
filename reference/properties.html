@@ -41,7 +41,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Dataset of properties in the municipality of Athens (sf)</h1>
-    
+    <small class="dont-index">Source: <a href="https://github.com/Nowosad/spData/blob/HEAD/R/properties.R" class="external-link"><code>R/properties.R</code></a></small>
     <div class="hidden name"><code>properties.Rd</code></div>
     </div>
 
@@ -50,67 +50,42 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">properties</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">properties</span></span></code></pre></div>
     </div>
 
     <div id="format">
     <h2>Format</h2>
-    <p>An sf object of 1000 points with the following 6 variables.</p><dl><dt>id</dt>
-<dd><p>An unique identifier for each property.</p></dd>
-
-    <dt>size </dt>
-<dd><p>The size of the property (unit: square meters)</p></dd>
-
-    <dt>price </dt>
-<dd><p>The asking price (unit: euros)</p></dd>
-
-    <dt>prpsqm </dt>
-<dd><p>The asking price per squre meter (unit: euroes/square meter).</p></dd>
-
-    <dt>age </dt>
-<dd><p>Age of property in 2017 (unit: years).</p></dd>
-
-    <dt>dist_metro</dt>
-<dd><p>The distance to closest train/metro station (unit: meters).</p></dd>
-
-    
-</dl><p></p>
-    </div>
+    <p>An sf object of 1000 points with the following 6 variables.</p><ul><li><p>idAn unique identifier for each property.</p></li>
+<li><p>size The size of the property (unit: square meters)</p></li>
+<li><p>price The asking price (unit: euros)</p></li>
+<li><p>prpsqm The asking price per squre meter (unit: euroes/square meter).</p></li>
+<li><p>age Age of property in 2017 (unit: years).</p></li>
+<li><p>dist_metroThe distance to closest train/metro station (unit: meters).</p></li>
+</ul></div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p><code><a href="depmunic.html">depmunic</a></code></p></div>
+    <div class="dont-index"><p>depmunic</p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/spdep/" class="external-link">spdep</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">properties</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   207.5   631.1  1098.8  1316.9  1814.2  9166.7 </span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">pr.nb.800</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/dnearneigh.html" class="external-link">dnearneigh</a></span><span class="op">(</span><span class="va">properties</span>,<span class="fl">0</span>,<span class="fl">800</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">pr.listw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2listw.html" class="external-link">nb2listw</a></span><span class="op">(</span><span class="va">pr.nb.800</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/moran.test.html" class="external-link">moran.test</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span>, <span class="va">pr.listw</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 	Moran I test under randomisation</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> data:  properties$prpsqm  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> weights: pr.listw    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Moran I statistic standard deviate = 51.163, p-value &lt; 2.2e-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: greater</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Moran I statistic       Expectation          Variance </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      3.204868e-01     -1.001001e-03      3.948319e-05 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/moran.plot.html" class="external-link">moran.plot</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span>, <span class="va">pr.listw</span>, xlab<span class="op">=</span><span class="st">"Price/m^2"</span>, ylab<span class="op">=</span> <span class="st">"Lagged"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"spdep"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>    <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/spdep/" class="external-link">spdep</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">properties</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span>    <span class="va">pr.nb.800</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/dnearneigh.html" class="external-link">dnearneigh</a></span><span class="op">(</span><span class="va">properties</span>, <span class="fl">0</span>, <span class="fl">800</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    <span class="va">pr.listw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2listw.html" class="external-link">nb2listw</a></span><span class="op">(</span><span class="va">pr.nb.800</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/moran.test.html" class="external-link">moran.test</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span>, <span class="va">pr.listw</span><span class="op">)</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/moran.plot.html" class="external-link">moran.plot</a></span><span class="op">(</span><span class="va">properties</span><span class="op">$</span><span class="va">prpsqm</span>, <span class="va">pr.listw</span>, xlab <span class="op">=</span> <span class="st">"Price/m^2"</span>, ylab <span class="op">=</span> <span class="st">"Lagged"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">}</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="properties-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>

@@ -41,7 +41,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Municipality departments of Athens (Sf)</h1>
-    
+    <small class="dont-index">Source: <a href="https://github.com/Nowosad/spData/blob/HEAD/R/depmunic.R" class="external-link"><code>R/depmunic.R</code></a></small>
     <div class="hidden name"><code>depmunic.Rd</code></div>
     </div>
 
@@ -50,49 +50,34 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">depmunic</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">depmunic</span></span></code></pre></div>
     </div>
 
     <div id="format">
     <h2>Format</h2>
-    <p>An sf object of 7 polygons with the following 7 variables.</p><dl><dt>num_dep</dt>
-<dd><p>An unique identifier for each municipality department.</p></dd>
-
-    <dt>airbnb </dt>
-<dd><p>The number of airbnb properties in 2017</p></dd>
-
-    <dt>museums </dt>
-<dd><p>The number of museums</p></dd>
-
-    <dt>population </dt>
-<dd><p>The population recorded in census at 2011.</p></dd>
-
-    <dt>pop_rest </dt>
-<dd><p>The number of citizens that the origin is a non european country.</p></dd>
-
-    <dt>greensp</dt>
-<dd><p>The area of green spaces (unit: square meters).</p></dd>
-
-    <dt>area</dt>
-<dd><p>The area of the polygon (unit: square kilometers).</p></dd>
-
-    
-</dl><p></p>
-    </div>
+    <p>An sf object of 7 polygons with the following 7 variables.</p><ul><li><p>num_depAn unique identifier for each municipality department.</p></li>
+<li><p>airbnb The number of airbnb properties in 2017</p></li>
+<li><p>museums The number of museums</p></li>
+<li><p>population The population recorded in census at 2011.</p></li>
+<li><p>pop_rest The number of citizens that the origin is a non european country.</p></li>
+<li><p>greenspThe area of green spaces (unit: square meters).</p></li>
+<li><p>areaThe area of the polygon (unit: square kilometers).</p></li>
+</ul></div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p><code><a href="properties.html">properties</a></code></p></div>
+    <div class="dont-index"><p>properties</p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">depmunic</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">depmunic</span><span class="op">$</span><span class="va">foreigners</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">*</span><span class="va">depmunic</span><span class="op">$</span><span class="va">pop_rest</span><span class="op">/</span><span class="va">depmunic</span><span class="op">$</span><span class="va">population</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">depmunic</span><span class="op">[</span><span class="st">"foreigners"</span><span class="op">]</span>, key.pos<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"sf"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">depmunic</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  </span></span>
+<span class="r-in"><span>  <span class="va">depmunic</span><span class="op">$</span><span class="va">foreigners</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">*</span><span class="va">depmunic</span><span class="op">$</span><span class="va">pop_rest</span><span class="op">/</span><span class="va">depmunic</span><span class="op">$</span><span class="va">population</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">depmunic</span><span class="op">[</span><span class="st">"foreigners"</span><span class="op">]</span>, key.pos<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="depmunic-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
