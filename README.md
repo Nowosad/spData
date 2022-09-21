@@ -53,8 +53,8 @@ Datasets for spatial analysis
 
 ### **raster**
 
--   `elev` - Small raster dataset representing elevation values
--   `grain` - Small raster dataset representing grain size classes
+-   `elev.tif` - Small raster dataset representing elevation values
+-   `grain.tif` - Small raster dataset representing grain size classes
 
 ### misc
 
@@ -68,6 +68,8 @@ Datasets for spatial analysis
 -   `us_states_df` - Selected American Community Survey (ACS) data
 -   `wheat` - Mercer and Hall wheat yield data
 -   `worldbank_df` - Selected World Bank data
+-   `depmunic` and `properties` - Athens properties data set from
+    **HSAR**
 
 ## Installation
 
