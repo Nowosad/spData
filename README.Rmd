@@ -73,6 +73,7 @@ Datasets for spatial analysis
 - `us_states_df` - Selected American Community Survey (ACS) data
 - `wheat` - Mercer and Hall wheat yield data
 - `worldbank_df` - Selected World Bank data
+- `depmunic` and `properties` - Athens properties data set from **HSAR**
 
 ## Installation
 
