@@ -43,6 +43,9 @@
     <loc>/reference/cycle_hire_osm.html</loc>
   </url>
   <url>
+    <loc>/reference/depmunic.html</loc>
+  </url>
+  <url>
     <loc>/reference/eire.html</loc>
   </url>
   <url>
@@ -89,6 +92,9 @@
   </url>
   <url>
     <loc>/reference/nz_height.html</loc>
+  </url>
+  <url>
+    <loc>/reference/properties.html</loc>
   </url>
   <url>
     <loc>/reference/seine.html</loc>
