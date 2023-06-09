@@ -18,10 +18,36 @@ ukr2 |>
   plot()
 
 # Update geometry of Ukraine in world object:
-world$geometry[world$name_long == "Ukraine"] = ukr2$geometry[ukr2$name_long == "Ukraine"]
+world_new = world
+world_new$geom[world$name_long == "Ukraine"] = ukr2$geom[ukr2$name_long == "Ukraine"]
+waldo::compare(world, world_new)
 
 # Update geometry of Russia in world object:
 russia = ukr2 |>
   subset(grepl("Russia", name_long))
 # Fails to edit sub-components of Russia:
 russia2 = mapedit::editFeatures(russia)
+
+# Cast Russia to POLYGON:
+russia3 = russia |>
+  sf::st_cast("POLYGON")
+crimea_centroid = tmaptools::geocode_OSM("Crimea", as.sf = TRUE) 
+crimea_polygon = russia3[crimea_centroid, ]
+plot(crimea_polygon)
+# Remove Crimea from Russia:
+russia4 = russia3[crimea_centroid, , op = sf::st_disjoint]
+lengths(sf::st_intersects(russia3, crimea_centroid))
+#  [1] 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+# 4th element is Crimea
+nrow(russia3) - nrow(russia4)
+russia4_union = sf::st_union(russia4)
+# Extract Crimea from Russia and plot lines:
+plot(russia$geom[[1]][[4]][[1]], type = "l")
+# Remove Crimea from Russia:
+russia$geom[[1]][[4]] = NULL
+mapview::mapview(russia)
+
+# Update geometry of Russia in world object:
+world_new$geom[grepl("Russia", world_new$name_long)] = russia$geom
+# Check results:
+mapview::mapview(world_new)
