@@ -6,11 +6,25 @@ world = spData::world
 names(world)
 
 # Test 1: Edit all of the features (too slow)
-world2 = mapedit::editFeatures(world)
+# world2 = mapedit::editFeatures(world)
+
+ukraine = world |>
+  subset(grepl("Ukraine", name_long))
+
+russia = world |>
+  subset(grepl("Russia", name_long))
+
+russia_polygons = russia |>
+  sf::st_cast("POLYGON")
+crimea_centroid = tmaptools::geocode_OSM("Crimea", as.sf = TRUE) 
+crimea_polygon = russia_polygons[crimea_centroid, ]
+plot(crimea_polygon)
+
+russia_updated = sf::st_difference(russia_polygons, crimea_polygon)
+mapview::mapview(russia_updated)
+
 
 # Test 2: Edit only Ukraine and Russia's features
-ukr = world |>
-  subset(grepl("Ukraine|Russia", name_long)) 
 ukr2 = mapedit::editFeatures(ukr)
 # Plot just Ukraine:
 ukr2 |>
@@ -51,3 +65,9 @@ mapview::mapview(russia)
 world_new$geom[grepl("Russia", world_new$name_long)] = russia$geom
 # Check results:
 mapview::mapview(world_new)
+waldo::compare(world, world_new)
+usethis::use_data(world, overwrite = TRUE)
+
+# Test world object
+devtools::load_all()
+mapview::mapview(world)
