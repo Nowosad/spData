@@ -44,3 +44,6 @@ usethis::use_data(world, overwrite = TRUE)
 # Test world object
 devtools::load_all()
 mapview::mapview(world)
+
+write_sf(world, "inst/shapes/world.gpkg")
+write_sf(world, "inst/shapes/world.shp")
