@@ -7,9 +7,9 @@
 \format{
 A data frame (tibble) with 58 for the following 12 variables:
 \itemize{
-\item{name_long} {name of country or coffee variety}
-\item{coffee_production_2016} {production in 2016}
-\item{coffee_production_2017} {production in 2017}
+\item{name_long: name of country or coffee variety}
+\item{coffee_production_2016: production in 2016}
+\item{coffee_production_2017: production in 2017}
 }
 }
 \source{
@@ -29,12 +29,13 @@ The examples section shows how this can be joined with spatial data to create a 
 \examples{
 head(coffee_data)
 \dontrun{
+if (requireNamespace("dplyr")) {
 library(dplyr)
 library(sf)
 # found by searching for "global coffee data"
 u = "http://www.ico.org/prices/m1-exports.pdf"
 download.file(u, "data.pdf", mode = "wb")
-install.packages("pdftables") # requires api key
+if (requireNamespace("pdftables")) { # requires api key
 pdftables::convert_pdf(input_file = "data.pdf", output_file = "coffee-data-messy.csv")
 d = read_csv("coffee-data-messy.csv")
 file.remove("coffee-data-messy.csv")
@@ -52,6 +53,7 @@ tm_shape(world_coffee) +
   tm_fill("coffee_production_2017", title = "Thousand 60kg bags", breaks = b,
           textNA = "No data", colorNA = NULL)
 tmap_mode("view") # for an interactive version
+}}
 }
 }
 \keyword{datasets}

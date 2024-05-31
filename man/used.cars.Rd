@@ -8,8 +8,8 @@
 \format{
 This data frame contains the following columns:
 \itemize{
-\item{tax.charges} {taxes and delivery charges for 1955-9 new cars}
-\item{price.1960} {1960 used car prices by state}
+\item{tax.charges: taxes and delivery charges for 1955-9 new cars}
+\item{price.1960: 1960 used car prices by state}
 }
 }
 \source{
@@ -34,25 +34,28 @@ if (requireNamespace("spdep", quietly = TRUE)) {
   lm.morantest(uc.lm, nb2listw(usa48.nb))
   lm.morantest.sad(uc.lm, nb2listw(usa48.nb))
   lm.LMtests(uc.lm, nb2listw(usa48.nb))
-  #if (requireNamespace("spatialreg", quietly = TRUE)) {
-  #  library(spatialreg)
-  #  uc.err <- errorsarlm(price.1960 ~ tax.charges, data=used.cars,
-  #                     nb2listw(usa48.nb), tol.solve=1.0e-13, 
-  #                     control=list(tol.opt=.Machine$double.eps^0.3))
-  #  summary(uc.err)
-  #  uc.lag <- lagsarlm(price.1960 ~ tax.charges, data=used.cars,
-  #                   nb2listw(usa48.nb), tol.solve=1.0e-13, 
-  #                   control=list(tol.opt=.Machine$double.eps^0.3))
-  #  summary(uc.lag)
-  #  uc.lag1 <- lagsarlm(price.1960 ~ 1, data=used.cars,
-  #                    nb2listw(usa48.nb), tol.solve=1.0e-13, 
-  #                    control=list(tol.opt=.Machine$double.eps^0.3))
-  #  summary(uc.lag1)
-  #  uc.err1 <- errorsarlm(price.1960 ~ 1, data=used.cars,
-  #                      nb2listw(usa48.nb), tol.solve=1.0e-13, 
-  #                      control=list(tol.opt=.Machine$double.eps^0.3))
-  #  summary(uc.err1)
-  #}
+\donttest{
+  if (requireNamespace("spatialreg", quietly = TRUE)) {
+    library(spatialreg)
+    uc.err <- errorsarlm(price.1960 ~ tax.charges, data=used.cars,
+                       nb2listw(usa48.nb), tol.solve=1.0e-13, 
+                       control=list(tol.opt=.Machine$double.eps^0.3))
+    summary(uc.err)
+    uc.lag <- lagsarlm(price.1960 ~ tax.charges, data=used.cars,
+                     nb2listw(usa48.nb), tol.solve=1.0e-13, 
+                     control=list(tol.opt=.Machine$double.eps^0.3))
+    summary(uc.lag)
+    uc.lag1 <- lagsarlm(price.1960 ~ 1, data=used.cars,
+                      nb2listw(usa48.nb), tol.solve=1.0e-13, 
+                      control=list(tol.opt=.Machine$double.eps^0.3))
+    summary(uc.lag1)
+    uc.err1 <- errorsarlm(price.1960 ~ 1, data=used.cars,
+                        nb2listw(usa48.nb), tol.solve=1.0e-13, 
+                        control=list(tol.opt=.Machine$double.eps^0.3),
+                        Durbin=FALSE)
+    summary(uc.err1)
+  }
+}
 }
 }
 \references{

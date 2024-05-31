@@ -8,8 +8,8 @@
 \format{
 FORMAT:
 \itemize{
-    \item{name} {name}
-    \item{geometry} {sfc_MULTILINESTRING}
+    \item{name: name}
+    \item{geometry: sfc_MULTILINESTRING}
 }
 The object is in the RGF93 / Lambert-93 CRS.
 }

@@ -10,9 +10,9 @@
 \format{
 This data frame contains the following columns:
 \itemize{
-        \item{x} {grid eastings}
-        \item{y} {grid northings}
-        \item{val} {remote sensing values}
+        \item{x: grid eastings}
+        \item{y: grid northings}
+        \item{val: remote sensing values}
 }
 }
 \source{

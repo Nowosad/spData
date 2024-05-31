@@ -5,11 +5,11 @@
 #' 
 #' @format Formal class 'data.frame'; the data contains a data.frame with 51 obs. of 5 variables:
 #' \itemize{
-#'     \item{state} {character vector of state names}
-#'     \item{median_income_10} {numerical vector of median income in 2010}
-#'     \item{median_income_15} {numerical vector of median income in 2010}
-#'     \item{poverty_level_10} {numerical vector of number of people with income below poverty level in 2010}
-#'     \item{poverty_level_15} {numerical vector of number of people with income below poverty level in 2015}
+#'     \item{state: character vector of state names}
+#'     \item{median_income_10: numerical vector of median income in 2010}
+#'     \item{median_income_15: numerical vector of median income in 2010}
+#'     \item{poverty_level_10: numerical vector of number of people with income below poverty level in 2010}
+#'     \item{poverty_level_15: numerical vector of number of people with income below poverty level in 2015}
 #' }
 #' 
 #' @seealso 

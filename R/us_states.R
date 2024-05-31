@@ -6,13 +6,13 @@
 #' 
 #' @format Formal class 'sf' [package "sf"]; the data contains a data.frame with 49 obs. of 7 variables:
 #' \itemize{
-#'     \item{GEOID} {character vector of geographic identifiers}
-#'     \item{NAME} {character vector of state names}
-#'     \item{REGION} {character vector of region names}
-#'     \item{AREA} {area in square kilometers of units class}
-#'     \item{total_pop_10} {numerical vector of total population in 2010}
-#'     \item{total_pop_15} {numerical vector of total population in 2015}
-#'     \item{geometry} {sfc_MULTIPOLYGON}
+#'     \item{GEOID: character vector of geographic identifiers}
+#'     \item{NAME: character vector of state names}
+#'     \item{REGION: character vector of region names}
+#'     \item{AREA: area in square kilometers of units class}
+#'     \item{total_pop_10: numerical vector of total population in 2010}
+#'     \item{total_pop_15: numerical vector of total population in 2015}
+#'     \item{geometry: sfc_MULTIPOLYGON}
 #' }
 #' The object is in geographical coordinates using the NAD83 datum.
 #' 

@@ -23,11 +23,11 @@
 #' }
 #' # Code used to download the data:
 #' \dontrun{
-#' devtools::install_github("robinlovelace/ukboundaries")
+#' #devtools::install_github("robinlovelace/ukboundaries")
 #' library(sf)
 #' library(tmap)
 #' library(dplyr)
-#' library(ukboundaries)
+#' #library(ukboundaries)
 #' sel = grepl("003|004", msoa2011_lds$geo_label)
 #' aggregating_zones = st_transform(msoa2011_lds[sel, ], 27700)
 #' # find lsoas in the aggregating_zones

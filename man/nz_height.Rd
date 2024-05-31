@@ -7,9 +7,9 @@
 \format{
 FORMAT:
 \itemize{
-    \item{t50_fid} {ID}
-    \item{elevation} {Height above sea level in m}
-    \item{geometry} {sfc_POINT}
+    \item{t50_fid: ID}
+    \item{elevation: Height above sea level in m}
+    \item{geometry: sfc_POINT}
 }
 }
 \source{
