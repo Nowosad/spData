@@ -6,12 +6,12 @@
 #' 
 #' @format An sf object of 1000 points with the following 6 variables.
 #' \itemize{
-#'   \item{id}{An unique identifier for each property.}
-#'   \item{size }{The size of the property (unit: square meters)}
-#'   \item{price }{The asking price (unit: euros) }
-#'   \item{prpsqm }{The asking price per squre meter (unit: euroes/square meter).}
-#'   \item{age }{Age of property in 2017 (unit: years).}
-#'   \item{dist_metro}{The distance to closest train/metro station (unit: meters).}
+#'   \item{id: An unique identifier for each property.}
+#'   \item{size : The size of the property (unit: square meters)}
+#'   \item{price : The asking price (unit: euros) }
+#'   \item{prpsqm : The asking price per squre meter (unit: euroes/square meter).}
+#'   \item{age : Age of property in 2017 (unit: years).}
+#'   \item{dist_metro: The distance to closest train/metro station (unit: meters).}
 #' }
 #' 
 #' @docType data

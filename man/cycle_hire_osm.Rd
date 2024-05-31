@@ -6,12 +6,12 @@
 \title{Cycle hire points in London from OSM}
 \format{
 \itemize{
-    \item{osm_id} {The OSM ID}
-    \item{name} {The name of the cycle point}
-    \item{capacity} {How many bikes it can take}
-    \item{cyclestreets_id} {The ID linked to cyclestreets' photomap}
-    \item{description} {Additional description of points}
-    \item{geometry} {sfc_POINT}
+    \item{osm_id: The OSM ID}
+    \item{name: The name of the cycle point}
+    \item{capacity: How many bikes it can take}
+    \item{cyclestreets_id: The ID linked to cyclestreets' photomap}
+    \item{description: Additional description of points}
+    \item{geometry: sfc_POINT}
 }
 }
 \source{

@@ -9,11 +9,11 @@
 #' @format 
 #' Selected variables:
 #' \itemize{
-#'     \item{year} {Year of population estimate}
-#'     \item{country_code} {Code of country}
-#'     \item{urban_agglomeration} {Name of the urban agglomeration}
-#'     \item{population_millions} {Estimated human population}
-#'     \item{geometry} {sfc_POINT}
+#'     \item{year: Year of population estimate}
+#'     \item{country_code: Code of country}
+#'     \item{urban_agglomeration: Name of the urban agglomeration}
+#'     \item{population_millions: Estimated human population}
+#'     \item{geometry: sfc_POINT}
 #' }
 #' 
 #' @docType data

@@ -8,13 +8,13 @@
 \format{
 FORMAT:
 \itemize{
-    \item{Name} {Name}
-    \item{Island} {Island}
-    \item{Land_area} {Land area}
-    \item{Population} {Population}
-    \item{Median_income} {Median income (NZD)}
-    \item{Sex_ratio} {Sex ratio (male/female)}
-    \item{geom} {sfc_MULTIPOLYGON}
+    \item{Name: Name}
+    \item{Island: Island}
+    \item{Land_area: Land area}
+    \item{Population: Population}
+    \item{Median_income: Median income (NZD)}
+    \item{Sex_ratio: Sex ratio (male/female)}
+    \item{geom: sfc_MULTIPOLYGON}
 }
 }
 \source{

@@ -7,8 +7,8 @@
 \format{
 A data frame with 102 observations on the following 2 variables.
 \itemize{
-        \item{\code{jenks71}} {a numeric vector: Per acre value of gross farm products in dollars by county for Illinois in #' 1959}
-        \item{\code{area}} {a numeric vector: county area in square miles}
+        \item{\code{jenks71}: a numeric vector: Per acre value of gross farm products in dollars by county for Illinois in #' 1959}
+        \item{\code{area}: a numeric vector: county area in square miles}
 }
 }
 \source{

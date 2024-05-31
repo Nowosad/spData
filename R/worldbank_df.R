@@ -6,13 +6,13 @@
 #' 
 #' @format Formal class 'data.frame'; the data contains a data.frame with 177 obs. of 7 variables:
 #' \itemize{
-#'     \item{name} {character vector of country names}
-#'     \item{iso_a2} {character vector of ISO 2 character country codes}
-#'     \item{HDI} {human development index (HDI)}
-#'     \item{urban_pop} {urban population}
-#'     \item{unemployment} {unemployment, total (\% of total labor force)}
-#'     \item{pop_growth} {population growth (annual \%)}
-#'     \item{literacy} {adult literacy rate, population 15+ years, both sexes (\%)}
+#'     \item{name: character vector of country names}
+#'     \item{iso_a2: character vector of ISO 2 character country codes}
+#'     \item{HDI: human development index (HDI)}
+#'     \item{urban_pop: urban population}
+#'     \item{unemployment: unemployment, total (\% of total labor force)}
+#'     \item{pop_growth: population growth (annual \%)}
+#'     \item{literacy: adult literacy rate, population 15+ years, both sexes (\%)}
 #' }
 #' 
 #' @seealso 

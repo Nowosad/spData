@@ -7,8 +7,8 @@
 \format{
 A data frame with 71 observations on the following 2 variables.
 \itemize{
-        \item{\code{cases}} {Prevalence of at least mild conditions}
-        \item{\code{total}} {Number of questionnaires returned}
+        \item{\code{cases}: Prevalence of at least mild conditions}
+        \item{\code{total}: Number of questionnaires returned}
 }
 }
 \source{
