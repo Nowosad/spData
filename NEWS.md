@@ -1,3 +1,7 @@
+# spData 2.3.2
+
+* Adds the `shapes/NY8_utm18.gpkg` file
+
 # spData 2.3.1
 
 * Added a `NEWS.md` file to track changes to the package.
