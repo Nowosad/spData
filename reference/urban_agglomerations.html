@@ -5,7 +5,7 @@ Includes only the top 30 largest areas by population at 5 year intervals."><!-- 
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]--></head><body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-reference-topic">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -33,20 +33,20 @@ Includes only the top 30 largest areas by population at 5 year intervals."><!-- 
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/Nowosad/spData/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Major urban areas worldwide</h1>
-    <small class="dont-index">Source: <a href="https://github.com/Nowosad/spData/blob/HEAD/R/urban_agglomerations.R" class="external-link"><code>R/urban_agglomerations.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/Nowosad/spData/blob/master/R/urban_agglomerations.R" class="external-link"><code>R/urban_agglomerations.R</code></a></small>
     <div class="hidden name"><code>urban_agglomerations.Rd</code></div>
     </div>
 
@@ -77,7 +77,7 @@ Includes only the top 30 largest areas by population at 5 year intervals.</p>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-plt img"><img src="urban_agglomerations-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># Code used to download the data:</span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="va">f</span> <span class="op">=</span> <span class="st">"WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls"</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html" class="external-link">download.file</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  destfile <span class="op">=</span> <span class="va">f</span>,</span></span>
@@ -94,7 +94,7 @@ Includes only the top 30 largest areas by population at 5 year intervals.</p>
 <span class="r-in"><span><span class="va">urban_agglomerations</span></span></span>
 <span class="r-in"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_data</span><span class="op">(</span><span class="va">urban_agglomerations</span>, overwrite <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="st">"WUP2018-F11b-30_Largest_Cities_in_2018_by_time.xls"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -109,15 +109,15 @@ Includes only the top 30 largest areas by population at 5 year intervals.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
       </footer></div>
 
-  
 
 
-  
+
+
 
   </body></html>
 
