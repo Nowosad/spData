@@ -21,7 +21,7 @@ A SpatialPointsDataFrame with 3107 observations on the following 7 variables.
 }
 }
 \source{
-Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
+Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, formerly available from http://www.spatial-econometrics.com/html/jplv7.zip, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
 }
 \usage{
 elect80
