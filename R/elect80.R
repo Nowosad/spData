@@ -16,7 +16,7 @@
 #'         \item{pc_income: Income per capita of population over age 19 eligible to vote}
 #' }
 #' 
-#' @source Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
+#' @source Pace, R. Kelley and Ronald Barry. 1997. "Quick Computation of Spatial Autoregressive Estimators", in Geographical Analysis; sourced from the data folder in the Spatial Econometrics Toolbox for Matlab, formerly available from http://www.spatial-econometrics.com/html/jplv7.zip, files \code{elect.dat} and \code{elect.ford} (with the final line dropped).
 #' @docType data
 #' @keywords datasets sp
 #' @importClassesFrom sp SpatialPointsDataFrame

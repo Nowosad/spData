@@ -33,7 +33,7 @@
 #' }
 #' Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.
 #' 
-#' @source Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
+#' @source Dataset included in the Spatial Econometrics toolbox for Matlab, formerly available from http://www.spatial-econometrics.com/html/jplv7.zip.
 #' @docType data
 #' @keywords datasets sp
 #' @importClassesFrom sp SpatialPointsDataFrame
