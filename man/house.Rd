@@ -37,7 +37,7 @@ Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots. The data slot
 Its projection is \code{CRS(+init=epsg:2834)}, the Ohio North State Plane.
 }
 \source{
-Dataset included in the Spatial Econometrics toolbox for Matlab, \url{http://www.spatial-econometrics.com/html/jplv7.zip}.
+Dataset included in the Spatial Econometrics toolbox for Matlab, formerly available from http://www.spatial-econometrics.com/html/jplv7.zip.
 }
 \usage{
 house
