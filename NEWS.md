@@ -1,3 +1,7 @@
+# spData 2.3.3
+
+* Specifies CRS of the `nz` and `nz_height` objects to `ESPG:2193`
+
 # spData 2.3.2
 
 * Adds the `shapes/NY8_utm18.gpkg` file
