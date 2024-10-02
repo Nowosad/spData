@@ -47,13 +47,10 @@ saver = function(x, outdir){
         }
 }
 
-dir.create("data-raw/outputs", showWarnings = FALSE)
+dir.create("../spData_files/data", showWarnings = FALSE)
 dir("data", full.names = TRUE) |>
         lapply(rda2list) |>
         lapply(list_flatten, name_repair = "minimal") |>
         list_flatten() |>
-        saver("data-raw/outputs")
-
-
-
+        saver("../spData_files/data")
 
