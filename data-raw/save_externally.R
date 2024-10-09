@@ -54,3 +54,11 @@ dir("data", full.names = TRUE) |>
         list_flatten() |>
         saver("../spData_files/data")
 
+ext_files = c(
+        dir("inst/misc", full.names = TRUE),
+        dir("inst/raster", full.names = TRUE),
+        dir("inst/weights", full.names = TRUE),
+        dir("inst/shapes", full.names = TRUE, pattern = "*.(gpkg|geojson)")
+)
+
+file.copy(ext_files, "../spData_files/data/", overwrite = FALSE)
