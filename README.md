@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# spData
+# spData <img src="man/figures/logo.png" align="right" alt="" width="150" />
 
 [![GitHub action build
 status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
