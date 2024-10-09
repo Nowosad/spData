@@ -16,8 +16,8 @@ knitr::opts_chunk$set(
 # spData 
 
 [![GitHub action build status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
-[![CRAN version](http://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
+[![CRAN version](https://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
 [![CRAN RStudio total mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/spData)](https://cran.r-project.org/package=spData)
 
 Datasets for spatial analysis
