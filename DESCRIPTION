@@ -1,6 +1,6 @@
 Package: spData
 Title: Datasets for Spatial Analysis
-Version: 2.3.3
+Version: 2.3.4
 Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no", comment = c(ORCID = "0000-0003-2392-6140")),
     person("Jakub", "Nowosad", role = c("aut", "cre"), email="nowosad.jakub@gmail.com", comment = c(ORCID = "0000-0002-1057-3721")),
     person("Robin", "Lovelace", role = "aut", comment = c(ORCID = "0000-0001-5679-6536")),
@@ -11,7 +11,7 @@ Authors@R: c(person("Roger", "Bivand", role = "aut", email="Roger.Bivand@nhh.no"
 Description: Diverse spatial datasets for demonstrating, benchmarking and teaching spatial data analysis. 
     It includes R data of class sf (defined by the package 'sf'), Spatial ('sp'), and nb ('spdep').
     Unlike other spatial data packages such as 'rnaturalearth' and 'maps', 
-    it also contains data stored in a range of file formats including GeoJSON, ESRI Shapefile and GeoPackage. 
+    it also contains data stored in a range of file formats including GeoJSON and GeoPackage, but from version 2.3.4, no longer ESRI Shapefile - use GeoPackage instead. 
     Some of the datasets are designed to illustrate specific analysis techniques.
     cycle_hire() and cycle_hire_osm(), for example, is designed to illustrate point pattern analysis techniques.
 Depends:

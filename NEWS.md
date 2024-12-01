@@ -1,3 +1,7 @@
+# spData 2.3.4
+
+* remove ESRI Shapefile versions of datasets
+
 # spData 2.3.3
 
 * Specifies CRS of the `nz` and `nz_height` objects to `ESPG:2193`
