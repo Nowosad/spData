@@ -43,7 +43,7 @@
 #' 
 #' if (requireNamespace("sf", quietly = TRUE)) {
 #'   library(sf)
-#'   wheat <- st_read(system.file("shapes/wheat.shp", package="spData"))
+#'   wheat <- st_read(system.file("shapes/wheat.gpkg", package="spData"))
 #'   plot(wheat)
 #' }
 "wheat"
