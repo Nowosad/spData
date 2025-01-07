@@ -1,25 +1,27 @@
----
-output:
-  github_document
----
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
 
 # spData <img src="man/figures/logo.png" align="right" alt="" width="150" />
 
-[![GitHub action build status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
-[![CRAN version](https://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
-[![CRAN RStudio total mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/spData)](https://cran.r-project.org/package=spData)
+[![GitHub action build
+status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
+[![CRAN
+version](https://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio total mirror
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/spData)](https://cran.r-project.org/package=spData)
 
-Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile datasets have been dropped, use the provided GeoPackage files instead)
+Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile
+datasets have been dropped, use the provided GeoPackage files instead)
 
 ### **sf**
 
 - `alaska` - Alaska multipolygon
 - `aggregating_zones` - See `congruent`
-- `congruent` - Sample of UK administrative zones that have shared borders with `aggregating_zones` (`incongruent` does not have shared borders) for teaching the concept of spatial congruence
+- `congruent` - Sample of UK administrative zones that have shared
+  borders with `aggregating_zones` (`incongruent` does not have shared
+  borders) for teaching the concept of spatial congruence
 - `cycle_hire` - Cycle hire points in London
 - `cycle_hire_osm` - Cycle hire points in London from OSM
 - `hawaii` - Hawaii multipolygon
@@ -27,14 +29,14 @@ Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile datasets have 
 - `lnd` - The boroughs of London
 - `nz` - The regions of New Zealand
 - `nz_height` - High points in New Zealand
-- `seine` - Small river network in France 
+- `seine` - Small river network in France
 - `urban_agglomerations` - Major urban areas worldwide
 - `us_states` - US states polygons
 - `world` - World country polygons
 
 ### **sp**
 
-- `auckland` - Marshall's infant mortality in Auckland dataset
+- `auckland` - Marshall’s infant mortality in Auckland dataset
 - `elect80` - 1980 Presidential election results
 - `house` - Lucas county OH housing
 - `SplashDams` - Data for Splash Dams in western Oregon
@@ -58,7 +60,8 @@ Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile datasets have 
 ### misc
 
 - `baltimore` - House sales prices, Baltimore, MD 1978
-- `coffee_data` - World coffee production statistics by country, 2016 and 2017
+- `coffee_data` - World coffee production statistics by country, 2016
+  and 2017
 - `getisord` - Getis-Ord remote sensing example data
 - `hopkins` - Hopkins burnt savanna herb remains
 - `huddersfield` - Prevalence of respiratory symptoms
@@ -72,28 +75,31 @@ Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile datasets have 
 
 Get the released version from CRAN:
 
-```R
+``` r
 install.packages("spData")
 ```
 
 Get the development version from github:
 
-```R
+``` r
 devtools::install_github("nowosad/spData")
 ```
 
 ## spDataLarge
 
-This package interacts with data available through the **spDataLarge** package, which is available in a 'drat' repository. 
-To access this data package, run:
+This package interacts with data available through the **spDataLarge**
+package, which is available in a ‘drat’ repository. To access this data
+package, run:
 
-```R
+``` r
 install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
 ```
 
-The size of the **spDataLarge** package is approximately 20 MB.
-Learn more about the **spDataLarge** package at https://github.com/Nowosad/spDataLarge.
+The size of the **spDataLarge** package is approximately 20 MB. Learn
+more about the **spDataLarge** package at
+<https://github.com/Nowosad/spDataLarge>.
 
 ## Contributions
 
-[Feel free to submit issues and enhancement requests.](https://github.com/Nowosad/spData/issues)
+[Feel free to submit issues and enhancement
+requests.](https://github.com/Nowosad/spData/issues)
