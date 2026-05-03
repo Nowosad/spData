@@ -1,3 +1,7 @@
+# spData 2.3.5
+
+* Replaces %>% with |>
+
 # spData 2.3.4
 
 * Removes ESRI Shapefile versions of all datasets

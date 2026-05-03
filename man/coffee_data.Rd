@@ -40,10 +40,10 @@ pdftables::convert_pdf(input_file = "data.pdf", output_file = "coffee-data-messy
 d = read_csv("coffee-data-messy.csv")
 file.remove("coffee-data-messy.csv")
 file.remove("data.pdf")
-coffee_data = slice(d, -c(1:9)) \%>\% 
-        select(name_long = 1, coffee_production_2016 = 2, coffee_production_2017 = 3) \%>\% 
-        filter(!is.na(coffee_production_2016)) \%>\% 
-        mutate_at(2:3, str_replace, " ", "") \%>\% 
+coffee_data = slice(d, -c(1:9)) |> 
+        select(name_long = 1, coffee_production_2016 = 2, coffee_production_2017 = 3) |> 
+        filter(!is.na(coffee_production_2016)) |> 
+        mutate_at(2:3, str_replace, " ", "") |> 
         mutate_at(2:3, as.integer)
 world_coffee = left_join(world, coffee_data)
 plot(world_coffee[c("coffee_production_2016", "coffee_production_2017")])

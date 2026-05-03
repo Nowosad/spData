@@ -47,32 +47,32 @@
 #' print(object.size(nz), units = "Kb") # 39.9 Kb
 #' names(nz)
 #' nz$REGC2018_V1_00_NAME
-#' nz = filter(nz, REGC2018_V1_00_NAME != "Area Outside Region") %>%
+#' nz = filter(nz, REGC2018_V1_00_NAME != "Area Outside Region") |>
 #'         select(Name = REGC2018_V1_00_NAME, `Land_area` = LAND_AREA_SQ_KM)
 #' # regions basic info
 #' # devtools::install_github("hadley/rvest")
 #' library(rvest)
-#' doc = read_html("https://en.wikipedia.org/wiki/Regions_of_New_Zealand") %>%
+#' doc = read_html("https://en.wikipedia.org/wiki/Regions_of_New_Zealand") |>
 #'         html_nodes("div table")
-#' tab = doc[[3]] %>% html_table()
-#' tab = tab %>% select(Name = Region, Population = `Population[20]`, Island)
-#' tab = tab %>% mutate(Population = str_replace_all(Population, ",", "")) %>%
-#'         mutate(Population = as.numeric(Population)) %>%
+#' tab = doc[[3]] |> html_table()
+#' tab = tab |> select(Name = Region, Population = `Population[20]`, Island)
+#' tab = tab |> mutate(Population = str_replace_all(Population, ",", "")) |>
+#'         mutate(Population = as.numeric(Population)) |>
 #'         mutate(Name = str_remove_all(Name, " \\([1-9]\\)?.+"))
 #' nz$Name = as.character(nz$Name)
 #' nz$Name = str_remove(nz$Name, " Region")
 #' nz$Name %in% tab$Name
 #' # regions additional info
 #' library(nzcensus)
-#' nz_add_data = REGC2013 %>% 
+#' nz_add_data = REGC2013 |> 
 #'         select(Name = REGC2013_N, Median_income = MedianIncome2013, 
-#'                PropFemale2013, PropMale2013) %>% 
-#'         mutate(Sex_ratio = PropMale2013 / PropFemale2013) %>% 
-#'         mutate(Name = gsub(" Region", "", Name)) %>% 
+#'                PropFemale2013, PropMale2013) |> 
+#'         mutate(Sex_ratio = PropMale2013 / PropFemale2013) |> 
+#'         mutate(Name = gsub(" Region", "", Name)) |> 
 #'         select(Name, Median_income, Sex_ratio)
 #' # data join
-#' nz = left_join(nz, tab, by = "Name") %>% 
-#'         left_join(nz_add_data, by = "Name") %>% 
+#' nz = left_join(nz, tab, by = "Name") |> 
+#'         left_join(nz_add_data, by = "Name") |> 
 #'         select(Name, Island, Land_area, Population, Median_income, Sex_ratio)
 #' }
 "nz"

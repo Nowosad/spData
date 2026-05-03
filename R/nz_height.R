@@ -28,7 +28,7 @@
 #' library(dplyr)
 #' # After downloading data
 #' unzip("lds-nz-height-points-topo-150k-SHP.zip")
-#' nz_height = st_read("nz-height-points-topo-150k.shp") %>% 
+#' nz_height = st_read("nz-height-points-topo-150k.shp") |> 
 #'   top_n(n = 100, wt = elevation)
 #' library(tmap)
 #' tmap_mode("view")

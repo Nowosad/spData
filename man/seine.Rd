@@ -34,9 +34,9 @@ library(rnaturalearth)
 library(tidyverse)
 
 seine = ne_download(scale = 10, type = "rivers_lake_centerlines", 
-                    category = "physical", returnclass = "sf") \%>\% 
-        filter(name \%in\% c("Yonne", "Seine", "Marne")) \%>\% 
-        select(name = name_en) \%>\% 
+                    category = "physical", returnclass = "sf") |> 
+        filter(name \%in\% c("Yonne", "Seine", "Marne")) |> 
+        select(name = name_en) |> 
         st_transform(2154)
 }
 }

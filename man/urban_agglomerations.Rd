@@ -36,10 +36,10 @@ download.file(
  )
 library(dplyr)
 library(sf)
-urban_agglomerations = readxl::read_excel(f, skip = 16) \%>\%
+urban_agglomerations = readxl::read_excel(f, skip = 16) |>
     st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
 names(urban_agglomerations)
-names(urban_agglomerations) <- gsub(" |\\\\n", "_", tolower(names(urban_agglomerations)) ) \%>\% 
+names(urban_agglomerations) <- gsub(" |\\\\n", "_", tolower(names(urban_agglomerations)) ) |> 
         gsub("\\\\(|\\\\)", "", .)
 names(urban_agglomerations)
 urban_agglomerations
