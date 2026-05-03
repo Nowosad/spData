@@ -1,0 +1,195 @@
+# spData
+
+[![GitHub action build
+status](https://github.com/Nowosad/spData/workflows/pkgdown/badge.svg)](https://github.com/Nowosad/spData/actions)
+[![CRAN
+version](https://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
+[![CRAN RStudio total mirror
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/spData)](https://cran.r-project.org/package=spData)
+
+Datasets for spatial analysis (from version 2.3.4, ESRI Shapefile
+datasets have been dropped, use the provided GeoPackage files instead)
+
+### **sf**
+
+- `alaska` - Alaska multipolygon
+- `aggregating_zones` - See `congruent`
+- `congruent` - Sample of UK administrative zones that have shared
+  borders with `aggregating_zones` (`incongruent` does not have shared
+  borders) for teaching the concept of spatial congruence
+- `cycle_hire` - Cycle hire points in London
+- `cycle_hire_osm` - Cycle hire points in London from OSM
+- `hawaii` - Hawaii multipolygon
+- `incongruent` - See `congruent`
+- `lnd` - The boroughs of London
+- `nz` - The regions of New Zealand
+- `nz_height` - High points in New Zealand
+- `seine` - Small river network in France
+- `urban_agglomerations` - Major urban areas worldwide
+- `us_states` - US states polygons
+- `world` - World country polygons
+
+### **sp**
+
+- `auckland` - Marshall’s infant mortality in Auckland dataset
+- `elect80` - 1980 Presidential election results
+- `house` - Lucas county OH housing
+- `SplashDams` - Data for Splash Dams in western Oregon
+- `state.vbm` - US State Visibility Based Map
+
+### **spdep**
+
+- `afcon` - Spatial patterns of conflict in Africa 1966-78
+- `boston` - Boston Housing Data
+- `columbus` - Columbus OH spatial analysis data set
+- `eire` - Eire data sets
+- `nc.sids` - North Carolina SIDS data
+- `NY_data` - New York leukemia data
+- `used.cars` - US 1960 used car prices
+
+### **raster**
+
+- `elev.tif` - Small raster dataset representing elevation values
+- `grain.tif` - Small raster dataset representing grain size classes
+
+### misc
+
+- `baltimore` - House sales prices, Baltimore, MD 1978
+- `coffee_data` - World coffee production statistics by country, 2016
+  and 2017
+- `getisord` - Getis-Ord remote sensing example data
+- `hopkins` - Hopkins burnt savanna herb remains
+- `huddersfield` - Prevalence of respiratory symptoms
+- `jenks71` - Illinois 1959 county gross farm product value per acre
+- `us_states_df` - Selected American Community Survey (ACS) data
+- `wheat` - Mercer and Hall wheat yield data
+- `worldbank_df` - Selected World Bank data
+- `depmunic` and `properties` - Athens properties data set from **HSAR**
+
+## Installation
+
+Get the released version from CRAN:
+
+``` r
+
+install.packages("spData")
+```
+
+Get the development version from github:
+
+``` r
+
+devtools::install_github("nowosad/spData")
+```
+
+## spDataLarge
+
+This package interacts with data available through the **spDataLarge**
+package, which is available in a ‘drat’ repository. To access this data
+package, run:
+
+``` r
+
+install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
+```
+
+The size of the **spDataLarge** package is approximately 20 MB. Learn
+more about the **spDataLarge** package at
+<https://github.com/Nowosad/spDataLarge>.
+
+## Contributions
+
+[Feel free to submit issues and enhancement
+requests.](https://github.com/Nowosad/spData/issues)
+
+# Package index
+
+## All functions
+
+- [`SplashDams`](https://jakubnowosad.com/spData/reference/SplashDams.md)
+  : Data for Splash Dams in western Oregon
+- [`afcon`](https://jakubnowosad.com/spData/reference/afcon.md) :
+  Spatial patterns of conflict in Africa 1966-78
+- [`alaska`](https://jakubnowosad.com/spData/reference/alaska.md) :
+  Alaska multipolygon
+- [`auckland`](https://jakubnowosad.com/spData/reference/auckland.md) :
+  Marshall's infant mortality in Auckland dataset
+- [`baltimore`](https://jakubnowosad.com/spData/reference/baltimore.md)
+  : House sales prices, Baltimore, MD 1978
+- [`boston`](https://jakubnowosad.com/spData/reference/boston.md)
+  [`boston.c`](https://jakubnowosad.com/spData/reference/boston.md)
+  [`boston.soi`](https://jakubnowosad.com/spData/reference/boston.md)
+  [`boston.utm`](https://jakubnowosad.com/spData/reference/boston.md) :
+  Corrected Boston Housing Data
+- [`coffee_data`](https://jakubnowosad.com/spData/reference/coffee_data.md)
+  : World coffee production data
+- [`columbus`](https://jakubnowosad.com/spData/reference/columbus.md) :
+  Columbus OH spatial analysis data set
+- [`congruent`](https://jakubnowosad.com/spData/reference/congruent.md)
+  : Datasets to illustrate the concept of spatial congruence
+- [`cycle_hire`](https://jakubnowosad.com/spData/reference/cycle_hire.md)
+  : Cycle hire points in London
+- [`cycle_hire_osm`](https://jakubnowosad.com/spData/reference/cycle_hire_osm.md)
+  : Cycle hire points in London from OSM
+- [`depmunic`](https://jakubnowosad.com/spData/reference/depmunic.md) :
+  Municipality departments of Athens (Sf)
+- [`eire`](https://jakubnowosad.com/spData/reference/eire.md)
+  [`eire.df`](https://jakubnowosad.com/spData/reference/eire.md)
+  [`eire.polys.utm`](https://jakubnowosad.com/spData/reference/eire.md)
+  [`eire.coords.utm`](https://jakubnowosad.com/spData/reference/eire.md)
+  [`eire.nb`](https://jakubnowosad.com/spData/reference/eire.md) : Eire
+  data sets
+- [`elect80`](https://jakubnowosad.com/spData/reference/elect80.md) :
+  1980 Presidential election results
+- [`elev.tif`](https://jakubnowosad.com/spData/reference/elev.tif.md) :
+  Artificial elevation raster data set
+- [`getisord`](https://jakubnowosad.com/spData/reference/getisord.md)
+  [`go_x`](https://jakubnowosad.com/spData/reference/getisord.md)
+  [`go_y`](https://jakubnowosad.com/spData/reference/getisord.md)
+  [`go_xyz`](https://jakubnowosad.com/spData/reference/getisord.md) :
+  Getis-Ord remote sensing example data
+- [`grain.tif`](https://jakubnowosad.com/spData/reference/grain.tif.md)
+  : Artificial raster dataset representing grain sizes
+- [`hawaii`](https://jakubnowosad.com/spData/reference/hawaii.md) :
+  Hawaii multipolygon
+- [`hopkins`](https://jakubnowosad.com/spData/reference/hopkins.md) :
+  Hopkins burnt savanna herb remains
+- [`house`](https://jakubnowosad.com/spData/reference/house.md) : Lucas
+  county OH housing
+- [`huddersfield`](https://jakubnowosad.com/spData/reference/huddersfield.md)
+  : Prevalence of respiratory symptoms
+- [`jenks71`](https://jakubnowosad.com/spData/reference/jenks71.md) :
+  Illinois 1959 county gross farm product value per acre
+- [`lnd`](https://jakubnowosad.com/spData/reference/lnd.md) : The
+  boroughs of London
+- [`nc.sids`](https://jakubnowosad.com/spData/reference/nc.sids.md) :
+  North Carolina SIDS data
+- [`nydata`](https://jakubnowosad.com/spData/reference/nydata.md) : New
+  York leukemia data
+- [`nz`](https://jakubnowosad.com/spData/reference/nz.md) : Regions in
+  New Zealand
+- [`nz_height`](https://jakubnowosad.com/spData/reference/nz_height.md)
+  : High points in New Zealand
+- [`properties`](https://jakubnowosad.com/spData/reference/properties.md)
+  : Dataset of properties in the municipality of Athens (sf)
+- [`seine`](https://jakubnowosad.com/spData/reference/seine.md) : Small
+  river network in France
+- [`state.vbm`](https://jakubnowosad.com/spData/reference/state.vbm.md)
+  : US State Visibility Based Map
+- [`urban_agglomerations`](https://jakubnowosad.com/spData/reference/urban_agglomerations.md)
+  : Major urban areas worldwide
+- [`us_states`](https://jakubnowosad.com/spData/reference/us_states.md)
+  : US states polygons
+- [`us_states_df`](https://jakubnowosad.com/spData/reference/us_states_df.md)
+  : the American Community Survey (ACS) data
+- [`used.cars`](https://jakubnowosad.com/spData/reference/used.cars.md)
+  : US 1960 used car prices
+- [`wheat`](https://jakubnowosad.com/spData/reference/wheat.md) : Mercer
+  and Hall wheat yield data
+- [`world`](https://jakubnowosad.com/spData/reference/world.md) : World
+  country polygons
+- [`worldbank_df`](https://jakubnowosad.com/spData/reference/worldbank_df.md)
+  : World Bank data
+

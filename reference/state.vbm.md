@@ -1,0 +1,58 @@
+# US State Visibility Based Map
+
+A SpatialPolygonsDataFrame object to plot a Visibility Based Map.
+
+## Usage
+
+``` r
+state.vbm
+```
+
+## Format
+
+An object of class `SpatialPolygonsDataFrame` with 50 rows and 2
+columns.
+
+## Source
+
+The data was converted from the maps library for S-PLUS. S-PLUS uses the
+map with permission from the author. This version of the data has not
+received permission from the author (no attempt made, not that it was
+refused), most of my uses I feel fall under fair use and do not violate
+copyright, but you will need to decide for yourself and your
+applications.
+
+## Details
+
+A SpatialPolygonsDataFrame object to plot a map of the US states where
+the sizes of the states have been adjusted to be more equal. This map
+can be useful for plotting state data using colors patterns without the
+larger states dominating and the smallest states being lost. The
+original map is copyrighted by Mark Monmonier. Official publications
+based on this map should acknowledge him. Comercial publications of maps
+based on this probably need permission from him to use.
+
+## References
+
+<http://www.markmonmonier.com/index.htm>,
+[http://euclid.psych.yorku.ca/SCS/Gallery/bright-ideas.html](http://euclid.psych.yorku.ca/SCS/Gallery/bright-ideas.md)
+
+## Author
+
+Greg Snow <greg.snow@imail.org> (of this compilation)
+
+## Examples
+
+``` r
+if (requireNamespace("sp", quietly = TRUE)) {
+  library(sp)
+  data(state.vbm)
+  plot(state.vbm)
+
+  tmp <- state.x77[, 'HS Grad']
+  tmp2 <- cut(tmp, seq(min(tmp), max(tmp), length.out=11),
+            include.lowest=TRUE)
+  plot(state.vbm, col=cm.colors(10)[tmp2])
+}
+
+```
